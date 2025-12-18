@@ -1,6 +1,6 @@
 # Ročníkový projekt S3E Dobeš Tomáš Digitální hodiny
 ## Zvláštní poděkování
-Zvláště bych chtěl poděkovat panu Miroslavu Máchovi za rady a pomc při výběru součástek a řešení problémů konsktručního typu.
+Zvláště bych chtěl poděkovat panu Miroslavu Máchovi za rady a pomoc při výběru součástek a řešení problémů konstrukčního typu.
 A také  panu Jiřímu Vinterovi za rady a kontakty.
 
 ## To-do list
@@ -10,6 +10,13 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 - [ ] Navrhnout PCB
 - [ ] Vyrobit PCB osadit, otestovat
 
+## Princip a postup návrhu
+Původní myšlenka jak zhotovit tento obvod byla, že by se jednotlivé výstupy na zobrazovače připojily přes posuvné registry, ovšem bylo by jich zapotřebí 6 kousků (HH:mm:ss) převod časového údaje z RTC by bylo zhotoveno přímo v PIC.
+
+Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. že v jednom okamžiku problikne jeden segment, takto se "probliká" každý segment zvlášť v určité rychlosti(Hz), od určité rychlosti ± 30 Hz se obraz jeví jako spojitý. 
+
+### Součástky a jejich funkce v obvodu
+V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje.  
 ## Komponenty použité v projektu
 - Aktivní součástky
 	+ MCU https://ecom.cz/eshop/detail/73426-PIC18F47Q43-I-P
@@ -19,7 +26,7 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 - Krystal
 	+ Crystal https://www.tme.eu/cz/details/32.768k-38-sr/krystalove-rezonatory-tht/sr-passives/32-768k-3-8-sr/
 - Headry:
-	+ 2X https://ecom.cz/eshop/detail/84648-KL-1X02-SG-62 není skladem
+	+ 2X https://ecom.cz/eshop/detail/84648Kondenzátry-KL-1X02-SG-62 není skladem
 	+ 5X není skladem
 	+ 18X není skladem
 - Patice
@@ -31,7 +38,7 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 	+ 7 segment 2X 20,32mm: https://ecom.cz/eshop/detail/29807-LD-FYD-8021DUHR-21
 	+ 7 segment 10mm: https://ecom.cz/eshop/detail/29798-LD-FYD-3921BUHR-21
 - Pasivní součástky
-	+ Rezistory a Kondenzátry
+	+ Rezistory a Kondenzátory
 		* 4K7 https://ecom.cz/eshop/detail/71624-R1206-4K7-1--WRX
 		* 6.8 pF https://ecom.cz/eshop/detail/14473-C0603-6-8PF-NPO-50V-DNCC
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
