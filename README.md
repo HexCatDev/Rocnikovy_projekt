@@ -63,4 +63,4 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - [5] STMICROELECTRONICS. *ULN2801A, ULN2802A, ULN2803A, ULN2804A: Eight Darlington Transistor Arrays*. 2012. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D05723.pdf&nazev=ECOM_05723_ULN2804A.pdf
 - [6] FORYARD OPTOELECTRONICS. *FYD-8021DUHR-21: Dual Digit 7-Segment Display Specification*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D29806.pdf&nazev=ECOM_29807_LD-FYD-8021DUHR-21.pdf
 - [7] FORYARD OPTOELECTRONICS. *FYD-3921BUHR-21: Single Digit 7-Segment Display Specification*. Dostupné z:https://ecom.cz/data/exportdokumentu?soubor=D29797.pdf&nazev=ECOM_29798_LD-FYD-3921BUHR-21.pdf
-- [8] TSC - TAIWAN SEMICONDUCTORS. *DTA123JCA PNP 100mA 5OV R1 2.2K R2 47K*
+- [8] TSC - TAIWAN SEMICONDUCTORS. *DTA123JCA PNP 100mA 5OV R1 2.2K R2 47K*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D59753.pdf&nazev=ECOM_59753_DTA123JCA-SMD.pdf
