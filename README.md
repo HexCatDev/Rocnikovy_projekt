@@ -14,7 +14,7 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 Původní myšlenka jak zhotovit tento obvod byla, že by se jednotlivé výstupy na zobrazovače připojily přes posuvné registry, ovšem bylo by jich zapotřebí 6 kousků (HH:mm:ss) převod časového údaje z RTC by bylo zhotoveno přímo v PIC.
 
 Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. že v jednom okamžiku problikne jeden segment, takto se "probliká" každý segment zvlášť v určité rychlosti(Hz), od určité rychlosti ± 30 Hz se obraz jeví jako spojitý. 
-![Blokové Schéma](Dokumentace/Blokové schéma.jpg)
+![Blokové Schéma](Dokumentace/Blokove_schema.jpg)
 
 ### Součástky a jejich funkce v obvodu
 V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje. 
