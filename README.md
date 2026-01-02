@@ -14,9 +14,16 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 Původní myšlenka jak zhotovit tento obvod byla, že by se jednotlivé výstupy na zobrazovače připojily přes posuvné registry, ovšem bylo by jich zapotřebí 6 kousků (HH:mm:ss) převod časového údaje z RTC by bylo zhotoveno přímo v PIC.
 
 Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. že v jednom okamžiku problikne jeden segment, takto se "probliká" každý segment zvlášť v určité rychlosti(Hz), od určité rychlosti ± 30 Hz se obraz jeví jako spojitý. 
+![Blokové Schéma]()
 
 ### Součástky a jejich funkce v obvodu
-V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje.  
+V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje. 
+- Mozkem obvodu je PIC18F47Q43-I-P (viz.komponenty) má na starosti komunikaci s RTC, multiplexování a řízení hodin. 
+- RTC (Real Time Clock) a Krystal 
+Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[1].
+- Tranzistorové pole ULN2804A tento IO ve svém pouzdře DIP 18 obsahuje 8x NPN transistorů se spol. emitorem s max. kolektorovím  proudem 0,5A a max. napětím mezi kolektorem a emitorem 50V
+- 
+
 ## Komponenty použité v projektu
 - Aktivní součástky
 	+ MCU https://ecom.cz/eshop/detail/73426-PIC18F47Q43-I-P
@@ -43,3 +50,4 @@ V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tran
 		* 6.8 pF https://ecom.cz/eshop/detail/14473-C0603-6-8PF-NPO-50V-DNCC
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
 - Svorkovnice https://ecom.cz/eshop/detail/6649-DG126-5-0-02P-14-02
+## Citace
