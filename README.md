@@ -26,7 +26,8 @@ V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tran
 - RTC (Real Time Clock)[3] a Krystal[4] 
 Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1].
 - Tranzistorové pole ULN2804A[5] tento IO ve svém pouzdře DIP 18 obsahuje 8x NPN transistorů se spol. emitorem s max. kolektorovím  proudem 0,5A a max. napětím mezi kolektorem a emitorem 50V
-- 7 Segmentové zobrazovače[6][7] 2x 20,32mm a 2x 10mm se společnou katodou obsahují 16x znaků v pouzdře 2x8 (7+DP) jsou připojeny na přes rezistory na ULN2804A[5] a jednotlivé znaky jsou připojeny přes tranzistory DTA123JCA[8]
+- 7 Segmentové zobrazovače[6][7] 2x 20,32mm a 2x 10mm se společnou katodou obsahují 16x znaků v pouzdře 2x8 (7+DP) jsou připojeny na přes rezistory na ULN2804A[5] a jednotlivé znaky jsou připojeny přes tranzistory DTA123JCA[8] které uzemňují daný znak.
+- tranzitory DTA123JCA[8] PNP Uce max. 50V Ic 100mA P 0.2W se zabudovanými rezistory R1 2.2KOhm a R2 47KOhm
 
 ## Komponenty použité v projektu
 - Aktivní součástky
