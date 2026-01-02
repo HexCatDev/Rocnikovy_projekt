@@ -6,7 +6,7 @@
 *.lck
 fp-info-cache
 _autosave-*
-
+*.txt
 # Backups folder
 *-backups/
 
