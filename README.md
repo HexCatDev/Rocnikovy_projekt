@@ -38,9 +38,9 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - Krystal
 	+ Crystal https://www.tme.eu/cz/details/32.768k-38-sr/krystalove-rezonatory-tht/sr-passives/32-768k-3-8-sr/
 - Headry:
-	+ 2X https://ecom.cz/eshop/detail/84648Kondenzátry-KL-1X02-SG-62 není skladem
-	+ 5X není skladem
-	+ 18X není skladem
+	+ 2X https://ecom.cz/eshop/detail/84648
+	+ 5X https://ecom.cz/eshop/detail/84654
+	+ 18X https://ecom.cz/eshop/detail/47661
 - Patice
 	+ 1X4 https://ecom.cz/eshop/detail/85255-SILPZ-1X04-V13-JK
 	+ 1X8 https://ecom.cz/eshop/detail/85260-SILPZ-1X08-V13-JK
