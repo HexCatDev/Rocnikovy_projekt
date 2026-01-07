@@ -42,8 +42,8 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 	+ 5X https://ecom.cz/eshop/detail/84654
 	+ 18X https://ecom.cz/eshop/detail/47661
 - Patice
-	+ 1X4 https://ecom.cz/eshop/detail/85255-SILPZ-1X04-V13-JK
-	+ 1X8 https://ecom.cz/eshop/detail/85260-SILPZ-1X08-V13-JK
+	+ SIL 1X10 https://ecom.cz/eshop/detail/85244-SILPZ-1X10-V13-JK
+	+ SIL 1X20(zkrácena na 18) https://ecom.cz/eshop/detail/85248-SILPZ-1X20-V13-JK
 	+ DIP 18 https://ecom.cz/eshop/detail/64634-DIL-18-3-NT-1
 	+ DIP 40 https://ecom.cz/eshop/detail/64639-DIL-40-6-YT-1
 - Zobrazovače
@@ -54,7 +54,11 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 		* 4K7 https://ecom.cz/eshop/detail/71624-R1206-4K7-1--WRX
 		* 6.8 pF https://ecom.cz/eshop/detail/14473-C0603-6-8PF-NPO-50V-DNCC
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
+		* 470R https://ecom.cz/eshop/detail/71620-R1206-470R-1--WRX
 - Svorkovnice https://ecom.cz/eshop/detail/6649-DG126-5-0-02P-14-02
+- Tlačítka https://ecom.cz/eshop/detail/55539-T-0670HIM-160G
+- Napájecí vidlice (zásuvka) https://ecom.cz/eshop/detail/78223-KNAPZP-25-1610-01
+	+ zástrčka https://ecom.cz/eshop/detail/78201-KNAPVK-2514-NES-J-250
 ## Použitá literatura
 
 - [1] WIKIPEDIA CONTRIBUTORS. *Flicker fusion threshold*. Wikipedia: The Free Encyclopedia [online]. [cit. 2026-01-02]. Dostupné z: https://en.wikipedia.org/wiki/Flicker_fusion_threshold
