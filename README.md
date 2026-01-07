@@ -55,6 +55,7 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 		* 6.8 pF https://ecom.cz/eshop/detail/14473-C0603-6-8PF-NPO-50V-DNCC
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
 		* 470R https://ecom.cz/eshop/detail/71620-R1206-470R-1--WRX
+		* 100uF/35V https://ecom.cz/eshop/detail/78716-CERA-100-35-6-3x11-KM
 - Svorkovnice https://ecom.cz/eshop/detail/6649-DG126-5-0-02P-14-02
 - Tlačítka https://ecom.cz/eshop/detail/55539-T-0670HIM-160G
 - Napájecí vidlice (zásuvka) https://ecom.cz/eshop/detail/78223-KNAPZP-25-1610-01
