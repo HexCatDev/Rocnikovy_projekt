@@ -35,6 +35,7 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 	+ RTC https://ecom.cz/eshop/detail/39997-MCP7940M-I-SN
 	+ T. pole https://ecom.cz/eshop/detail/5723-ULN2804A
 	+ Tranzistory SMD https://ecom.cz/eshop/detail/59753-DTA123JCA-SMD
+	+ Dioda SMD https://ecom.cz/eshop/detail/82063-M7-SMD-T-R
 - Krystal
 	+ Crystal https://www.tme.eu/cz/details/32.768k-38-sr/krystalove-rezonatory-tht/sr-passives/32-768k-3-8-sr/
 - Headry:
