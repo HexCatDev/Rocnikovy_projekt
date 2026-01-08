@@ -23,8 +23,8 @@ Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. �
 
 ### Schéma zapojení 
 <figure>
-  <img src="Dokumentace/Blokove_schema.jp" alt="Blokové schéma">
-  <figcaption align="center"><i>Obrázek 1: Blokové schéma zapojení hodin</i></figcaption>
+  <img src="Dokumentace/Schema.png" alt="Schéma">
+  <figcaption align="center"><i>Obrázek 2: Schéma zapojení hodin</i></figcaption>
 </figure>
 
 ### Součástky a jejich funkce v obvodu
