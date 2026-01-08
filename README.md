@@ -2,6 +2,7 @@
 ## Zvláštní poděkování
 Zvláště bych chtěl poděkovat panu Miroslavu Máchovi za rady a pomoc při výběru součástek a řešení problémů konstrukčního typu.
 A také  panu Jiřímu Vinterovi za rady a kontakty.
+449,74 Kč	s DPH
 
 ## To-do list
 - [x] Navrhnout schéma 
@@ -23,11 +24,16 @@ Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. �
 ### Součástky a jejich funkce v obvodu
 V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje. 
 - Mozkem obvodu je PIC18F47Q43-I-P[2] má na starosti komunikaci s RTC, multiplexování a řízení hodin. 
+
 - RTC (Real Time Clock)[3] a Krystal[4] 
 Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1].
+
 - Tranzistorové pole ULN2804A[5] tento IO ve svém pouzdře DIP 18 obsahuje 8x NPN transistorů se spol. emitorem s max. kolektorovím  proudem 0,5A a max. napětím mezi kolektorem a emitorem 50V tento IO slouží pro výběr segmentu který bude svítit (A-DP)
 - 7 Segmentové zobrazovače[6][7] 2x 20,32mm a 2x 10mm se společnou katodou obsahují 16x znaků v pouzdře 2x8 (7+DP) jsou připojeny na přes rezistory na ULN2804A[5] a jednotlivé znaky jsou připojeny přes tranzistory DTA123JCA[8] které uzemňují daný znak.
+
 - tranzistory DTA123JCA[8] PNP Uce max. 50V Ic 100mA P 0.2W se zabudovanými rezistory R1 2.2KOhm a R2 47KOhm tyto tranzistory zajišťují spojení daného segmentu se zemí tzn. pokud bude na 1. digitu svítit znak "A" ULN2804A[5] přivede na pin A napětí a poté tranzistor uzemní tento segment který se rozsvítí. To znamená že tranzistory DTA123JCA[8] zajišťují multiplexování a ULN2804A[5] zajišťuje rozsvicování jednotlivých znaků.
+
+- 
 
 ## Komponenty použité v projektu
 - Aktivní součástky
