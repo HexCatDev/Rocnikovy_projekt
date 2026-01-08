@@ -5,7 +5,7 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 
 ## To-do list
 - [x] Navrhnout schéma 
-- [ ] Objednat součástky
+- [x] Objednat součástky
 - [ ] Otestovat na breadboardu
 - [ ] Navrhnout PCB
 - [ ] Vyrobit PCB osadit, otestovat
