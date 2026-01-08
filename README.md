@@ -21,12 +21,22 @@ Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. �
   <figcaption align="center"><i>Obrázek 1: Blokové schéma zapojení hodin</i></figcaption>
 </figure>
 
+### Schéma zapojení 
+<figure>
+  <img src="Dokumentace/Blokove_schema.jp" alt="Blokové schéma">
+  <figcaption align="center"><i>Obrázek 1: Blokové schéma zapojení hodin</i></figcaption>
+</figure>
+
 ### Součástky a jejich funkce v obvodu
 V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje. 
+
+- Obecné informace napěťový vstup tzv. Tank Capacitors[2, kap. 4.2.2], jsou to dva kondenzátory na napájení jejich funkce zajišťuje stabilní napětí při náhlém zvětšení proudového zatížení. Každý IO napájený z VCC má připojený tzv. Decoupling Capacitors[10] tyto kondenzátory mají na starosti odrušení od možných na indukovaných vysokých frekvencí, všechny mají hodnotu 100nF. Dále je v obvodu implementována dioda která obvod chrání před přepólováním její úbytek je ± 1100mV[11]
+
+
 - Mozkem obvodu je PIC18F47Q43-I-P[2] má na starosti komunikaci s RTC, multiplexování a řízení hodin. 
 
 - RTC (Real Time Clock)[3] a Krystal[4] 
-Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1].
+Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1]. Doporučená hodnota kondenzátorů které slouží jako kapacitní zátěž je 6-9pF.[3, kap. 4.2.1] Kondenzáty byly zapojeny podle doporučeného zapojení v citaci 3 kapitole FIGURE 4-3[3, kap. FIGURE 4-3].
 
 - Tranzistorové pole ULN2804A[5] tento IO ve svém pouzdře DIP 18 obsahuje 8x NPN transistorů se spol. emitorem s max. kolektorovím  proudem 0,5A a max. napětím mezi kolektorem a emitorem 50V tento IO slouží pro výběr segmentu který bude svítit (A-DP)
 - 7 Segmentové zobrazovače[6][7] 2x 20,32mm a 2x 10mm se společnou katodou obsahují 16x znaků v pouzdře 2x8 (7+DP) jsou připojeny na přes rezistory na ULN2804A[5] a jednotlivé znaky jsou připojeny přes tranzistory DTA123JCA[8] které uzemňují daný znak.
@@ -77,3 +87,5 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - [6] FORYARD OPTOELECTRONICS. *FYD-8021DUHR-21: Dual Digit 7-Segment Display Specification*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D29806.pdf&nazev=ECOM_29807_LD-FYD-8021DUHR-21.pdf
 - [7] FORYARD OPTOELECTRONICS. *FYD-3921BUHR-21: Single Digit 7-Segment Display Specification*. Dostupné z:https://ecom.cz/data/exportdokumentu?soubor=D29797.pdf&nazev=ECOM_29798_LD-FYD-3921BUHR-21.pdf
 - [8] TSC - TAIWAN SEMICONDUCTORS. *DTA123JCA PNP 100mA 5OV R1 2.2K R2 47K*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D59753.pdf&nazev=ECOM_59753_DTA123JCA-SMD.pdf
+- [10] WIKIPEDIA CONTRIBUTORS. *Decoupling*. Wikipedia: The Free Encyclopedia [online]. Dostupné z: https://en.wikipedia.org/wiki/Capacitor#Decoupling
+- [11] KOME *M7 SMD T/R* Dostupné z: https://www.tme.eu/Document/4a413fd76a83438d5e8f54eb6b2d20d6/m1.pdf
