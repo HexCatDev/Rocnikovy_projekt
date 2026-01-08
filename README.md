@@ -2,36 +2,29 @@
 ## Zvláštní poděkování
 Zvláště bych chtěl poděkovat panu Miroslavu Máchovi za rady a pomoc při výběru součástek a řešení problémů konstrukčního typu.
 A také  panu Jiřímu Vinterovi za rady a kontakty.
-449,74 Kč	s DPH
 
 ## To-do list
 - [x] Navrhnout schéma 
 - [x] Objednat součástky
 - [ ] Otestovat na breadboardu
-- [ ] Navrhnout PCB
+- [x] Navrhnout PCB
 - [ ] Vyrobit PCB osadit, otestovat
 
-## Princip a postup návrhu
+## Princip a popis
 Původní myšlenka jak zhotovit tento obvod byla, že by se jednotlivé výstupy na zobrazovače připojily přes posuvné registry, ovšem bylo by jich zapotřebí 6 kousků (HH:mm:ss) převod časového údaje z RTC by bylo zhotoveno přímo v PIC.
 
 Po konzultaci s panem Máchou by bylo lepší Multiplexovat číslice 1:6 tzn. že v jednom okamžiku problikne jeden segment, takto se "probliká" každý segment zvlášť v určité rychlosti(Hz), od určité rychlosti ± 30 Hz se obraz jeví jako spojitý.[1]
 ### Blokové schéma
+
 <figure>
   <img src="Dokumentace/Blokove_schema.jpg" alt="Blokové schéma">
   <figcaption align="center"><i>Obrázek 1: Blokové schéma zapojení hodin</i></figcaption>
 </figure>
 
-### Schéma zapojení 
-<figure>
-  <img src="Dokumentace/Schema.png" alt="Schéma">
-  <figcaption align="center"><i>Obrázek 2: Schéma zapojení hodin</i></figcaption>
-</figure>
-
 ### Součástky a jejich funkce v obvodu
 V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tranzistorové pole a samotné tranzistory (touto částí obvodu se chápe zobrazovací část. Vzhledem ke složitosti projektu zde nebude popsáno jak každý samostatný prvek funguje. 
 
-- Obecné informace napěťový vstup tzv. Tank Capacitors[2, kap. 4.2.2], jsou to dva kondenzátory na napájení jejich funkce zajišťuje stabilní napětí při náhlém zvětšení proudového zatížení. Každý IO napájený z VCC má připojený tzv. Decoupling Capacitors[10] tyto kondenzátory mají na starosti odrušení od možných na indukovaných vysokých frekvencí, všechny mají hodnotu 100nF. Dále je v obvodu implementována dioda která obvod chrání před přepólováním její úbytek je ± 1100mV[11]
-
+- Obecné informace na vstupu napětí jsou  umístěny tzv. Tank Capacitors[2, kap. 4.2.2], jsou to dva kondenzátory 100uF/35V na napájení jejich funkce zajišťuje stabilní napětí při náhlém zvětšení proudového zatížení. Každý IO napájený z VCC má připojený tzv. Decoupling Capacitors[10] tyto kondenzátory mají na starosti odrušení od možných na indukovaných vysokých frekvencí, všechny mají hodnotu 100nF. Dále je v obvodu implementována dioda která obvod chrání před přepólováním její úbytek je ± 1100mV[11], takže velikost napájecího napětí bude 6V (6-1 = 5V) maximální napětí všech IO je 5,5V. Před vyrobením PCB bude zdroj otestován na stabilitu napětí.
 
 - Mozkem obvodu je PIC18F47Q43-I-P[2] má na starosti komunikaci s RTC, multiplexování a řízení hodin. 
 
@@ -43,7 +36,34 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 
 - tranzistory DTA123JCA[8] PNP Uce max. 50V Ic 100mA P 0.2W se zabudovanými rezistory R1 2.2KOhm a R2 47KOhm tyto tranzistory zajišťují spojení daného segmentu se zemí tzn. pokud bude na 1. digitu svítit znak "A" ULN2804A[5] přivede na pin A napětí a poté tranzistor uzemní tento segment který se rozsvítí. To znamená že tranzistory DTA123JCA[8] zajišťují multiplexování a ULN2804A[5] zajišťuje rozsvicování jednotlivých znaků.
 
-- 
+## Návrh schéma a PCB
+- návrh schéma byl konzultován s panem Máchou a také byl upravován v souladu s dokumentací jednotlivých součástek s jejich doporučeními.
+
+<figure>
+  <img src="Dokumentace/Schema.png" alt="Schéma">
+  <figcaption align="center"><i>Obrázek 2: Schéma zapojení hodin</i></figcaption>
+</figure>
+
+<figure>
+  <img src="Dokumentace/PCB_front_side.png" alt="PCB">
+  <figcaption align="center"><i>Obrázek 3: Plně osazená PCB deska z horní strany (některé 3D modely chybí)</i></figcaption>
+</figure>
+
+<figure>
+  <img src="Dokumentace/PCB_front_side_without_components.png" alt="PCB">
+  <figcaption align="center"><i>Obrázek 4: Neosazená PCB deska z horní strany strany</i></figcaption>
+</figure>
+
+<figure>
+  <img src="Dokumentace/PCB_back_side.png" alt="PCB">
+  <figcaption align="center"><i>Obrázek 3: Plně osazená PCB deska ze spodní strany</i></figcaption>
+</figure>
+
+<figure>
+  <img src="Dokumentace/PCB_back_side_without_components.png" alt="PCB">
+  <figcaption align="center"><i>Obrázek 5: Neosazená PCB deska ze spodní strany</i></figcaption>
+</figure>
+
 
 ## Komponenty použité v projektu
 - Aktivní součástky
