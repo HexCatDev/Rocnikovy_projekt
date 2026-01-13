@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>530</used>
+      <free>130542</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>80</used>
+      <free>8112</free>
+    </memory>
+  </executable>
+</project>
