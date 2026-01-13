@@ -1,5 +1,7 @@
 # ninja log v7
 1	346	1768256452275665232	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/MPLABProjects/Hodiny/main.c.p1	9e9a33d28cb9c301
 347	1130	1768256452623681388	/home/nontoxiccat/MPLABProjects/Hodiny/out/Hodiny/default.elf	10b089459dbde99e
-1	519	1768287143130834276	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1	29222c87d3cffa5c
-519	1322	1768287143650843915	/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.elf	147cf25534c7a8c1
+1	281	1768292408990882808	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1	29222c87d3cffa5c
+281	1097	1768292409270869803	/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.elf	147cf25534c7a8c1
+3	353	1768293431840165411	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1	29222c87d3cffa5c
+353	1651	1768293432188167060	/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.elf	147cf25534c7a8c1

@@ -7,9 +7,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2261 . . ]
 "48248
 [v _LATDbits `VS2261 ~T0 @X0 0 e@1217 ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
+[v F41 `(v ~T0 @X0 1 tf1`ul ]
 "20 /opt/microchip/xc8/v3.10/pic/include/builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
+[v __delay `JF41 ~T0 @X0 0 e ]
 [p i __delay ]
 [p mainexit ]
 "5390 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
@@ -1738,104 +1738,181 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 04FEh ;# ">
 "50169
 [; <" TOSU equ 04FFh ;# ">
-"12 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
+"13 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
 [p x FEXTOSC  =  OFF            ]
-"13
-[p x RSTOSC  =  HFINTOSC_1MHZ   ]
 "14
-[p x WDTE  =  OFF               ]
+[p x RSTOSC  =  HFINTOSC_1MHZ   ]
 "15
+[p x WDTE  =  OFF               ]
+"16
 [p x MCLRE  =  INTMCLR          ]
-"18
-[v _CLK `(v ~T0 @X0 1 ef2`i`i ]
 "19
+[v _CLK `(v ~T0 @X0 1 ef1`*i ]
+"20
 {
 [e :U _CLK ]
-"18
-[v _H `i ~T0 @X0 1 r1 ]
-[v _HH `i ~T0 @X0 1 r2 ]
 "19
-[f ]
+[v _time `*i ~T0 @X0 1 r1 ]
 "20
+[f ]
+"21
+[v _hh `i ~T0 @X0 1 a ]
+[v _h `i ~T0 @X0 1 a ]
+[v _mm `i ~T0 @X0 1 a ]
+[v _m `i ~T0 @X0 1 a ]
+[v _ss `i ~T0 @X0 1 a ]
+[v _s `i ~T0 @X0 1 a ]
+"22
+[e = *U + _time * -> -> 0 `i `x -> -> # *U _time `i `x _hh ]
+"23
+[e = *U + _time * -> -> 1 `i `x -> -> # *U _time `i `x _h ]
+"24
+[e = *U + _time * -> -> 2 `i `x -> -> # *U _time `i `x _mm ]
+"25
+[e = *U + _time * -> -> 3 `i `x -> -> # *U _time `i `x _m ]
+"26
+[e = *U + _time * -> -> 4 `i `x -> -> # *U _time `i `x _ss ]
+"27
+[e = *U + _time * -> -> 5 `i `x -> -> # *U _time `i `x _s ]
+"28
 [e :U 2401 ]
 {
-"21
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-"22
-[e ++ _H -> 1 `i ]
-"23
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"24
-[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
-"25
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"27
-[e $ ! >= _H -> 10 `i 2403  ]
-{
-"28
-[e = _H -> 0 `i ]
 "29
-[e ++ _HH -> 1 `i ]
+[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
 "30
+[e ++ _s -> 1 `i ]
+"31
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"32
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+"33
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"35
+[e $ ! >= _s -> 10 `i 2403  ]
+{
+"36
+[e = _s -> 0 `i ]
+"37
+[e ++ _ss -> 1 `i ]
+"38
 }
 [e :U 2403 ]
-"31
-[e $ ! && >= _HH -> 24 `i >= _H -> 10 `i 2404  ]
+"39
+[e $ ! && >= _ss -> 60 `i >= _s -> 10 `i 2404  ]
 {
-"32
-[e = _H -> 0 `i ]
-"33
-[e = _HH -> 0 `i ]
-"34
+"40
+[e = _s -> 0 `i ]
+"41
+[e ++ _ss -> 1 `i ]
+"42
 }
 [e :U 2404 ]
-"35
+"43
+[e $ ! >= _ss -> 60 `i 2405  ]
+{
+"44
+[e ++ _m -> 1 `i ]
+"45
+}
+[e :U 2405 ]
+"46
+[e $ ! && >= _m -> 10 `i >= _ss -> 60 `i 2406  ]
+{
+"47
+[e = _m -> 0 `i ]
+"48
+[e ++ _mm -> 1 `i ]
+"49
+}
+[e :U 2406 ]
+"50
+[e $ ! >= _mm -> 60 `i 2407  ]
+{
+"51
+[e ++ _h -> 1 `i ]
+"52
+}
+[e :U 2407 ]
+"53
+[e $ ! && >= _h -> 10 `i >= _mm -> 60 `i 2408  ]
+{
+"54
+[e = _h -> 0 `i ]
+"55
+[e ++ _hh -> 1 `i ]
+"56
+}
+[e :U 2408 ]
+"57
+[e $ ! && && && && && >= _hh -> 24 `i >= _h -> 10 `i >= _mm -> 60 `i >= _m -> 10 `i >= _ss -> 60 `i >= _s -> 10 `i 2409  ]
+"58
+{
+"59
+[e = _hh -> 0 `i ]
+"60
+[e = _h -> 0 `i ]
+"61
+[e = _mm -> 0 `i ]
+"62
+[e = _m -> 0 `i ]
+"63
+[e = _ss -> 0 `i ]
+"64
+[e = _s -> 0 `i ]
+"65
+}
+[e :U 2409 ]
+"66
 }
 [e :U 2400 ]
 [e $U 2401  ]
 [e :U 2402 ]
-"37
+"68
 [e :UE 2399 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"39
+"70
 [v _main `(i ~T0 @X0 1 ef ]
-"40
+"71
 {
 [e :U _main ]
 [f ]
-"43
+"74
 [e = _OSCFRQ -> -> 3 `i `uc ]
-"46
+"77
 [e = _ANSELC -> -> 0 `i `uc ]
-"48
+"80
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"49
+"81
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"52
+"82
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+"83
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+"84
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+"85
+[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+"88
 [e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
-"53
+"89
 [e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-"54
+"90
 [e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
-"55
+"91
 [e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-"56
+"92
 [e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-"57
+"93
 [e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-"58
+"94
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"59
+"95
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-"61
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
-"62
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[v F16953 `i ~T0 @X0 -> 8 `i s ]
-[i F16953
+[v F16958 `i ~T0 @X0 -> 8 `i s ]
+[i F16958
 :U ..
-"64
+"98
 -> 0 `i
 -> 1 `i
 -> 2 `i
@@ -1847,91 +1924,160 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _Segments `i ~T0 @X0 -> 8 `i a ]
-[e = _Segments F16953 ]
-[v F16955 `i ~T0 @X0 -> 9 `i s ]
-[i F16955
+[e = _Segments F16958 ]
+[v F16960 `i ~T0 @X0 -> 9 `i s ]
+[i F16960
 :U ..
 ..
 ]
-"66
+"100
 [v _numbers `i ~T0 @X0 -> 9 `i a ]
-[e = _numbers F16955 ]
-"70
+[e = _numbers F16960 ]
+"102
+[v _time `i ~T0 @X0 -> 5 `i a ]
+"103
+[e ( _CLK (1 &U _time ]
+"106
+[e :U 2412 ]
+{
+"107
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 2406  ]
-[e $U 2407  ]
-[e :U 2406 ]
-{
-"71
-[e $U 2410  ]
-{
-"72
-[e :U 2411 ]
-[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"73
-[e :U 2412 ]
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"74
-[e :U 2413 ]
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"75
+[e $ < _i -> 6 `i 2414  ]
+[e $U 2415  ]
 [e :U 2414 ]
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"76
-[e :U 2415 ]
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"77
-[e :U 2416 ]
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"78
-[e :U 2417 ]
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"79
-[e :U 2418 ]
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-[e $U 2409  ]
-"80
+{
+"108
+[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
+"109
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+"110
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+"111
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
+"112
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
+"113
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
+"115
+[e $U 2418  ]
+{
+"116
+[e :U 2419 ]
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"117
+[e :U 2420 ]
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"118
+[e :U 2421 ]
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"119
+[e :U 2422 ]
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"120
+[e :U 2423 ]
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"121
+[e :U 2424 ]
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[e $U 2417  ]
+"122
 }
-[e $U 2409  ]
-[e :U 2410 ]
-[e [\ *U + &U _Segments * -> -> _i `ui `ux -> -> # *U &U _Segments `ui `ux , $ -> 0 `i 2411
- , $ -> 1 `i 2412
- , $ -> 2 `i 2413
- , $ -> 3 `i 2414
- , $ -> 4 `i 2415
- , $ -> 5 `i 2416
- , $ -> 6 `i 2417
- , $ -> 7 `i 2418
- 2409 ]
-[e :U 2409 ]
-"81
+[e $U 2417  ]
+[e :U 2418 ]
+[e [\ _i , $ -> 0 `i 2419
+ , $ -> 1 `i 2420
+ , $ -> 2 `i 2421
+ , $ -> 3 `i 2422
+ , $ -> 4 `i 2423
+ , $ -> 5 `i 2424
+ 2417 ]
+[e :U 2417 ]
+"123
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 2406  ]
-[e :U 2407 ]
+[e $ < _i -> 6 `i 2414  ]
+[e :U 2415 ]
 }
-"82
-[v _H `i ~T0 @X0 1 a ]
-"83
-[v _HH `i ~T0 @X0 1 a ]
-"84
-[e = _H -> 0 `i ]
-"85
-[e = _HH -> 0 `i ]
-"86
-[e ( _CLK (2 , _H _HH ]
-"88
+"126
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 2425  ]
+[e $U 2426  ]
+[e :U 2425 ]
+{
+"127
+[e $U 2429  ]
+{
+"128
+[e :U 2430 ]
+[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
+[e $U 2428  ]
+"129
+[e :U 2431 ]
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"130
+[e :U 2432 ]
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"131
+[e :U 2433 ]
+[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"132
+[e :U 2434 ]
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"133
+[e :U 2435 ]
+[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"134
+[e :U 2436 ]
+[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"135
+[e :U 2437 ]
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+[e $U 2428  ]
+"136
+}
+[e $U 2428  ]
+[e :U 2429 ]
+[e [\ *U + &U _Segments * -> -> _i `ui `ux -> -> # *U &U _Segments `ui `ux , $ -> 0 `i 2430
+ , $ -> 1 `i 2431
+ , $ -> 2 `i 2432
+ , $ -> 3 `i 2433
+ , $ -> 4 `i 2434
+ , $ -> 5 `i 2435
+ , $ -> 6 `i 2436
+ , $ -> 7 `i 2437
+ 2428 ]
+[e :U 2428 ]
+"137
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"138
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 2425  ]
+[e :U 2426 ]
+}
+"139
+}
+[e :U 2411 ]
+[e $U 2412  ]
+[e :U 2413 ]
+"141
 [e ) -> 0 `i ]
-[e $UE 2405  ]
-"89
-[e :UE 2405 ]
+[e $UE 2410  ]
+"142
+[e :UE 2410 ]
 }

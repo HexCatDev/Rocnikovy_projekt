@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 18F47Q43 ]
 [d frameptr 1249 ]
-"18 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
+"19 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
 [v _CLK CLK `(v  1 e 1 0 ]
-"39
+"70
 [v _main main `(i  1 e 2 0 ]
 "7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -155,25 +155,34 @@
 "48528
 "48528
 [v _TRISDbits TRISDbits `VES83  1 e 1 @1225 ]
-"39 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
+"70 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"70
-[v main@i i `i  1 a 2 44 ]
-"66
-[v main@numbers numbers `[9]i  1 a 18 8 ]
-"64
-[v main@Segments Segments `[8]i  1 a 16 26 ]
-"83
-[v main@HH HH `i  1 a 2 42 ]
-"62
-[v main@F16953 F16953 `[8]i  1 s 16 F16953 ]
-"89
+"126
+[v main@i_218 i `i  1 a 2 64 ]
+"107
+[v main@i i `i  1 a 2 62 ]
+"100
+[v main@numbers numbers `[9]i  1 a 18 18 ]
+"98
+[v main@Segments Segments `[8]i  1 a 16 36 ]
+"102
+[v main@time time `[5]i  1 a 10 52 ]
+"95
+[v main@F16958 F16958 `[8]i  1 s 16 F16958 ]
+"142
 } 0
-"18
+"19
 [v _CLK CLK `(v  1 e 1 0 ]
 {
-[v CLK@H H `i  1 p 2 0 ]
-[v CLK@HH HH `i  1 p 2 2 ]
-"37
+"21
+[v CLK@ss ss `i  1 a 2 14 ]
+[v CLK@s s `i  1 a 2 12 ]
+[v CLK@mm mm `i  1 a 2 10 ]
+[v CLK@m m `i  1 a 2 8 ]
+[v CLK@h h `i  1 a 2 6 ]
+[v CLK@hh hh `i  1 a 2 4 ]
+"19
+[v CLK@time time `*.39i  1 p 2 0 ]
+"68
 } 0
