@@ -24,7 +24,7 @@ rule C_COMPILER__Hodiny_default_default_XC8_compile_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__Hodiny_default_image_l6s2x_of_
+rule C_EXECUTABLE_LINKER__Hodiny_default_image_BvNriB54_
   command = $PRE_LINK && /opt/microchip/xc8/v3.10/bin/xc8-cc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S"/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/cmake/Hodiny/default" -B"/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/_build/Hodiny/default"
+  command = /usr/bin/cmake --regenerate-during-build -S"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/cmake/Hodiny/default" -B"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default"
   description = Re-running CMake...
   generator = 1
 

@@ -1,61 +1,57 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "48237 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
-[s S2262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2262 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+[s S2264 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2264 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
 "48236
-[u S2261 `S2262 1 ]
-[n S2261 . . ]
+[u S2263 `S2264 1 ]
+[n S2263 . . ]
 "48248
-[v _LATDbits `VS2261 ~T0 @X0 0 e@1217 ]
-[v F41 `(v ~T0 @X0 1 tf1`ul ]
-"20 /opt/microchip/xc8/v3.10/pic/include/builtins.h
-[v __delay `JF41 ~T0 @X0 0 e ]
-[p i __delay ]
+[v _LATDbits `VS2263 ~T0 @X0 0 e@1217 ]
 [p mainexit ]
-"5390 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
+"5390
 [v _OSCFRQ `Vuc ~T0 @X0 0 e@177 ]
 "40501
 [v _ANSELC `Vuc ~T0 @X0 0 e@1040 ]
 "48393
-[s S2268 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2268 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"48392
-[u S2267 `S2268 1 ]
-[n S2267 . . ]
-"48404
-[v _TRISBbits `VS2267 ~T0 @X0 0 e@1223 ]
-"48517
-[s S2272 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2272 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
-"48516
-[u S2271 `S2272 1 ]
-[n S2271 . . ]
-"48528
-[v _TRISDbits `VS2271 ~T0 @X0 0 e@1225 ]
-"48455
 [s S2270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2270 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"48454
+[n S2270 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"48392
 [u S2269 `S2270 1 ]
 [n S2269 . . ]
+"48404
+[v _TRISBbits `VS2269 ~T0 @X0 0 e@1223 ]
+"48517
+[s S2274 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2274 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"48516
+[u S2273 `S2274 1 ]
+[n S2273 . . ]
+"48528
+[v _TRISDbits `VS2273 ~T0 @X0 0 e@1225 ]
+"48455
+[s S2272 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2272 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"48454
+[u S2271 `S2272 1 ]
+[n S2271 . . ]
 "48466
-[v _TRISCbits `VS2269 ~T0 @X0 0 e@1224 ]
-"48113
-[s S2258 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2258 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"48112
-[u S2257 `S2258 1 ]
-[n S2257 . . ]
-"48124
-[v _LATBbits `VS2257 ~T0 @X0 0 e@1215 ]
+[v _TRISCbits `VS2271 ~T0 @X0 0 e@1224 ]
 "48175
-[s S2260 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2260 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+[s S2262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2262 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 "48174
+[u S2261 `S2262 1 ]
+[n S2261 . . ]
+"48186
+[v _LATCbits `VS2261 ~T0 @X0 0 e@1216 ]
+"48113
+[s S2260 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2260 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"48112
 [u S2259 `S2260 1 ]
 [n S2259 . . ]
-"48186
-[v _LATCbits `VS2259 ~T0 @X0 0 e@1216 ]
+"48124
+[v _LATBbits `VS2259 ~T0 @X0 0 e@1215 ]
 "270 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
 [; <" CLKRCON equ 039h ;# ">
 "374
@@ -1738,181 +1734,126 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 04FEh ;# ">
 "50169
 [; <" TOSU equ 04FFh ;# ">
-"13 /home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c
+"14 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [p x FEXTOSC  =  OFF            ]
-"14
-[p x RSTOSC  =  HFINTOSC_1MHZ   ]
 "15
-[p x WDTE  =  OFF               ]
+[p x RSTOSC  =  HFINTOSC_1MHZ   ]
 "16
+[p x WDTE  =  OFF               ]
+"17
 [p x MCLRE  =  INTMCLR          ]
-"19
-[v _CLK `(v ~T0 @X0 1 ef1`*i ]
 "20
+[v _CLK `(v ~T0 @X0 1 ef1`*i ]
+"21
 {
 [e :U _CLK ]
-"19
-[v _time `*i ~T0 @X0 1 r1 ]
 "20
-[f ]
+[v _time `*i ~T0 @X0 1 r1 ]
 "21
-[v _hh `i ~T0 @X0 1 a ]
-[v _h `i ~T0 @X0 1 a ]
-[v _mm `i ~T0 @X0 1 a ]
-[v _m `i ~T0 @X0 1 a ]
-[v _ss `i ~T0 @X0 1 a ]
-[v _s `i ~T0 @X0 1 a ]
+[f ]
 "22
-[e = *U + _time * -> -> 0 `i `x -> -> # *U _time `i `x _hh ]
+[v _h `i ~T0 @X0 1 a ]
+[e = _h *U + _time * -> -> 0 `i `x -> -> # *U _time `i `x ]
+[v _m `i ~T0 @X0 1 a ]
+[e = _m *U + _time * -> -> 1 `i `x -> -> # *U _time `i `x ]
+[v _s `i ~T0 @X0 1 a ]
+[e = _s *U + _time * -> -> 2 `i `x -> -> # *U _time `i `x ]
 "23
-[e = *U + _time * -> -> 1 `i `x -> -> # *U _time `i `x _h ]
-"24
-[e = *U + _time * -> -> 2 `i `x -> -> # *U _time `i `x _mm ]
-"25
-[e = *U + _time * -> -> 3 `i `x -> -> # *U _time `i `x _m ]
-"26
-[e = *U + _time * -> -> 4 `i `x -> -> # *U _time `i `x _ss ]
-"27
-[e = *U + _time * -> -> 5 `i `x -> -> # *U _time `i `x _s ]
-"28
-[e :U 2401 ]
-{
-"29
-[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-"30
-[e ++ _s -> 1 `i ]
-"31
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"32
-[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
-"33
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"35
-[e $ ! >= _s -> 10 `i 2403  ]
-{
-"36
-[e = _s -> 0 `i ]
-"37
-[e ++ _ss -> 1 `i ]
-"38
-}
 [e :U 2403 ]
-"39
-[e $ ! && >= _ss -> 60 `i >= _s -> 10 `i 2404  ]
 {
-"40
+"24
+[e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
+"25
+[e ++ _s -> 1 `i ]
+"27
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+"29
+[e $ ! >= _s -> 60 `i 2405  ]
+{
+"30
 [e = _s -> 0 `i ]
-"41
-[e ++ _ss -> 1 `i ]
-"42
-}
-[e :U 2404 ]
-"43
-[e $ ! >= _ss -> 60 `i 2405  ]
-{
-"44
+"31
 [e ++ _m -> 1 `i ]
-"45
+"32
 }
 [e :U 2405 ]
-"46
-[e $ ! && >= _m -> 10 `i >= _ss -> 60 `i 2406  ]
+"33
+[e $ ! >= _m -> 60 `i 2406  ]
 {
-"47
+"34
 [e = _m -> 0 `i ]
-"48
-[e ++ _mm -> 1 `i ]
-"49
+"35
+[e ++ _h -> 1 `i ]
+"36
 }
 [e :U 2406 ]
-"50
-[e $ ! >= _mm -> 60 `i 2407  ]
+"37
+[e $ ! >= _h -> 24 `i 2407  ]
 {
-"51
-[e ++ _h -> 1 `i ]
-"52
+"38
+[e = _h -> 0 `i ]
+"39
 }
 [e :U 2407 ]
-"53
-[e $ ! && >= _h -> 10 `i >= _mm -> 60 `i 2408  ]
-{
-"54
-[e = _h -> 0 `i ]
-"55
-[e ++ _hh -> 1 `i ]
-"56
+"40
 }
-[e :U 2408 ]
-"57
-[e $ ! && && && && && >= _hh -> 24 `i >= _h -> 10 `i >= _mm -> 60 `i >= _m -> 10 `i >= _ss -> 60 `i >= _s -> 10 `i 2409  ]
-"58
-{
-"59
-[e = _hh -> 0 `i ]
-"60
-[e = _h -> 0 `i ]
-"61
-[e = _mm -> 0 `i ]
-"62
-[e = _m -> 0 `i ]
-"63
-[e = _ss -> 0 `i ]
-"64
-[e = _s -> 0 `i ]
-"65
-}
-[e :U 2409 ]
-"66
-}
-[e :U 2400 ]
-[e $U 2401  ]
 [e :U 2402 ]
-"68
-[e :UE 2399 ]
+[e $U 2403  ]
+[e :U 2404 ]
+"41
+[e = *U + _time * -> -> 1 `i `x -> -> # *U _time `i `x _h ]
+"42
+[e = *U + _time * -> -> 3 `i `x -> -> # *U _time `i `x _m ]
+"43
+[e = *U + _time * -> -> 2 `i `x -> -> # *U _time `i `x _s ]
+"45
+[e $UE 2401  ]
+"46
+[e :UE 2401 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"70
+"48
 [v _main `(i ~T0 @X0 1 ef ]
-"71
+"49
 {
 [e :U _main ]
 [f ]
-"74
+"52
 [e = _OSCFRQ -> -> 3 `i `uc ]
-"77
+"55
 [e = _ANSELC -> -> 0 `i `uc ]
-"80
+"58
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"81
+"59
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"82
+"60
 [e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"83
+"61
 [e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-"84
+"62
 [e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-"85
+"63
 [e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
-"88
+"66
 [e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
-"89
+"67
 [e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-"90
+"68
 [e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
-"91
+"69
 [e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-"92
+"70
 [e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-"93
+"71
 [e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-"94
+"72
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"95
+"73
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-[v F16958 `i ~T0 @X0 -> 8 `i s ]
-[i F16958
+[v F17276 `i ~T0 @X0 -> 8 `i s ]
+[i F17276
 :U ..
-"98
+"76
 -> 0 `i
 -> 1 `i
 -> 2 `i
@@ -1924,160 +1865,290 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _Segments `i ~T0 @X0 -> 8 `i a ]
-[e = _Segments F16958 ]
-[v F16960 `i ~T0 @X0 -> 9 `i s ]
-[i F16960
+[e = _Segments F17276 ]
+"78
+[v _DP `i ~T0 @X0 1 a ]
+[e = _DP -> . . _LATDbits 0 7 `i ]
+"79
+[v _A `i ~T0 @X0 1 a ]
+[e = _A -> . . _LATDbits 0 6 `i ]
+"80
+[v _B `i ~T0 @X0 1 a ]
+[e = _B -> . . _LATDbits 0 5 `i ]
+"81
+[v _C `i ~T0 @X0 1 a ]
+[e = _C -> . . _LATDbits 0 4 `i ]
+"82
+[v _D `i ~T0 @X0 1 a ]
+[e = _D -> . . _LATDbits 0 3 `i ]
+"83
+[v _E `i ~T0 @X0 1 a ]
+[e = _E -> . . _LATCbits 0 7 `i ]
+"84
+[v _F `i ~T0 @X0 1 a ]
+[e = _F -> . . _LATCbits 0 6 `i ]
+"85
+[v _G `i ~T0 @X0 1 a ]
+[e = _G -> . . _LATCbits 0 5 `i ]
+[v F17287 `i ~T0 @X0 -> 8 `i t ]
+[v F17286 `F17287 ~T0 @X0 -> 10 `i s ]
+[i F17286
 :U ..
+:U ..
+"88
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+..
+:U ..
+-> 0 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 0 `i
+-> 0 `i
+-> 0 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 0 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 0 `i
+-> 0 `i
+-> 0 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+..
+:U ..
+-> 0 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 0 `i
+-> 1 `i
+-> 1 `i
+..
 ..
 ]
+[v F17289 `i ~T0 @X0 -> 8 `i t ]
+[v _numbers `F17289 ~T0 @X0 -> 10 `i a ]
+[e = _numbers F17286 ]
 "100
-[v _numbers `i ~T0 @X0 -> 9 `i a ]
-[e = _numbers F16960 ]
-"102
-[v _time `i ~T0 @X0 -> 5 `i a ]
-"103
+[v _time `i ~T0 @X0 -> 3 `i a ]
+"101
 [e ( _CLK (1 &U _time ]
-"106
+"103
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $ <= _j -> 1 `i 2409  ]
+[e $U 2410  ]
+[e :U 2409 ]
+{
+"104
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 6 `i 2412  ]
+[e $U 2413  ]
 [e :U 2412 ]
 {
-"107
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 6 `i 2414  ]
-[e $U 2415  ]
-[e :U 2414 ]
-{
-"108
+"105
 [e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
-"109
+"106
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-"110
+"107
 [e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
-"111
+"108
 [e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-"112
+"109
 [e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-"113
+"110
 [e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
-"115
-[e $U 2418  ]
+"112
+[e $U 2416  ]
 {
-"116
-[e :U 2419 ]
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"117
-[e :U 2420 ]
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"118
-[e :U 2421 ]
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"119
-[e :U 2422 ]
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"120
-[e :U 2423 ]
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"121
-[e :U 2424 ]
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
-[e $U 2417  ]
-"122
-}
-[e $U 2417  ]
-[e :U 2418 ]
-[e [\ _i , $ -> 0 `i 2419
- , $ -> 1 `i 2420
- , $ -> 2 `i 2421
- , $ -> 3 `i 2422
- , $ -> 4 `i 2423
- , $ -> 5 `i 2424
- 2417 ]
+"113
 [e :U 2417 ]
-"123
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"114
+[e :U 2418 ]
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"115
+[e :U 2419 ]
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"116
+[e :U 2420 ]
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"117
+[e :U 2421 ]
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"118
+[e :U 2422 ]
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[e $U 2415  ]
+"119
+}
+[e $U 2415  ]
+[e :U 2416 ]
+[e [\ _i , $ -> 0 `i 2417
+ , $ -> 1 `i 2418
+ , $ -> 2 `i 2419
+ , $ -> 3 `i 2420
+ , $ -> 4 `i 2421
+ , $ -> 5 `i 2422
+ 2415 ]
+[e :U 2415 ]
+"120
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 6 `i 2414  ]
-[e :U 2415 ]
+[e $ < _i -> 6 `i 2412  ]
+[e :U 2413 ]
 }
-"126
+"123
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 2425  ]
-[e $U 2426  ]
-[e :U 2425 ]
+[e $ < _i -> 8 `i 2423  ]
+[e $U 2424  ]
+[e :U 2423 ]
 {
-"127
-[e $U 2429  ]
+"124
+[e $U 2427  ]
 {
-"128
-[e :U 2430 ]
+"125
+[e :U 2428 ]
 [e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
-[e $U 2428  ]
-"129
-[e :U 2431 ]
+[e $U 2426  ]
+"126
+[e :U 2429 ]
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"130
-[e :U 2432 ]
+[e $U 2426  ]
+"127
+[e :U 2430 ]
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"131
-[e :U 2433 ]
+[e $U 2426  ]
+"128
+[e :U 2431 ]
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"132
-[e :U 2434 ]
+[e $U 2426  ]
+"129
+[e :U 2432 ]
 [e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"133
-[e :U 2435 ]
+[e $U 2426  ]
+"130
+[e :U 2433 ]
 [e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"134
-[e :U 2436 ]
+[e $U 2426  ]
+"131
+[e :U 2434 ]
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-[e $U 2428  ]
-"135
-[e :U 2437 ]
+[e $U 2426  ]
+"132
+[e :U 2435 ]
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-[e $U 2428  ]
+[e $U 2426  ]
+"133
+}
+[e $U 2426  ]
+[e :U 2427 ]
+[e [\ *U + &U _Segments * -> -> _i `ui `ux -> -> # *U &U _Segments `ui `ux , $ -> 0 `i 2428
+ , $ -> 1 `i 2429
+ , $ -> 2 `i 2430
+ , $ -> 3 `i 2431
+ , $ -> 4 `i 2432
+ , $ -> 5 `i 2433
+ , $ -> 6 `i 2434
+ , $ -> 7 `i 2435
+ 2426 ]
+[e :U 2426 ]
+"135
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 2423  ]
+[e :U 2424 ]
+}
 "136
 }
-[e $U 2428  ]
-[e :U 2429 ]
-[e [\ *U + &U _Segments * -> -> _i `ui `ux -> -> # *U &U _Segments `ui `ux , $ -> 0 `i 2430
- , $ -> 1 `i 2431
- , $ -> 2 `i 2432
- , $ -> 3 `i 2433
- , $ -> 4 `i 2434
- , $ -> 5 `i 2435
- , $ -> 6 `i 2436
- , $ -> 7 `i 2437
- 2428 ]
-[e :U 2428 ]
-"137
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ++ _j -> 1 `i ]
+[e $ <= _j -> 1 `i 2409  ]
+[e :U 2410 ]
+}
 "138
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 2425  ]
-[e :U 2426 ]
-}
-"139
-}
-[e :U 2411 ]
-[e $U 2412  ]
-[e :U 2413 ]
-"141
 [e ) -> 0 `i ]
-[e $UE 2410  ]
-"142
-[e :UE 2410 ]
+[e $UE 2408  ]
+"139
+[e :UE 2408 ]
 }

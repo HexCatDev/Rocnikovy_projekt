@@ -18,6 +18,7 @@
             ],
             "fileSet": "default",
             "toolchain": "default-XC8",
+            "userVariables": "default-uservariables_1",
             "preBuildSteps": [],
             "postBuildSteps": []
         }
@@ -25,6 +26,11 @@
     "propertyGroups": [
         {
             "name": "default-uservariables",
+            "type": "uservariables",
+            "properties": {}
+        },
+        {
+            "name": "default-uservariables_1",
             "type": "uservariables",
             "properties": {}
         },

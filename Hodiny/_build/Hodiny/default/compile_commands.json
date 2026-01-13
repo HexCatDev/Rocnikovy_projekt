@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/_build/Hodiny/default",
-  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c\"",
-  "file": "/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/main.c",
-  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1"
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1"
 }
 ]

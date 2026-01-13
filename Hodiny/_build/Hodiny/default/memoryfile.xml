@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.hex">
+  <executable name="/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>1232</used>
-      <free>129840</free>
+      <used>954</used>
+      <free>130118</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
-      <used>100</used>
-      <free>8092</free>
+      <used>374</used>
+      <free>7818</free>
     </memory>
   </executable>
 </project>
