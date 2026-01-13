@@ -3,9 +3,20 @@
 [d edition pro ]
 [d chip 18F47Q43 ]
 [d frameptr 1249 ]
-"20 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-[v _CLK CLK `(v  1 e 1 0 ]
-"48
+"22 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[e E17116 Segments `uc
+DPS 0
+As 1
+BS 2
+CS 3
+DS 4
+ES 5
+FS 6
+GS 7
+]
+"21
+[v _display_digit display_digit `(v  1 e 1 0 ]
+"32
 [v _main main `(i  1 e 2 0 ]
 "7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -71,7 +82,7 @@
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
 "40501
 [v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
-[s S131 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S146 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -81,11 +92,11 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "48124
-[u S140 . 1 `S131 1 . 1 0 ]
+[u S155 . 1 `S146 1 . 1 0 ]
 "48124
 "48124
-[v _LATBbits LATBbits `VES140  1 e 1 @1215 ]
-[s S110 . 1 `uc 1 LATC0 1 0 :1:0 
+[v _LATBbits LATBbits `VES155  1 e 1 @1215 ]
+[s S54 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -95,10 +106,10 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "48186
-[u S119 . 1 `S110 1 . 1 0 ]
+[u S63 . 1 `S54 1 . 1 0 ]
 "48186
 "48186
-[v _LATCbits LATCbits `VES119  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES63  1 e 1 @1216 ]
 [s S24 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
@@ -113,7 +124,7 @@
 "48248
 "48248
 [v _LATDbits LATDbits `VES33  1 e 1 @1217 ]
-[s S47 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S77 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -123,11 +134,11 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "48404
-[u S56 . 1 `S47 1 . 1 0 ]
+[u S86 . 1 `S77 1 . 1 0 ]
 "48404
 "48404
-[v _TRISBbits TRISBbits `VES56  1 e 1 @1223 ]
-[s S89 . 1 `uc 1 TRISC0 1 0 :1:0 
+[v _TRISBbits TRISBbits `VES86  1 e 1 @1223 ]
+[s S119 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -137,11 +148,11 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "48466
-[u S98 . 1 `S89 1 . 1 0 ]
+[u S128 . 1 `S119 1 . 1 0 ]
 "48466
 "48466
-[v _TRISCbits TRISCbits `VES98  1 e 1 @1224 ]
-[s S68 . 1 `uc 1 TRISD0 1 0 :1:0 
+[v _TRISCbits TRISCbits `VES128  1 e 1 @1224 ]
+[s S98 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -151,39 +162,26 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "48528
-[u S77 . 1 `S68 1 . 1 0 ]
+[u S107 . 1 `S98 1 . 1 0 ]
 "48528
 "48528
-[v _TRISDbits TRISDbits `VES77  1 e 1 @1225 ]
-"48 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[v _TRISDbits TRISDbits `VES107  1 e 1 @1225 ]
+"32 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"123
-[v main@i_228 i `i  1 a 2 186 ]
-"104
-[v main@i i `i  1 a 2 184 ]
-"103
-[v main@j j `i  1 a 2 182 ]
-"88
+"92
+[v main@i i `i  1 a 2 162 ]
+"71
 [v main@numbers numbers `[10][8]i  1 a 160 0 ]
-"76
-[v main@Segments Segments `[8]i  1 a 16 160 ]
-"100
-[v main@time time `[3]i  1 a 6 176 ]
-"73
-[v main@F17276 F17276 `[8]i  1 s 16 F17276 ]
 "85
-[v main@F17286 F17286 `[10][8]i  1 s 160 F17286 ]
-"139
+[v main@value value `i  1 a 2 160 ]
+"68
+[v main@F17136 F17136 `[10][8]i  1 s 160 F17136 ]
+"114
 } 0
-"20
-[v _CLK CLK `(v  1 e 1 0 ]
+"21
+[v _display_digit display_digit `(v  1 e 1 0 ]
 {
-"22
-[v CLK@s s `i  1 a 2 6 ]
-[v CLK@m m `i  1 a 2 4 ]
-[v CLK@h h `i  1 a 2 2 ]
-"20
-[v CLK@time time `*.39i  1 p 2 0 ]
-"46
+[v display_digit@segments segments `*.39Ci  1 p 2 0 ]
+"30
 } 0

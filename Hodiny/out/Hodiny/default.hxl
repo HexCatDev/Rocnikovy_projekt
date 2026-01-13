@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXFBKcNc/driver_tmp_3.o
+ /tmp/xcXJOkMfK/driver_tmp_3.o
  -O/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hex
  -logfile=/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hxl
  -addressing=1
@@ -9,15 +9,15 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXFBKcNc/driver_tmp_3.o)
-  2600h - 29B1h		(/tmp/xcXFBKcNc/driver_tmp_3.o)
-  1FFFCh - 1FFFFh		(/tmp/xcXFBKcNc/driver_tmp_3.o)
-  300000h - 300000h		(/tmp/xcXFBKcNc/driver_tmp_3.o)
-  300002h - 300002h		(/tmp/xcXFBKcNc/driver_tmp_3.o)
-  300004h - 300004h		(/tmp/xcXFBKcNc/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXJOkMfK/driver_tmp_3.o)
+  2600h - 291Dh		(/tmp/xcXJOkMfK/driver_tmp_3.o)
+  1FFFCh - 1FFFFh		(/tmp/xcXJOkMfK/driver_tmp_3.o)
+  300000h - 300000h		(/tmp/xcXJOkMfK/driver_tmp_3.o)
+  300002h - 300002h		(/tmp/xcXJOkMfK/driver_tmp_3.o)
+  300004h - 300004h		(/tmp/xcXJOkMfK/driver_tmp_3.o)
  Unused ranges:
   4h - 25FFh
-  29B2h - 1FFFBh
+  291Eh - 1FFFBh
   20000h - 2FFFFFh
   300001h - 300001h
   300003h - 300003h
@@ -25,7 +25,7 @@
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXFBKcNc/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXJOkMfK/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -80,17 +80,7 @@
 000028E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000028F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002900 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002910 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002920 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002930 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002940 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002950 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002960 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002970 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002980 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002990 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000029A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000029B0 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+00002910 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 0001FFF0 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
 ----------------------------------------------------------
