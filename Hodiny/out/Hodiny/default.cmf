@@ -11,18 +11,18 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXJOkMfK/driver_tmp_9.o
+$/tmp/xcXBNOnji/driver_tmp_9.o
 init CODE 0 1FFFC 1FFFC 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 5 1 1
 $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-cinit CODE 0 28F8 28F8 26 1 2
-text0 CODE 0 2602 2602 144 1 2
-text1 CODE 0 2746 2746 112 1 2
+cinit CODE 0 28D0 28D0 26 1 2
+text0 CODE 0 2602 2602 11C 1 2
+text1 CODE 0 271E 271E 112 1 2
 cstackCOMRAM COMRAM 1 501 501 5 1 1
-cstackBANK6 BANK6 1 600 600 A4 1 1
+cstackBANK6 BANK6 1 600 600 A2 1 1
 smallconst SMALLCONST 0 2600 2600 2 1 2
-idataBANK5 CODE 0 2858 2858 A0 1 1
+idataBANK5 CODE 0 2830 2830 A0 1 1
 dataBANK5 BANK5 1 560 560 A0 1 1
 config CONFIG 4 300000 300000 5 1 1
 # %UNUSED Section
@@ -31,20 +31,20 @@ config CONFIG 4 300000 300000 5 1 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 6A4-24FF 1
+RAM 6A2-24FF 1
 SFR 0-4FF 1
 SFR 2500-25FF 1
-BANK6 6A4-6FF 1
+BANK6 6A2-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-25FF 1
-CONST 291E-1FFFB 1
+CONST 28F6-1FFFB 1
 IDLOC 200000-20003F 1
-SMALLCONST 291E-FFFF 1
+SMALLCONST 28F6-FFFF 1
 SMALLCONST 12600-1FFFB 1
 CODE 4-25FF 1
-CODE 291E-1FFFB 1
+CODE 28F6-1FFFB 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -73,13 +73,13 @@ BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
 BIGRAM 506-55F 1
-BIGRAM 6A4-24FF 1
+BIGRAM 6A2-24FF 1
 BIGSFR 0-4FF 1
 BIGSFR 2500-25FF 1
 COMRAM 506-55F 1
 CONFIG 300005-300011 1
 EEDATA 380000-3803FF 1
-MEDIUMCONST 291E-FFFF 1
+MEDIUMCONST 28F6-FFFF 1
 MEDIUMCONST 12600-1FFFB 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -95,16 +95,16 @@ MEDIUMCONST 12600-1FFFB 1
 # All other numeric values are in decimal.
 %LINETAB
 $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-2746 text1 CODE >21:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2746 text1 CODE >22:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2764 text1 CODE >23:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2788 text1 CODE >24:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-27AA text1 CODE >25:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-27CA text1 CODE >26:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-27EC text1 CODE >27:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2810 text1 CODE >28:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2832 text1 CODE >29:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2856 text1 CODE >30:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+271E text1 CODE >21:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+271E text1 CODE >22:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+273C text1 CODE >23:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2760 text1 CODE >24:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2782 text1 CODE >25:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+27A2 text1 CODE >26:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+27C4 text1 CODE >27:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+27E8 text1 CODE >28:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+280A text1 CODE >29:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+282E text1 CODE >30:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 2602 text0 CODE >32:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 2602 text0 CODE >36:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 2608 text0 CODE >39:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
@@ -131,56 +131,52 @@ $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodin
 2634 text0 CODE >67:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 2636 text0 CODE >68:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 2638 text0 CODE >71:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2650 text0 CODE >86:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2658 text0 CODE >89:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2674 text0 CODE >90:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-267A text0 CODE >91:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-267A text0 CODE >92:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2680 text0 CODE >93:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2688 text0 CODE >94:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-268A text0 CODE >95:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-268C text0 CODE >96:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-268E text0 CODE >97:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2690 text0 CODE >98:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2692 text0 CODE >99:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2694 text0 CODE >101:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2698 text0 CODE >102:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-269E text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26A4 text0 CODE >104:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26AA text0 CODE >105:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26B0 text0 CODE >106:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26B6 text0 CODE >107:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26BC text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26C8 text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26D6 text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26DE text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26E6 text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26EE text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26F6 text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-26FE text0 CODE >108:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2708 text0 CODE >109:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-2714 text0 CODE >110:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-271C text0 CODE >111:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-28F8 cinit CODE >1914:/tmp/xcXJOkMfK/driver_tmp_1.s
-28F8 cinit CODE >1916:/tmp/xcXJOkMfK/driver_tmp_1.s
-28F8 cinit CODE >1919:/tmp/xcXJOkMfK/driver_tmp_1.s
-28F8 cinit CODE >1933:/tmp/xcXJOkMfK/driver_tmp_1.s
-28FA cinit CODE >1934:/tmp/xcXJOkMfK/driver_tmp_1.s
-28FC cinit CODE >1935:/tmp/xcXJOkMfK/driver_tmp_1.s
-28FE cinit CODE >1936:/tmp/xcXJOkMfK/driver_tmp_1.s
-2900 cinit CODE >1937:/tmp/xcXJOkMfK/driver_tmp_1.s
-2902 cinit CODE >1938:/tmp/xcXJOkMfK/driver_tmp_1.s
-2904 cinit CODE >1939:/tmp/xcXJOkMfK/driver_tmp_1.s
-2908 cinit CODE >1940:/tmp/xcXJOkMfK/driver_tmp_1.s
-290C cinit CODE >1941:/tmp/xcXJOkMfK/driver_tmp_1.s
-290C cinit CODE >1942:/tmp/xcXJOkMfK/driver_tmp_1.s
-290E cinit CODE >1943:/tmp/xcXJOkMfK/driver_tmp_1.s
-2912 cinit CODE >1944:/tmp/xcXJOkMfK/driver_tmp_1.s
-2914 cinit CODE >1945:/tmp/xcXJOkMfK/driver_tmp_1.s
-2916 cinit CODE >1946:/tmp/xcXJOkMfK/driver_tmp_1.s
-2918 cinit CODE >1952:/tmp/xcXJOkMfK/driver_tmp_1.s
-2918 cinit CODE >1954:/tmp/xcXJOkMfK/driver_tmp_1.s
-291A cinit CODE >1955:/tmp/xcXJOkMfK/driver_tmp_1.s
+2650 text0 CODE >87:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2658 text0 CODE >88:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2660 text0 CODE >89:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2662 text0 CODE >90:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2664 text0 CODE >91:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2666 text0 CODE >92:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2668 text0 CODE >93:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+266A text0 CODE >94:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+266C text0 CODE >96:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2670 text0 CODE >97:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2676 text0 CODE >98:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+267C text0 CODE >99:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2682 text0 CODE >100:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2688 text0 CODE >101:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+268E text0 CODE >102:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+2694 text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26A0 text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26AE text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26B6 text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26BE text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26C6 text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26CE text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26D6 text0 CODE >103:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26E0 text0 CODE >104:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26EC text0 CODE >105:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+26F4 text0 CODE >106:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+28D0 cinit CODE >1914:/tmp/xcXBNOnji/driver_tmp_1.s
+28D0 cinit CODE >1916:/tmp/xcXBNOnji/driver_tmp_1.s
+28D0 cinit CODE >1919:/tmp/xcXBNOnji/driver_tmp_1.s
+28D0 cinit CODE >1933:/tmp/xcXBNOnji/driver_tmp_1.s
+28D2 cinit CODE >1934:/tmp/xcXBNOnji/driver_tmp_1.s
+28D4 cinit CODE >1935:/tmp/xcXBNOnji/driver_tmp_1.s
+28D6 cinit CODE >1936:/tmp/xcXBNOnji/driver_tmp_1.s
+28D8 cinit CODE >1937:/tmp/xcXBNOnji/driver_tmp_1.s
+28DA cinit CODE >1938:/tmp/xcXBNOnji/driver_tmp_1.s
+28DC cinit CODE >1939:/tmp/xcXBNOnji/driver_tmp_1.s
+28E0 cinit CODE >1940:/tmp/xcXBNOnji/driver_tmp_1.s
+28E4 cinit CODE >1941:/tmp/xcXBNOnji/driver_tmp_1.s
+28E4 cinit CODE >1942:/tmp/xcXBNOnji/driver_tmp_1.s
+28E6 cinit CODE >1943:/tmp/xcXBNOnji/driver_tmp_1.s
+28EA cinit CODE >1944:/tmp/xcXBNOnji/driver_tmp_1.s
+28EC cinit CODE >1945:/tmp/xcXBNOnji/driver_tmp_1.s
+28EE cinit CODE >1946:/tmp/xcXBNOnji/driver_tmp_1.s
+28F0 cinit CODE >1952:/tmp/xcXBNOnji/driver_tmp_1.s
+28F0 cinit CODE >1954:/tmp/xcXBNOnji/driver_tmp_1.s
+28F2 cinit CODE >1955:/tmp/xcXBNOnji/driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -195,9 +191,9 @@ $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodin
 %SYMTAB
 __LdataBANK5 0 0 ABS 0 dataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__end_of_display_digit 2858 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__end_of_display_digit 2830 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hspace_0 20000 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__Hspace_1 6A4 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__Hspace_1 6A2 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hspace_2 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hspace_4 600005 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HidataBANK5 0 0 ABS 0 idataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -205,29 +201,29 @@ __Hibigdata 0 0 CODE 0 ibigdata /home/nontoxiccat/Desktop/KiCad projects/Rocniko
 __mediumconst 2600 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __L__absolute__ 0 0 ABS 0 __absolute__ /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-main@i 6A2 0 BANK6 1 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+main@i 6A0 0 BANK6 1 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lsmallconst 2600 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___sp 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
+___sp 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
 _main 2602 0 CODE 0 text0 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___stack_hi 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
-start 1FFFC 0 CODE 0 init /tmp/xcXJOkMfK/driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
+start 1FFFC 0 CODE 0 init /tmp/xcXBNOnji/driver_tmp_9.o
 __LidataBANK5 0 0 ABS 0 idataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hpowerup 0 0 CODE 0 powerup /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__accesstop 560 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
-intlevel0 0 0 CODE 0 text /tmp/xcXJOkMfK/driver_tmp_9.o
-intlevel1 0 0 CODE 0 text /tmp/xcXJOkMfK/driver_tmp_9.o
-intlevel2 0 0 CODE 0 text /tmp/xcXJOkMfK/driver_tmp_9.o
-intlevel3 0 0 CODE 0 text /tmp/xcXJOkMfK/driver_tmp_9.o
+__accesstop 560 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xcXBNOnji/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xcXBNOnji/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xcXBNOnji/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xcXBNOnji/driver_tmp_9.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hifardata 0 0 CODE 0 ifardata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hclrtext 0 0 ABS 0 clrtext /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _ANSELC 410 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-start_initialization 28F8 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+start_initialization 28D0 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _OSCFRQ B1 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _TRISBbits 4C7 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -235,7 +231,7 @@ _TRISCbits 4C8 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Proj
 _TRISDbits 4C9 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 ___rparam_used 1 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __pcstackBANK6 600 0 BANK6 1 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-isa$xinst 0 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
 display_digit@segments 501 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hbank5 0 0 ABS 0 bank5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hbank6 0 0 ABS 0 bank6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -322,7 +318,7 @@ __LcstackBANK6 0 0 ABS 0 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Ro
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hirdata 0 0 CODE 0 irdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __S0 20000 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__S1 6A4 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__S1 6A2 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __S4 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __S5 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lbigdata 0 0 BIGRAM 1 bigdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -368,14 +364,13 @@ _LATBbits 4BF 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Proje
 _LATCbits 4C0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _LATDbits 4C1 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lfarbss 0 0 FARRAM 0 farbss /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-isa$std 1 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
-main@value 6A0 0 BANK6 1 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+isa$std 1 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
 main@numbers 600 0 BANK6 1 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-stackhi 0 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
-stacklo 0 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
+stackhi 0 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
 __Lirdata 0 0 CODE 0 irdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lspace_0 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lspace_1 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -383,34 +378,34 @@ __Lspace_2 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projek
 __Lspace_4 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HcstackBANK6 0 0 ABS 0 cstackBANK6 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-end_of_initialization 2918 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-_display_digit 2746 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+end_of_initialization 28F0 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+_display_digit 271E 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lnvrram 0 0 COMRAM 1 nvrram /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hreset_vec 4 0 CODE 0 reset_vec /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lramtop 2600 0 RAM 0 ramtop /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lrparam 0 0 COMRAM 1 rparam /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__pcinit 28F8 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__pcinit 28D0 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __ptext0 2602 0 CODE 0 text0 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__ptext1 2746 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__ptext1 271E 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lstruct 0 0 COMRAM 1 struct /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__ramtop 2600 0 RAM 0 ramtop /tmp/xcXJOkMfK/driver_tmp_9.o
+__ramtop 2600 0 RAM 0 ramtop /tmp/xcXBNOnji/driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __H__absolute__ 0 0 ABS 0 __absolute__ /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __psmallconst 2600 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lreset_vec 0 0 CODE 0 reset_vec /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___heap_hi 0 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - /tmp/xcXJOkMfK/driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXBNOnji/driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXJOkMfK/driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXBNOnji/driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__end_of__initialization 2918 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__end_of__initialization 28F0 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Libigdata 0 0 CODE 0 ibigdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__pidataBANK5 2858 0 CODE 0 idataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__pidataBANK5 2830 0 CODE 0 idataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lclrtext 0 0 ABS 0 clrtext /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__end_of_main 2746 0 CODE 0 text0 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__end_of_main 271E 0 CODE 0 text0 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HRAM 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hbss 0 0 RAM 1 bss /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hram 0 0 ABS 0 ram /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -420,7 +415,7 @@ __Lbss 0 0 RAM 1 bss /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_
 __Lram 0 0 ABS 0 ram /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lsfr 0 0 ABS 0 sfr /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HdataBANK5 0 0 ABS 0 dataBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__initialization 28F8 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
+__initialization 28D0 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hfardata 0 0 FARRAM 0 fardata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Hsmallconst 2602 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lifardata 0 0 CODE 0 ifardata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -449,9 +444,9 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs /home/nontoxiccat/Desktop/KiCad projec
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text0 0 2602 2602 31C 1
+text0 0 2602 2602 2F4 1
 cstackCOMRAM 1 501 501 5 1
-cstackBANK6 1 600 600 A4 1
+cstackBANK6 1 600 600 A2 1
 init 0 1FFFC 1FFFC 4 1
 reset_vec 0 0 0 4 1
 smallconst 0 2600 2600 2 1
