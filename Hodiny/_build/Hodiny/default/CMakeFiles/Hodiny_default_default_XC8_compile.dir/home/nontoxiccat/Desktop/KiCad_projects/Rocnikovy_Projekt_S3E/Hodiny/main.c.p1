@@ -7,9 +7,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2261 . . ]
 "48248
 [v _LATDbits `VS2261 ~T0 @X0 0 e@1217 ]
-"22 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-[c E17116 0 1 2 3 4 5 6 7 .. ]
-[n E17116 Segments DPS As BS CS DS ES FS GS  ]
+"30 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[c E17065 0 1 2 3 4 5 6 7 .. ]
+[n E17065 Segments DPS As BS CS DS ES FS GS  ]
 "48175 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
 [s S2260 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2260 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -19,10 +19,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48186
 [v _LATCbits `VS2259 ~T0 @X0 0 e@1216 ]
 [p mainexit ]
-"5390
-[v _OSCFRQ `Vuc ~T0 @X0 0 e@177 ]
 "40501
 [v _ANSELC `Vuc ~T0 @X0 0 e@1040 ]
+"55 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/system.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"48897 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
+[s S2286 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2286 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
+"48906
+[s S2287 :7 `uc 1 :1 `uc 1 ]
+[n S2287 . . GIEH ]
+"48896
+[u S2285 `S2286 1 `S2287 1 ]
+[n S2285 . . . ]
+"48911
+[v _INTCON0bits `VS2285 ~T0 @X0 0 e@1238 ]
 "48393
 [s S2268 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2268 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
@@ -47,11 +58,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2269 . . ]
 "48466
 [v _TRISCbits `VS2269 ~T0 @X0 0 e@1224 ]
-[v F41 `(v ~T0 @X0 1 tf1`ul ]
-"20 /opt/microchip/xc8/v3.10/pic/include/builtins.h
-[v __delay `JF41 ~T0 @X0 0 e ]
-[p i __delay ]
-"48113 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8/pic/include/proc/pic18f47q43.h
+"48113
 [s S2258 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2258 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
 "48112
@@ -1742,107 +1749,105 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50169
 [; <" TOSU equ 04FFh ;# ">
 "13 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-[p x FEXTOSC  =  OFF            ]
-"14
-[p x RSTOSC  =  HFINTOSC_1MHZ   ]
-"15
 [p x WDTE  =  OFF               ]
-"16
-[p x MCLRE  =  INTMCLR          ]
-"21
+"29
 [v _display_digit `(v ~T0 @X0 1 ef1`*Ci ]
 {
 [e :U _display_digit ]
 [v _segments `*Ci ~T0 @X0 1 r1 ]
 [f ]
-"22
-[e = . . _LATDbits 0 7 -> & *U + _segments * -> . `E17116 0 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"23
-[e = . . _LATDbits 0 6 -> & *U + _segments * -> . `E17116 1 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"24
-[e = . . _LATDbits 0 5 -> & *U + _segments * -> . `E17116 2 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"25
-[e = . . _LATDbits 0 4 -> & *U + _segments * -> . `E17116 3 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"26
-[e = . . _LATCbits 0 7 -> & *U + _segments * -> . `E17116 4 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"27
-[e = . . _LATCbits 0 6 -> & *U + _segments * -> . `E17116 5 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"28
-[e = . . _LATCbits 0 5 -> & *U + _segments * -> . `E17116 6 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
-"29
-[e = . . _LATDbits 0 3 -> & *U + _segments * -> . `E17116 7 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
 "30
-[e :UE 2400 ]
+[e = . . _LATDbits 0 7 -> & *U + _segments * -> . `E17065 0 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"31
+[e = . . _LATDbits 0 6 -> & *U + _segments * -> . `E17065 1 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"32
+[e = . . _LATDbits 0 5 -> & *U + _segments * -> . `E17065 2 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"33
+[e = . . _LATDbits 0 4 -> & *U + _segments * -> . `E17065 3 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"34
+[e = . . _LATCbits 0 7 -> & *U + _segments * -> . `E17065 4 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"35
+[e = . . _LATCbits 0 6 -> & *U + _segments * -> . `E17065 5 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"36
+[e = . . _LATCbits 0 5 -> & *U + _segments * -> . `E17065 6 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"37
+[e = . . _LATDbits 0 3 -> & *U + _segments * -> . `E17065 7 `x -> -> # *U _segments `i `x -> 1 `i `uc ]
+"38
+[e :UE 2402 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"32
+"40
 [v _main `(i ~T0 @X0 1 ef ]
-"33
+"41
 {
 [e :U _main ]
 [f ]
-"36
-[e = _OSCFRQ -> -> 3 `i `uc ]
-"39
-[e = _ANSELC -> -> 0 `i `uc ]
-"42
-[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
 "43
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"44
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"45
-[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[e = _ANSELC -> -> 0 `i `uc ]
 "46
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+[e ( _SYSTEM_Initialize ..  ]
 "47
-[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
+"48
+[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
 "50
-[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
 "51
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
 "52
-[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
 "53
-[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
 "54
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
 "55
-[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-"56
-[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"57
-[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+"58
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+"59
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+"60
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
 "61
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+"62
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+"63
+[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
+"64
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
+"65
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"69
 [v _DP `i ~T0 @X0 1 a ]
 [e = _DP -> . . _LATDbits 0 7 `i ]
-"62
+"70
 [v _A `i ~T0 @X0 1 a ]
 [e = _A -> . . _LATDbits 0 6 `i ]
-"63
+"71
 [v _B `i ~T0 @X0 1 a ]
 [e = _B -> . . _LATDbits 0 5 `i ]
-"64
+"72
 [v _C `i ~T0 @X0 1 a ]
 [e = _C -> . . _LATDbits 0 4 `i ]
-"65
+"73
 [v _D `i ~T0 @X0 1 a ]
 [e = _D -> . . _LATCbits 0 7 `i ]
-"66
+"74
 [v _E `i ~T0 @X0 1 a ]
 [e = _E -> . . _LATCbits 0 6 `i ]
-"67
+"75
 [v _F `i ~T0 @X0 1 a ]
 [e = _F -> . . _LATCbits 0 5 `i ]
-"68
+"76
 [v _G `i ~T0 @X0 1 a ]
 [e = _G -> . . _LATDbits 0 3 `i ]
-[v F17137 `i ~T0 @X0 -> 8 `i t ]
-[v F17136 `F17137 ~T0 @X0 -> 10 `i s ]
-[i F17136
+[v F17086 `i ~T0 @X0 -> 8 `i t ]
+[v F17085 `F17086 ~T0 @X0 -> 10 `i s ]
+[i F17085
 :U ..
 :U ..
-"71
+"79
 -> 0 `i
 -> 0 `i
 -> 1 `i
@@ -1944,91 +1949,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F17139 `i ~T0 @X0 -> 8 `i t ]
-[v _numbers `F17139 ~T0 @X0 -> 10 `i a ]
-[e = _numbers F17136 ]
-"86
-[e :U 2403 ]
+[v F17088 `i ~T0 @X0 -> 8 `i t ]
+[v _numbers `F17088 ~T0 @X0 -> 10 `i a ]
+[e = _numbers F17085 ]
+"93
+[e :U 2405 ]
 {
-"87
+"95
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 6 `i 2405  ]
-[e $U 2406  ]
-[e :U 2405 ]
+[e $ < _i -> 6 `i 2407  ]
+[e $U 2408  ]
+[e :U 2407 ]
 {
-"88
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"89
-[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
-"90
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-"91
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
-"92
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-"93
-[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-"94
-[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
 "96
-[e $U 2409  ]
-{
+[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
 "97
-[e :U 2410 ]
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
-[e $U 2408  ]
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "98
-[e :U 2411 ]
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-[e $U 2408  ]
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
 "99
-[e :U 2412 ]
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-[e $U 2408  ]
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 "100
-[e :U 2413 ]
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-[e $U 2408  ]
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
 "101
-[e :U 2414 ]
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[e $U 2408  ]
-"102
-[e :U 2415 ]
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
-[e $U 2408  ]
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
 "103
-}
-[e $U 2408  ]
-[e :U 2409 ]
-[e [\ _i , $ -> 0 `i 2410
- , $ -> 1 `i 2411
- , $ -> 2 `i 2412
- , $ -> 3 `i 2413
- , $ -> 4 `i 2414
- , $ -> 5 `i 2415
- 2408 ]
-[e :U 2408 ]
+[e $U 2411  ]
+{
 "104
-[e ( _display_digit (1 -> &U *U + &U _numbers * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U _numbers `ui -> -> 8 `i `ui `ux `*Ci ]
+[e :U 2412 ]
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
 "105
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e :U 2413 ]
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
 "106
+[e :U 2414 ]
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
+"107
+[e :U 2415 ]
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
+"108
+[e :U 2416 ]
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
+"109
+[e :U 2417 ]
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[e ( _display_digit (1 -> -> 0 `i `*Ci ]
+[e $U 2410  ]
+"110
+}
+[e $U 2410  ]
+[e :U 2411 ]
+[e [\ _i , $ -> 0 `i 2412
+ , $ -> 1 `i 2413
+ , $ -> 2 `i 2414
+ , $ -> 3 `i 2415
+ , $ -> 4 `i 2416
+ , $ -> 5 `i 2417
+ 2410 ]
+[e :U 2410 ]
+"111
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 6 `i 2405  ]
-[e :U 2406 ]
+[e $ < _i -> 6 `i 2407  ]
+[e :U 2408 ]
 }
-"107
+"112
 }
-[e :U 2402 ]
-[e $U 2403  ]
 [e :U 2404 ]
-"108
+[e $U 2405  ]
+[e :U 2406 ]
+"113
 [e ) -> 0 `i ]
-[e $UE 2401  ]
-"109
-[e :UE 2401 ]
+[e $UE 2403  ]
+"114
+[e :UE 2403 ]
 }

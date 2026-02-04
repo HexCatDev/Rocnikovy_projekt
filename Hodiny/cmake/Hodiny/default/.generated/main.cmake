@@ -1,4 +1,3 @@
-# cmake files support debug production
 include("${CMAKE_CURRENT_LIST_DIR}/rule.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/file.cmake")
 
@@ -32,15 +31,14 @@ endif()
 # Main target for this project
 add_executable(Hodiny_default_image_BvNriB54 ${Hodiny_default_library_list})
 
-set_target_properties(Hodiny_default_image_BvNriB54 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${Hodiny_default_output_dir})
-set_target_properties(Hodiny_default_image_BvNriB54 PROPERTIES OUTPUT_NAME "default")
-set_target_properties(Hodiny_default_image_BvNriB54 PROPERTIES SUFFIX ".elf")
-
+set_target_properties(Hodiny_default_image_BvNriB54 PROPERTIES
+    OUTPUT_NAME "default"
+    SUFFIX ".elf"
+    ADDITIONAL_CLEAN_FILES "${output_extensions}"
+    RUNTIME_OUTPUT_DIRECTORY "${Hodiny_default_output_dir}")
 target_link_libraries(Hodiny_default_image_BvNriB54 PRIVATE ${Hodiny_default_default_XC8_FILE_TYPE_link})
 
-
 # Add the link options from the rule file.
-Hodiny_default_link_rule(Hodiny_default_image_BvNriB54)
-
+Hodiny_default_link_rule( Hodiny_default_image_BvNriB54)
 
 

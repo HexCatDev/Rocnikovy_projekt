@@ -18,9 +18,7 @@
             ],
             "fileSet": "default",
             "toolchain": "default-XC8",
-            "userVariables": "default-uservariables_1",
-            "preBuildSteps": [],
-            "postBuildSteps": []
+            "userVariables": "default-uservariables_1"
         }
     ],
     "propertyGroups": [
@@ -38,7 +36,15 @@
             "name": "default-XC8",
             "type": "toolchain",
             "provider": "microchip.toolchains:xc8@3.10",
-            "properties": {}
+            "properties": {
+                "compiler.isolate-each-function": true,
+                "compiler.optimization-level": "-O1",
+                "compiler.place-data-into-section": true,
+                "linker.heap-size": "0",
+                "linker.remove-unused-sections": true,
+                "compiler++.isolate-each-function": true,
+                "compiler++.optimization-level": "-O1"
+            }
         },
         {
             "name": "default-tool-base",
@@ -55,7 +61,22 @@
                 {
                     "include": "**/*",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
-                }
+                },
+                "My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/clock.h",
+                "My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/interrupt.h",
+                "My_MCC_Config/mcc/mcc_generated_files/i2c_host/i2c_host_event_types.h",
+                "My_MCC_Config/mcc/mcc_generated_files/i2c_host/i2c_host_interface.h",
+                "My_MCC_Config/mcc/mcc_generated_files/i2c_host/i2c1.h",
+                "My_MCC_Config/mcc/mcc_generated_files/i2c_host/i2c_host_types.h",
+                "My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/src/system.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/system.h",
+                "My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/config_bits.h",
+                "My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c",
+                "My_MCC_Config/mcc/mcc_generated_files/system/pins.h"
             ]
         }
     ]

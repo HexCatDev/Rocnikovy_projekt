@@ -9,9 +9,7 @@ set(CMAKE_ASM_COMPILER_WORKS YES CACHE BOOL "Tell CMake that the assembler works
 set(MP_AS "/opt/microchip/xc8/v3.10/bin/xc8-cc" CACHE PATH "Legacy variable from MPLAB X pointing to the assembler")
 set(MP_AS_DIR "/opt/microchip/xc8/v3.10/bin" CACHE PATH "Legacy variable from MPLAB X pointing to the assembler base directory")
 set(CMAKE_ASM_COMPILER "/opt/microchip/xc8/v3.10/bin/xc8-cc" CACHE FILEPATH "Path to the compiler binary.")
-
-# Legacy variable from MPLAB X pointing to the assembler binary.
-set(MP_AS ${CMAKE_ASM_COMPILER})
+set(MP_AS "${CMAKE_ASM_COMPILER}" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the assembler binary.")
 
 set(MP_LD "/opt/microchip/xc8/v3.10/bin/xc8-cc" CACHE FILEPATH "Legacy variable from MPLAB X pointing to the linker binary.")
 set(MP_LD_DIR "/opt/microchip/xc8/v3.10/bin" CACHE PATH "Legacy variable from MPLAB X pointing to the linker base directory")

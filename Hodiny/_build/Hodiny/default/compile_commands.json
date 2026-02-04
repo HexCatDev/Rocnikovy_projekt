@@ -1,6 +1,42 @@
 [
 {
   "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c\"",
+  "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c",
+  "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c.p1"
+},
+{
+  "directory": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/_build/Hodiny/default",
   "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F47Q43__ -D__DEBUG=1 -c -mcpu=18F47Q43 -mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1 -c \"/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c\"",
   "file": "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c",
   "output": "CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1"
