@@ -3,24 +3,12 @@
 347	1130	1768256452623681388	/home/nontoxiccat/MPLABProjects/Hodiny/out/Hodiny/default.elf	10b089459dbde99e
 3	353	1768293431840165411	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Ročníkový_projekt_S3E/Hodiny/main.c.p1	29222c87d3cffa5c
 353	1651	1768293432188167060	/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/Hodiny/out/Hodiny/default.elf	147cf25534c7a8c1
-7	552	1770066203042687055	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	5ab2905760cf6e05
-445	1763	1770059219227035208	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	883652b4672ff745
-9	335	1770065861578279983	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1	942beaab09b10b80
-5	1007	1770065861574279832	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1	1a72847ffa8cf132
-9	971	1770065861578279983	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1	b70cd778b9196ce6
-2	695	1770065861570279679	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/main.c.p1	63fa281db9316394
-9	1267	1770065861578279983	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c.p1	fcb7b9479c5540ba
-4	1223	1770065861574279832	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c.p1	4516110ddc1a8b05
-336	1380	1770065861906292402	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c.p1	105ae999edd830b9
-2	363	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1	942beaab09b10b80
-10	961	1770066269909031616	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c.p1	105ae999edd830b9
-5	965	1770066269905031474	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c.p1	fcb7b9479c5540ba
-2	1029	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1	1a72847ffa8cf132
-7	1119	1770066269905031474	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1	b70cd778b9196ce6
-363	1212	1770066270261044018	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	5ab2905760cf6e05
-2	1333	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c.p1	4516110ddc1a8b05
-1334	3069	1770066271233078270	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	e6d4007a7def1e6f
-2	375	1770066351951937720	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	5ab2905760cf6e05
-375	1942	1770066352323950964	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	e6d4007a7def1e6f
 4	377	1770066714465060935	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	5ab2905760cf6e05
 377	1911	1770066714841074726	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	e6d4007a7def1e6f
+2	363	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1	942beaab09b10b80
+2	1029	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1	1a72847ffa8cf132
+7	1119	1770066269905031474	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1	b70cd778b9196ce6
+2	695	1770065861570279679	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/main.c.p1	63fa281db9316394
+5	965	1770066269905031474	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/interrupt.c.p1	fcb7b9479c5540ba
+2	1333	1770066269901031333	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c.p1	4516110ddc1a8b05
+10	961	1770066269909031616	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c.p1	105ae999edd830b9

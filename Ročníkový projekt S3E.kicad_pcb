@@ -588,7 +588,6 @@
 				)
 			)
 		)
-		(path "/07509d52-75e4-4277-984f-bbdcbb190fe5")
 		(sheetname "/")
 		(sheetfile "Ročníkový projekt S3E.kicad_sch")
 		(attr through_hole)
@@ -10968,11 +10967,11 @@
 			)
 		)
 	)
-	(footprint "SamacSys_Parts:SOIC127P600X175-8N"
+	(footprint "My parts:SOIC127P600X175-8N"
 		(layer "B.Cu")
 		(uuid "4acd931b-ab8e-44b4-9bdc-4f081a3e8e1e")
 		(at 173.4 117.7)
-		(descr "8-LEAD PLASTIC SMALL OUTLINE (SN)-ren1")
+		(descr "MCP7940M-I/SN")
 		(tags "Integrated Circuit")
 		(property "Reference" "IC5"
 			(at 0 0 180)
@@ -11030,7 +11029,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "bfdce834-eee8-4f53-b5ad-45c66d86d856")
+			(uuid "c91e9ac9-d4a6-4f1a-b104-6e9fdfe2c02f")
 			(effects
 				(font
 					(size 1 1)
@@ -11044,7 +11043,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "ae1f8bd1-c8b2-4091-814e-2072f9d5cfa2")
+			(uuid "f81c9720-dc60-4b9d-9fff-ced7d54047ab")
 			(effects
 				(font
 					(size 1 1)
@@ -11058,7 +11057,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8c3fbe89-7db9-45cb-831a-31a872f4bb86")
+			(uuid "92cdd449-f95e-40fd-a211-02460d036eb6")
 			(effects
 				(font
 					(size 1 1)
@@ -11072,7 +11071,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "269105aa-91ae-466b-a26f-f881d478d6b8")
+			(uuid "6d4e866f-a339-4f63-849d-89217ab8e519")
 			(effects
 				(font
 					(size 1 1)
@@ -11086,7 +11085,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3e0e5420-14a5-4a0d-8201-01d744a0c27d")
+			(uuid "7f9b52c9-e980-44d0-9c13-fb9eda1ed5bd")
 			(effects
 				(font
 					(size 1 1)
@@ -11100,7 +11099,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "afcab188-b8c6-4be4-973b-79ab8de7ea97")
+			(uuid "b2879a9d-781c-4d92-b0ba-37bde2ca3dac")
 			(effects
 				(font
 					(size 1 1)
@@ -11114,7 +11113,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1c8b0f01-482d-49cf-8f21-10dbe08f3da8")
+			(uuid "481da68b-6d50-40d1-adb1-83b99855d856")
 			(effects
 				(font
 					(size 1 1)
@@ -11135,7 +11134,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "c85fdd58-1477-4ac7-932b-34e9569a8b9b")
+			(uuid "29504512-3f2e-4444-b59b-2b29e73c2d50")
 		)
 		(fp_line
 			(start -1.6 -2.45)
@@ -11145,7 +11144,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "64b77ee3-9330-4383-b630-6d0d74ba5224")
+			(uuid "a5b5b8f1-229a-42a5-ac0c-07f84678b27b")
 		)
 		(fp_line
 			(start -1.6 2.45)
@@ -11155,7 +11154,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "b22f12e9-1136-4565-b2cd-50639aa5f836")
+			(uuid "31186e55-9aaa-4ac4-b817-379157ffde55")
 		)
 		(fp_line
 			(start 1.6 -2.45)
@@ -11165,7 +11164,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "bc0ad6b6-e36f-47e3-9fc9-d8e40190cd63")
+			(uuid "010f95b6-d6dc-45e2-9dba-ae939450f981")
 		)
 		(fp_line
 			(start 1.6 2.45)
@@ -11175,7 +11174,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "5d6da20b-8de3-4455-8b8c-0fe7f2d4adbb")
+			(uuid "2cf09aa0-541f-463a-9678-dcc86185ebbe")
 		)
 		(fp_line
 			(start -3.7 -2.7)
@@ -11185,7 +11184,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "7461581d-2a68-43ad-8942-ef3527fb2a7f")
+			(uuid "2ae1a4e3-d781-4917-8bbc-8b609dee67e0")
 		)
 		(fp_line
 			(start -3.7 2.7)
@@ -11195,7 +11194,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "16dcb23f-c1f3-49c1-b229-9abd21e623ba")
+			(uuid "89a69d68-f893-4695-b562-6d74d28c3f0f")
 		)
 		(fp_line
 			(start 3.7 -2.7)
@@ -11205,7 +11204,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "455c94d5-056c-4a6a-88e3-31246fbcaf31")
+			(uuid "5470a886-7319-4598-8c3b-1816887e4097")
 		)
 		(fp_line
 			(start 3.7 2.7)
@@ -11215,7 +11214,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "a126e216-f3b2-4f76-806b-6803ecb914c0")
+			(uuid "c62cbb65-4a37-436e-8415-c4ed540441d0")
 		)
 		(fp_line
 			(start -1.95 -2.45)
@@ -11225,7 +11224,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "2eaa537c-bb34-4612-bc68-fdaa1ee98659")
+			(uuid "78fcd336-b554-484d-8fd5-27dd52995faa")
 		)
 		(fp_line
 			(start -1.95 1.18)
@@ -11235,7 +11234,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "268ccdc7-8845-4b48-9388-3f0471906f78")
+			(uuid "1b60e440-3efd-4049-851d-59f7c8aca7d2")
 		)
 		(fp_line
 			(start -1.95 2.45)
@@ -11245,7 +11244,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "f57894c7-8e1e-497f-a1ec-e951e83c800f")
+			(uuid "fc90c033-61e0-48f6-beec-a5a06bf7367b")
 		)
 		(fp_line
 			(start 1.95 -2.45)
@@ -11255,7 +11254,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "1f92a70f-0cd2-4991-b15a-4bb690d75f1d")
+			(uuid "ff92bded-4eb1-44d5-9b53-7e576db7766e")
 		)
 		(fp_line
 			(start 1.95 2.45)
@@ -11265,7 +11264,7 @@
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "bac5aec0-3997-4272-96c5-67618e1758b5")
+			(uuid "b3ddac90-2327-440d-b932-6a0c9be01946")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 180)
@@ -11352,7 +11351,7 @@
 			(uuid "7fd9c3cf-d400-4abf-838c-b5507be2ce40")
 		)
 		(embedded_fonts no)
-		(model "/home/nontoxiccat/Kicad Libs/SamacSys/SamacSys_Parts.3dshapes/MCP7940N-I_SN.stp"
+		(model "${KICAD9_3RD_PARTY}/MCP7940M-I_SN.stp"
 			(offset
 				(xyz 0 0 0)
 			)
