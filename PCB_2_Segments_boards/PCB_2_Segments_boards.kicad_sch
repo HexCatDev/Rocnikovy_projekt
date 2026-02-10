@@ -3217,7 +3217,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My parts:DIP-10 Patice Display Digit 3 4"
 			(at 175.26 124.46 0)
 			(effects
 				(font
