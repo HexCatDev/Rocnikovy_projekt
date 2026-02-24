@@ -8,7 +8,7 @@
             "imageType": "application",
             "imagePath": "./out/Hodiny/default.elf",
             "toolProperties": "default-tool-base",
-            "tool": "Simulator",
+            "tool": "Snap",
             "packs": [
                 {
                     "name": "PIC18F-Q_DFP",

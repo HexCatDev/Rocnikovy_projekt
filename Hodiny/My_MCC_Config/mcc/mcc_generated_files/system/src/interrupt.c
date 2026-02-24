@@ -5,9 +5,9 @@
  * 
  * @ingroup interrupt 
  * 
- * @brief This file contains the API prototypes for the Interrupt Manager driver.
+ * @brief This file contains the API implementation for the Interrupt Manager driver.
  * 
- * @version Interrupt Manager Driver Version 2.0.4
+ * @version Interrupt Manager Driver Version 2.1.3
 */
 
 /*
@@ -33,7 +33,7 @@
 
 #include "../../system/interrupt.h"
 #include "../../system/system.h"
-#include "../pins.h"
+#include <stdbool.h>
 
 void (*INT0_InterruptHandler)(void);
 void (*INT1_InterruptHandler)(void);
@@ -41,8 +41,28 @@ void (*INT2_InterruptHandler)(void);
 
 void  INTERRUPT_Initialize (void)
 {
-    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
-    INTCON0bits.IPEN = 0;
+    INTCON0bits.IPEN = 1;
+
+    bool state = (unsigned char)GIE;
+    GIE = 0;
+    IVTLOCK = 0x55;
+    IVTLOCK = 0xAA;
+    IVTLOCKbits.IVTLOCKED = 0x00; // unlock IVT
+
+    IVTBASEU = 0;
+    IVTBASEH = 0;
+    IVTBASEL = 8;
+
+    IVTLOCK = 0x55;
+    IVTLOCK = 0xAA;
+    IVTLOCKbits.IVTLOCKED = 0x01; // lock IVT
+
+    GIE = state;
+    // Assign peripheral interrupt priority vectors
+    IPR7bits.I2C1RXIP = 1;
+    IPR7bits.I2C1TXIP = 1;
+    IPR7bits.I2C1IP = 1;
+    IPR7bits.I2C1EIP = 1;
 
     // Clear the interrupt flag
     // Set the external interrupt edge detect
@@ -70,39 +90,20 @@ void  INTERRUPT_Initialize (void)
 
 }
 
+void __interrupt(irq(default),base(8)) Default_ISR()
+{
+}
+
+
+
 /**
  * @ingroup interrupt
- * @brief Executes whenever a high-priority interrupt is triggered. This routine checks the source of the interrupt and calls the relevant interrupt function.
+ * @brief Executes whenever the signal on the INT0 pin transitions on the selected edge.
  * @pre INTERRUPT_Initialize() is already called.
  * @param None.
  * @return None.
  */
-void __interrupt() INTERRUPT_InterruptManager (void)
-{
-    // interrupt handler
-    if(PIE7bits.I2C1EIE == 1 && PIR7bits.I2C1EIF == 1)
-    {
-        I2C1_ERROR_ISR();
-    }
-    else if(PIE7bits.I2C1RXIE == 1 && PIR7bits.I2C1RXIF == 1)
-    {
-        I2C1_RX_ISR();
-    }
-    else if(PIE7bits.I2C1IE == 1 && PIR7bits.I2C1IF == 1)
-    {
-        I2C1_ISR();
-    }
-    else if(PIE7bits.I2C1TXIE == 1 && PIR7bits.I2C1TXIF == 1)
-    {
-        I2C1_TX_ISR();
-    }
-    else
-    {
-        //Unhandled Interrupt
-    }
-}
-
-void INT0_ISR(void)
+void __interrupt(irq(INT0),base(8)) INT0_ISR()
 {
     EXT_INT0_InterruptFlagClear();
 
@@ -128,7 +129,15 @@ void INT0_DefaultInterruptHandler(void){
     // add your INT0 interrupt custom code
     // or set custom function using INT0_SetInterruptHandler()
 }
-void INT1_ISR(void)
+
+/**
+ * @ingroup interrupt
+ * @brief Executes whenever the signal on the INT1 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void __interrupt(irq(INT1),base(8)) INT1_ISR()
 {
     EXT_INT1_InterruptFlagClear();
 
@@ -154,7 +163,15 @@ void INT1_DefaultInterruptHandler(void){
     // add your INT1 interrupt custom code
     // or set custom function using INT1_SetInterruptHandler()
 }
-void INT2_ISR(void)
+
+/**
+ * @ingroup interrupt
+ * @brief Executes whenever the signal on the INT2 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void __interrupt(irq(INT2),base(8)) INT2_ISR()
 {
     EXT_INT2_InterruptFlagClear();
 

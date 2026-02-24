@@ -225,37 +225,5 @@ bool I2C1_IsBusy(void);
  */
 void I2C1_CallbackRegister(void (*callbackHandler)(void));
 
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Common interrupts
- * @param void
- * @return void
- */
-void I2C1_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Error interrupts
- * @param void
- * @return void
- */
-void I2C1_ERROR_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Receive interrupts
- * @param void
- * @return void
- */
-void I2C1_RX_ISR(void);
-
-/**
- * @ingroup I2C1_host
- * @brief This function is ISR function for I2C1 Transmit interrupts
- * @param void
- * @return void
- */
-void I2C1_TX_ISR(void);
-
  
 #endif //I2C1_H

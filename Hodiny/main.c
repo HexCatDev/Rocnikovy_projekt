@@ -40,12 +40,10 @@ void display_digit(const int segments[8]){
 int main(void)
 {
     // Configure ANSELC to digital
-    ANSELC = 0x00;                     // All PORTC pins digital
-
+    ANSELC = 0x00;                     // All PORTC pins digital 
     //I2C stuff
     SYSTEM_Initialize();
-    INTCON0bits.GIEH = 1; 
-    INTCON0bits.GIEL = 1;
+    INTERRUPT_Initialize();
 
     TRISBbits.TRISB0 = 0; // Nastavení výstupů pro B0-B5 transzitory PNP
     TRISBbits.TRISB1 = 0;
@@ -75,7 +73,7 @@ int main(void)
     int F = LATCbits.LATC5;
     int G = LATDbits.LATD3;
 
- 
+
     int numbers[10][8] = {
         {0, 0, 1, 1, 1, 1, 1, 1}, //0
         {0, 0, 0, 0, 0, 1, 1, 0}, //1
@@ -89,9 +87,7 @@ int main(void)
         {0, 1, 1, 0, 1, 1, 1, 1} //9
     };      // DP,    G,      F,    E,      D,    C,     B,     A
 
-
     while (1) {
-        //__delay_us(250);
         for (int i = 0; i < 6; i++) {
             LATBbits.LATB0 = 1; //nastaví všechny tranzistory na high takže se vypnou protože PNP
             LATBbits.LATB1 = 1;
@@ -101,13 +97,14 @@ int main(void)
             LATBbits.LATB5 = 1;
             // nastaví určitý tranzistor na low takže se zapne
             switch (i) {
-                case 0: LATBbits.LATB5 = 0; display_digit(0x0); /**__delay_us(100); */ break;
-                case 1: LATBbits.LATB4 = 0; display_digit(0x0); /**__delay_us(100); */ break;
-                case 2: LATBbits.LATB3 = 0; display_digit(0x0); /**__delay_us(100); */ break;
-                case 3: LATBbits.LATB2 = 0; display_digit(0x0); /**__delay_us(100); */ break;
-                case 4: LATBbits.LATB1 = 0; display_digit(0x0); /**__delay_us(100); */ break;
-                case 5: LATBbits.LATB0 = 0; display_digit(0x0); /**__delay_us(100); */ break;
+                case 0: display_digit(numbers[1]); LATBbits.LATB5 = 0; __delay_us(500); break; 
+                case 1: display_digit(numbers[2]); LATBbits.LATB4 = 0; __delay_us(500); break; 
+                case 2: display_digit(numbers[3]); LATBbits.LATB3 = 0; __delay_us(500); break; 
+                case 3: display_digit(numbers[4]); LATBbits.LATB2 = 0; __delay_us(500); break; 
+                case 4: display_digit(numbers[3]); LATBbits.LATB1 = 0; __delay_us(500); break; 
+                case 5: display_digit(numbers[6]); LATBbits.LATB0 = 0; __delay_us(500); break; 
             }
+        //__delay_ms(1000);
         };
     } 
     return 0;

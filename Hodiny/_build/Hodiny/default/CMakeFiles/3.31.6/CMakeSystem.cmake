@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.12.63+deb13-amd64")
+set(CMAKE_HOST_SYSTEM "Linux-6.12.73+deb13-amd64")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.12.63+deb13-amd64")
+set(CMAKE_HOST_SYSTEM_VERSION "6.12.73+deb13-amd64")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/cmake/Hodiny/default/.generated/toolchain.cmake")

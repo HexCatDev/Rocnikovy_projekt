@@ -8,7 +8,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       The target system is: Generic -  - 
-      The host system is: Linux - 6.12.63+deb13-amd64 - x86_64
+      The host system is: Linux - 6.12.73+deb13-amd64 - x86_64
   -
     kind: "message-v1"
     backtrace:

@@ -39,7 +39,7 @@
 void CLOCK_Initialize(void)
 {
     // Set the CLOCK CONTROL module to the options selected in the user interface.
-    OSCCON1 = (3 << _OSCCON1_NDIV_POSN)   // NDIV 8
+    OSCCON1 = (0 << _OSCCON1_NDIV_POSN)   // NDIV 1
         | (6 << _OSCCON1_NOSC_POSN);  // NOSC HFINTOSC
     OSCCON3 = (0 << _OSCCON3_SOSCPWR_POSN)   // SOSCPWR Low power
         | (0 << _OSCCON3_CSWHOLD_POSN);  // CSWHOLD may proceed
