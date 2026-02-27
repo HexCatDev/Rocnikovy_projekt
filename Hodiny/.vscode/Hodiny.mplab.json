@@ -8,7 +8,7 @@
             "imageType": "application",
             "imagePath": "./out/Hodiny/default.elf",
             "toolProperties": "default-tool-base",
-            "tool": "Snap",
+            "tool": "Simulator",
             "packs": [
                 {
                     "name": "PIC18F-Q_DFP",
@@ -76,7 +76,10 @@
                 "My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c",
                 "My_MCC_Config/mcc/mcc_generated_files/system/config_bits.h",
                 "My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c",
-                "My_MCC_Config/mcc/mcc_generated_files/system/pins.h"
+                "My_MCC_Config/mcc/mcc_generated_files/system/pins.h",
+                "My_MCC_Config/mcc/mcc_generated_files/timer/src/tmr0.c",
+                "My_MCC_Config/mcc/mcc_generated_files/timer/tmr0.h",
+                "My_MCC_Config/mcc/mcc_generated_files/timer/timer_interface.h"
             ]
         }
     ]

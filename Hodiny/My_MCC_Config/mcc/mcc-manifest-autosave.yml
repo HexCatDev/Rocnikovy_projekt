@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: N/A
-creation_date: 2026-02-25T18:08:22.484+01:00[Europe/Prague]
+creation_date: 2026-02-27T09:35:26.063+01:00[Europe/Prague]
 operating_system: Linux
 mcc_mode: VSCodePlugin
 mcc_mode_version: Unknown
@@ -26,3 +26,5 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-i2c-v1', type: MELODY, version: 6.1.4}
 - {name: '@mchp-mcc/scf-pic8-interrupt-v1', type: MELODY, version: 5.2.11}
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.4.0}
+- {name: '@mchp-mcc/scf-pic8-tmr0-v1', type: MELODY, version: 5.1.1}
+- {name: '@mchp-mcc/timer', type: MELODY, version: 1.2.4}

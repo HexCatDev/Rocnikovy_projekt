@@ -1,5 +1,6 @@
 #ifndef CLOCK_CONFIG_H
 #define CLOCK_CONFIG_H
+#include "My_MCC_Config/mcc/mcc_generated_files/system/clock.h"
 #define _XTAL_FREQ 64000000 //definice frekvence pro delay funkce
 
 #include <language_support.h>
@@ -16,6 +17,13 @@
 #define E = LATCbits.LATC6;
 #define F = LATCbits.LATC5;
 #define G = LATDbits.LATD3;
+
+// Forward declarations
+void READ_RTC();
+void WRITE_RTC();
+void system_clock(void);
+void timer(void);
+void display_controll(void);
 
 const int numbers[10][8] = {
     {0, 0, 1, 1, 1, 1, 1, 1}, //0
@@ -50,7 +58,7 @@ static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
     ANSELC = 0x00;
     ANSELD = 0x00; 
 
-    TRISB &= ~0x3F; //nastavení výstupů pro B0-B5 transzistory PNP
+    TRISB &= ~0x3F; //nastavení výstupů pro B0-B5 transzistory PNP bitwisová operace AND s negací 0x3F (0011 1111) nastaví bity 0-5 na 0 (výstup) a zbytek ponechá beze změny
 
     // Tyto hodnoty reprezentují segmenty A_DP
     TRISDbits.TRISD7 = 0; // Nastavení výstupů pro D7-D3
@@ -66,11 +74,19 @@ static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
     TRISAbits.TRISA0 = 1; // hodiny zpět 
     TRISAbits.TRISA1 = 1; // výběr pozice
     TRISAbits.TRISA2 = 1; // hodiny vpřed
+
+    INTCON0bits.IPEN = 1; // povolení priorit přerušení
+    INTCON0bits.GIEH = 1; // povolení globálních přerušení s vysokou prioritou
+    INTCON0bits.GIEL = 1; // povolení globálních přerušení s nízkou prioritou
 }
 
 enum Segments { DPS, As, BS, CS, DS, ES, FS, GS };
 
-uint8_t numbers_out[6] = {0, 0, 0, 0, 2, 9}; // pole pro uchování aktuálních čísel na displeji
+uint8_t numbers_out[6] = {0, 0, 0, 0, 0, 0}; // pole pro uchování aktuálních čísel na displeji
 uint8_t in_setup_mode = 0; // proměnná pro indikaci, zda jsme v režimu nastavení hodin
-int ms_counter = 0; // počítadlo pro měření času v milisekundách
+
+volatile uint32_t ms_sync_counter = 0; // čítač pro měření času v milisekundách, inkrementuje se v přerušení od časovače
+volatile uint16_t ms_counter = 0; // čítač pro měření času v milisekundách, inkrementuje se v přerušení od časovače
+volatile bool sys_clock = false; // flag pro sys clock
+volatile bool RTC_sync = false; // flag pro RTC sync
 #endif
