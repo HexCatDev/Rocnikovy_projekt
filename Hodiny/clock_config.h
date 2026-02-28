@@ -1,6 +1,5 @@
 #ifndef CLOCK_CONFIG_H
 #define CLOCK_CONFIG_H
-#include "My_MCC_Config/mcc/mcc_generated_files/system/clock.h"
 #define _XTAL_FREQ 64000000 //definice frekvence pro delay funkce
 
 #include <language_support.h>
@@ -18,12 +17,24 @@
 #define F = LATCbits.LATC5;
 #define G = LATDbits.LATD3;
 
+#define time_to_BCD(tens, ones) ( (uint8_t) ((tens) << 4) | (ones)) //toto je makro vloží se do něj dvě hodnoty desítky a jednotky a ono vrátí hodnotu
+// v BCD formátu tj. pro třeba 45 sec máme 4 a 5, tens 4 ones 5 makro vezme 4 převede ho do binárního formátu což je 0100 a posune ji 
+// o 4 bity doleva (<< 4) takže vznikne 0100 0000 pak je tu bitwise OR (|) což slepí dvě hodnoty doromady, 5 je v bin 0101 (4+1)
+// výsledkem slepení je 0100 0101 což je 0x45 v hexu a to je BCD reprezentace čísla 45.
+// takže tady to bude bcd_numbers[3] = {time_to_BCD(numbers_out[4], numbers_out[5])}
+// do hodnoty 3 v poli bcd_numbers se uloží převod hodnot z numbers_out[4] a numbers_out[5] do BCD formátu což jsou sekundy
+// to se pak jako celek pošle do RTC
+
+
 // Forward declarations
-void READ_RTC();
-void WRITE_RTC();
+void READ_RTC(void);
+void WRITE_RTC(void);
 void system_clock(void);
 void timer(void);
 void display_controll(void);
+void My_I2C1_Interrupt(void);
+void process_data_from_RTC(void);
+
 
 const int numbers[10][8] = {
     {0, 0, 1, 1, 1, 1, 1, 1}, //0
@@ -84,9 +95,15 @@ enum Segments { DPS, As, BS, CS, DS, ES, FS, GS };
 
 uint8_t numbers_out[6] = {0, 0, 0, 0, 0, 0}; // pole pro uchování aktuálních čísel na displeji
 uint8_t in_setup_mode = 0; // proměnná pro indikaci, zda jsme v režimu nastavení hodin
-
+uint8_t bcd_numbers[4] = {0, 0, 0}; // pole pro uchování hodnot v BCD formátu pro hodiny, minuty a sekundy
+uint8_t payload[4] = {0, 0, 0, 0}; // pole pro uchování dat pro I2C komunikaci s RTC
+uint8_t bcd_numbers_recieved[3] = {0, 0, 0,}; // pole pro uchování dat přijatých z RTC
 volatile uint32_t ms_sync_counter = 0; // čítač pro měření času v milisekundách, inkrementuje se v přerušení od časovače
 volatile uint16_t ms_counter = 0; // čítač pro měření času v milisekundách, inkrementuje se v přerušení od časovače
+
+
+volatile bool I2C_trasmission_complete = false; // flag pro indikaci dokončení I2C přenosu
 volatile bool sys_clock = false; // flag pro sys clock
 volatile bool RTC_sync = false; // flag pro RTC sync
+static bool waiting_for_data = false; // flag pro čekání na data z RTC
 #endif

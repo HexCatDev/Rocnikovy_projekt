@@ -10,8 +10,8 @@ I2C_ERROR_ADDR_NACK 1
 I2C_ERROR_DATA_NACK 2
 I2C_ERROR_BUS_COLLISION 3
 ]
-"66 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-[e E17280 Segments `uc
+"75 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[e E17282 Segments `uc
 DPS 0
 As 1
 BS 2
@@ -21,20 +21,28 @@ ES 5
 FS 6
 GS 7
 ]
-"54 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
+"65 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
 [v _pin_init pin_init `T(v  1 s 1 pin_init ]
-"33 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"34 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _main main `(i  1 e 2 0 ]
-"65
+"74
 [v _display_digit display_digit `(v  1 e 1 0 ]
-"76
+"85
 [v _clock_init clock_init `(v  1 e 1 0 ]
-"147
+"156
 [v _display_controll display_controll `(v  1 e 1 0 ]
 "182
+[v _READ_RTC READ_RTC `(v  1 e 1 0 ]
+"187
+[v _WRITE_RTC WRITE_RTC `(v  1 e 1 0 ]
+"203
 [v _system_clock system_clock `(v  1 e 1 0 ]
-"209
+"230
 [v _timer timer `(v  1 e 1 0 ]
+"245
+[v _My_I2C1_Interrupt My_I2C1_Interrupt `(v  1 e 1 0 ]
+"249
+[v _process_data_from_RTC process_data_from_RTC `(v  1 e 1 0 ]
 "100 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "142
@@ -67,14 +75,17 @@ GS 7
 [v _I2C1_Close I2C1_Close `(v  1 s 1 I2C1_Close ]
 "355
 [v _I2C1_StartSend I2C1_StartSend `(v  1 s 1 I2C1_StartSend ]
+[v i2_I2C1_StartSend I2C1_StartSend `(v  1 s 1 i2_I2C1_StartSend ]
 "360
 [v _I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 I2C1_AddrTransmit ]
+[v i2_I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 i2_I2C1_AddrTransmit ]
 "365
 [v _I2C1_DataTransmit I2C1_DataTransmit `(v  1 s 1 I2C1_DataTransmit ]
 "370
 [v _I2C1_DataReceive I2C1_DataReceive `(uc  1 s 1 I2C1_DataReceive ]
 "375
 [v _I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 I2C1_CounterSet ]
+[v i2_I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 i2_I2C1_CounterSet ]
 "380
 [v _I2C1_CounterGet I2C1_CounterGet `(uc  1 s 1 I2C1_CounterGet ]
 "385
@@ -636,7 +647,7 @@ GS 7
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
 "48107
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
-[s S1470 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1488 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -646,13 +657,13 @@ GS 7
 `uc 1 LATB7 1 0 :1:7 
 ]
 "48124
-[u S1479 . 1 `S1470 1 . 1 0 ]
+[u S1497 . 1 `S1488 1 . 1 0 ]
 "48124
 "48124
-[v _LATBbits LATBbits `VES1479  1 e 1 @1215 ]
+[v _LATBbits LATBbits `VES1497  1 e 1 @1215 ]
 "48169
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S1425 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1439 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -662,13 +673,13 @@ GS 7
 `uc 1 LATC7 1 0 :1:7 
 ]
 "48186
-[u S1434 . 1 `S1425 1 . 1 0 ]
+[u S1448 . 1 `S1439 1 . 1 0 ]
 "48186
 "48186
-[v _LATCbits LATCbits `VES1434  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES1448  1 e 1 @1216 ]
 "48231
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
-[s S1395 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S1409 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -678,10 +689,10 @@ GS 7
 `uc 1 LATD7 1 0 :1:7 
 ]
 "48248
-[u S1404 . 1 `S1395 1 . 1 0 ]
+[u S1418 . 1 `S1409 1 . 1 0 ]
 "48248
 "48248
-[v _LATDbits LATDbits `VES1404  1 e 1 @1217 ]
+[v _LATDbits LATDbits `VES1418  1 e 1 @1217 ]
 "48293
 [v _LATE LATE `VEuc  1 e 1 @1218 ]
 "48325
@@ -736,7 +747,7 @@ GS 7
 [v _TRISDbits TRISDbits `VES1308  1 e 1 @1225 ]
 "48573
 [v _TRISE TRISE `VEuc  1 e 1 @1226 ]
-[s S1446 . 1 `uc 1 RA0 1 0 :1:0 
+[s S1460 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -746,10 +757,10 @@ GS 7
 `uc 1 RA7 1 0 :1:7 
 ]
 "48622
-[u S1455 . 1 `S1446 1 . 1 0 ]
+[u S1469 . 1 `S1460 1 . 1 0 ]
 "48622
 "48622
-[v _PORTAbits PORTAbits `VES1455  1 e 1 @1230 ]
+[v _PORTAbits PORTAbits `VES1469  1 e 1 @1230 ]
 [s S701 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -769,22 +780,32 @@ GS 7
 [v _INTCON0bits INTCON0bits `VES712  1 e 1 @1238 ]
 "54389
 [v _GIE GIE `VEb  1 e 0 @9911 ]
-"28 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
+"39 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
 [v _numbers numbers `C[10][8]i  1 e 160 0 ]
-"41
+"52
 [v _numbers_DP numbers_DP `C[10][8]i  1 e 160 0 ]
-"85
+"96
 [v _numbers_out numbers_out `[6]uc  1 e 6 0 ]
-"86
+"97
 [v _in_setup_mode in_setup_mode `uc  1 e 1 0 ]
-"88
+"98
+[v _bcd_numbers bcd_numbers `[4]uc  1 e 4 0 ]
+"99
+[v _payload payload `[4]uc  1 e 4 0 ]
+"100
+[v _bcd_numbers_recieved bcd_numbers_recieved `[3]uc  1 e 3 0 ]
+"101
 [v _ms_sync_counter ms_sync_counter `VEul  1 e 4 0 ]
-"89
+"102
 [v _ms_counter ms_counter `VEus  1 e 2 0 ]
-"90
+"105
+[v _I2C_trasmission_complete I2C_trasmission_complete `VEa  1 e 1 0 ]
+"106
 [v _sys_clock sys_clock `VEa  1 e 1 0 ]
-"91
+"107
 [v _RTC_sync RTC_sync `VEa  1 e 1 0 ]
+"108
+[v _waiting_for_data waiting_for_data `a  1 s 1 waiting_for_data ]
 "94 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Callback I2C1_Callback `*.38(v  1 s 3 I2C1_Callback ]
 [s S130 . 13 `a 1 busy 1 0 `us 1 address 2 1 `*.39uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.39uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E16950 1 errorState 1 12 ]
@@ -800,69 +821,87 @@ GS 7
 [v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
 "53
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
-"33 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"34 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"63
+"72
 } 0
-"182
+"203
 [v _system_clock system_clock `(v  1 e 1 0 ]
 {
-"207
+"228
 } 0
 "3 /opt/microchip/xc8/v3.10/pic/sources/c99/common/memset.c
 [v _memset memset `(*.39v  1 e 3 0 ]
 {
 "5
-[v memset@p p `*.39uc  1 a 2 29 ]
+[v memset@p p `*.39uc  1 a 2 19 ]
 "3
-[v memset@dest dest `*.39v  1 p 2 23 ]
-[v memset@c c `i  1 p 2 25 ]
-[v memset@n n `ui  1 p 2 27 ]
+[v memset@dest dest `*.39v  1 p 2 13 ]
+[v memset@c c `i  1 p 2 15 ]
+[v memset@n n `ui  1 p 2 17 ]
 "10
 } 0
-"54 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
+"249 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[v _process_data_from_RTC process_data_from_RTC `(v  1 e 1 0 ]
+{
+"257
+} 0
+"65 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
 [v _pin_init pin_init `T(v  1 s 1 pin_init ]
 {
-"81
+"92
 } 0
-"147 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"156 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _display_controll display_controll `(v  1 e 1 0 ]
 {
-"158
-[v display_controll@i i `i  1 a 2 35 ]
-"171
+"167
+[v display_controll@i i `i  1 a 2 2 ]
+"180
 } 0
-"76
+"85
 [v _clock_init clock_init `(v  1 e 1 0 ]
 {
-"131
-[v clock_init@i i `i  1 a 2 26 ]
-"78
-[v clock_init@selected_digit selected_digit `i  1 a 2 30 ]
-"79
-[v clock_init@hold_button_time hold_button_time `i  1 a 2 28 ]
-[v clock_init@theshold theshold `i  1 a 2 24 ]
-"76
-[v clock_init@numbers_out numbers_out `*.39uc  1 p 2 29 ]
-"145
+"140
+[v clock_init@i i `i  1 a 2 50 ]
+"87
+[v clock_init@selected_digit selected_digit `i  1 a 2 54 ]
+"88
+[v clock_init@hold_button_time hold_button_time `i  1 a 2 52 ]
+[v clock_init@theshold theshold `i  1 a 2 48 ]
+"85
+[v clock_init@numbers_out numbers_out `*.39uc  1 p 2 20 ]
+"154
 } 0
-"65
+"74
 [v _display_digit display_digit `(v  1 e 1 0 ]
 {
-[v display_digit@segments segments `*.32Ci  1 p 2 23 ]
-"74
+[v display_digit@segments segments `*.32Ci  1 p 2 13 ]
+"83
 } 0
 "7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 28 ]
-[v ___awmod@counter counter `uc  1 a 1 27 ]
+[v ___awmod@sign sign `uc  1 a 1 18 ]
+[v ___awmod@counter counter `uc  1 a 1 17 ]
 "7
-[v ___awmod@dividend dividend `i  1 p 2 23 ]
-[v ___awmod@divisor divisor `i  1 p 2 25 ]
+[v ___awmod@dividend dividend `i  1 p 2 13 ]
+[v ___awmod@divisor divisor `i  1 p 2 15 ]
 "34
+} 0
+"187 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[v _WRITE_RTC WRITE_RTC `(v  1 e 1 0 ]
+{
+"201
+} 0
+"155 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
+{
+[v I2C1_Write@address address `us  1 p 2 14 ]
+[v I2C1_Write@data data `*.39uc  1 p 2 16 ]
+[v I2C1_Write@dataLength dataLength `ui  1 p 2 18 ]
+"172
 } 0
 "94 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
@@ -877,7 +916,7 @@ GS 7
 "153
 [v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
 {
-[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 23 ]
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 13 ]
 "156
 } 0
 "38 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/system.c
@@ -899,25 +938,25 @@ GS 7
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "46
-[v INTERRUPT_Initialize@state state `a  1 a 1 26 ]
+[v INTERRUPT_Initialize@state state `a  1 a 1 16 ]
 "92
 } 0
 "193
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 23 ]
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 13 ]
 "195
 } 0
 "159
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 23 ]
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 13 ]
 "161
 } 0
 "125
 [v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 23 ]
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 13 ]
 "127
 } 0
 "100 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
@@ -935,7 +974,66 @@ GS 7
 {
 "58
 } 0
-"232 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
+"182 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[v _READ_RTC READ_RTC `(v  1 e 1 0 ]
+{
+"185
+} 0
+"193 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
+[v _I2C1_WriteRead I2C1_WriteRead `(a  1 e 1 0 ]
+{
+[v I2C1_WriteRead@address address `us  1 p 2 14 ]
+[v I2C1_WriteRead@writeData writeData `*.39uc  1 p 2 16 ]
+[v I2C1_WriteRead@writeLength writeLength `ui  1 p 2 18 ]
+[v I2C1_WriteRead@readData readData `*.39uc  1 p 2 20 ]
+[v I2C1_WriteRead@readLength readLength `ui  1 p 2 22 ]
+"210
+} 0
+"326
+[v _I2C1_WriteStart I2C1_WriteStart `(v  1 s 1 I2C1_WriteStart ]
+{
+"339
+} 0
+"355
+[v _I2C1_StartSend I2C1_StartSend `(v  1 s 1 I2C1_StartSend ]
+{
+"358
+} 0
+"411
+[v _I2C1_RestartEnable I2C1_RestartEnable `T(v  1 s 1 I2C1_RestartEnable ]
+{
+"414
+} 0
+"375
+[v _I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 I2C1_CounterSet ]
+{
+[v I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
+[v I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
+"377
+[v I2C1_CounterSet@counter counter `uc  1 p 1 13 ]
+"378
+} 1
+"360
+[v _I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 I2C1_AddrTransmit ]
+{
+[v I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
+[v I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
+"362
+[v I2C1_AddrTransmit@addr addr `uc  1 p 1 13 ]
+"363
+} 1
+"219
+[v _I2C1_IsBusy I2C1_IsBusy `(a  1 e 1 0 ]
+{
+"222
+} 0
+"224
+[v _I2C1_CallbackRegister I2C1_CallbackRegister `(v  1 e 1 0 ]
+{
+[v I2C1_CallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 13 ]
+"230
+} 0
+"232
 [v _I2C1_ISR I2C1_ISR `IIH(v  1 e 1 0 ]
 {
 "263
@@ -956,7 +1054,7 @@ GS 7
 [v I2C1_DataTransmit@data data `uc  1 p 1 wreg ]
 [v I2C1_DataTransmit@data data `uc  1 p 1 wreg ]
 "367
-[v I2C1_DataTransmit@data data `uc  1 p 1 14 ]
+[v I2C1_DataTransmit@data data `uc  1 p 1 4 ]
 "368
 } 1
 "380
@@ -970,26 +1068,26 @@ GS 7
 "324
 } 0
 "355
-[v _I2C1_StartSend I2C1_StartSend `(v  1 s 1 I2C1_StartSend ]
+[v i2_I2C1_StartSend I2C1_StartSend `(v  1 s 1 i2_I2C1_StartSend ]
 {
 "358
 } 0
 "375
-[v _I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 I2C1_CounterSet ]
+[v i2_I2C1_CounterSet I2C1_CounterSet `(v  1 s 1 i2_I2C1_CounterSet ]
 {
-[v I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
-[v I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
+[v i2I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
+[v i2I2C1_CounterSet@counter counter `uc  1 p 1 wreg ]
 "377
-[v I2C1_CounterSet@counter counter `uc  1 p 1 7 ]
+[v i2I2C1_CounterSet@counter counter `uc  1 p 1 1 ]
 "378
 } 1
 "360
-[v _I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 I2C1_AddrTransmit ]
+[v i2_I2C1_AddrTransmit I2C1_AddrTransmit `(v  1 s 1 i2_I2C1_AddrTransmit ]
 {
-[v I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
-[v I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
+[v i2I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
+[v i2I2C1_AddrTransmit@addr addr `uc  1 p 1 wreg ]
 "362
-[v I2C1_AddrTransmit@addr addr `uc  1 p 1 0 ]
+[v i2I2C1_AddrTransmit@addr addr `uc  1 p 1 0 ]
 "363
 } 1
 "341
@@ -1017,7 +1115,12 @@ GS 7
 {
 "299
 } 0
-"431
+"245 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+[v _My_I2C1_Interrupt My_I2C1_Interrupt `(v  1 e 1 0 ]
+{
+"247
+} 0
+"431 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
 {
 "434
@@ -1132,8 +1235,8 @@ GS 7
 {
 "161
 } 0
-"209 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"230 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _timer timer `(v  1 e 1 0 ]
 {
-"222
+"243
 } 0

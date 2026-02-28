@@ -16,7 +16,7 @@
 #pragma config WDTE = OFF              // Watchdog Timer disabled
 
 #define _XTAL_FREQ 64000000 // Define the operating frequency for delay functions
-#define RTC_ADDR 0xF6       // adress 7 bit 110 1111 
+#define RTC_ADDR 0x6F      // adress 7 bit 110 1111 
 #define SEC_REG 0x00        // seconds register
 #define MIN_REG 0X01        // minutes register
 #define HOUR_REG 0X02       // hours register
@@ -30,6 +30,7 @@
 #include "clock_config.h" //můj soubor jsou v něm definovány segmenty pro zobrazení číslic a funkce pro zobrazení číslice a nastavení hodin
 
 
+
 int main(void)
 { 
     //I2C stuff
@@ -39,6 +40,8 @@ int main(void)
     I2C1_Initialize();
     pin_init();
 
+    //interrupt stuff
+    I2C1_Host_CallbackRegister(My_I2C1_Interrupt); //registrace callback funkce pro dokončení I2C přenosu, která se volá, když je I2C přenos dokončen
     TMR0_OverflowCallbackRegister(timer); //registrace callback funkce pro přerušení od časovače tzn. když nastane přerušení spustí se fukce timer()
     TMR0_Start(); //spuštění časovače
 
@@ -53,8 +56,14 @@ int main(void)
                 INTCON0bits.GIEH = 0; //vypne globální přerušení aby se zabránilo konfliktu mezi timerem a I2C komunikací
                 uint32_t snapshot_sync = ms_sync_counter; //uloží se aktuální hodnota ms_sync_counter do lokální proměnné, aby se zabránilo problému s tím, že se ms_sync_counter změní během čtení z RTC
                 INTCON0bits.GIEH = 1; //znovu zapne globální přerušení
-                //READ_RTC(); //tato funkce se bude volat každých 15 minut a bude synchronizovat čas s RTC
+                READ_RTC(); //tato funkce se bude volat každých 15 minut a bude synchronizovat čas s RTC
                 RTC_sync = false; //reset flagu pro RTC sync
+            }
+            if (!I2C_trasmission_complete) {
+                waiting_for_data = false; //reset flagu pro čekání na data z RTC
+            }
+            if (waiting_for_data && I2C_trasmission_complete) { //pokud jsme čekali na data z RTC a I2C přenos je dokončen, aktualizujeme čas na displeji
+                process_data_from_RTC(); //tato funkce se bude volat, když je dokončen I2C přenos a aktualizuje čas na displeji podle dat z RTC
             }
         }
         display_controll();
@@ -83,7 +92,7 @@ void clock_init(uint8_t numbers_out[6]) {
             __delay_ms(10);
             if (hold_button_time > theshold) {
                 // tady se odešlou hodnoty z numbers out do RTC přes I2C a zapnase oscilátor
-                //WRITE_RTC(); //tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
+                WRITE_RTC(); //tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
                 while (TL_SET == 1) {
                     __delay_ms(10);
                     LATB |= 0x3F; //nastaví všechny tranzistory na high takže se vypnou protože PNP display zhasne
@@ -170,12 +179,24 @@ void display_controll(){
     }
 }
 
-void READ_RTC(){//přečet hodnoty z RTC převede je do arraye numbers_out a pak se zobrazí
-//tohle se musí dodělat
+void READ_RTC(){
+    I2C1_WriteRead(RTC_ADDR, SEC_REG, 1, bcd_numbers_recieved, 3); //odešle do RTC adresu registru pro sekundy a počet bytů k přečtení (3 pro sekundy, minuty a hodiny) a pole pro uložení přijatých dat
+    I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
 }
 
 void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
-//tohle se musí dodělat
+    bcd_numbers[3] = time_to_BCD(numbers_out[4], numbers_out[5]);
+    bcd_numbers[2] = time_to_BCD(numbers_out[2], numbers_out[3]);
+    bcd_numbers[1] = time_to_BCD(numbers_out[0], numbers_out[1]);
+
+    payload[0] = SEC_REG; // adresa registru pro sekundy
+    bcd_numbers[3] = bcd_numbers[3] | 0x80; // bitwisový operátor OR (|) také funguje jako přenastavitel bitů nechá všechny bity stejné krom
+    // bit 7 který nastaví na 1 což zapne oscilátor v RTC
+    payload[1] = bcd_numbers[3]; // hodnota pro sekundy v BCD formátu
+    payload[2] = bcd_numbers[2]; // hodnota pro minuty v BCD formátu
+    payload[3] = bcd_numbers[1]; // hodnota pro hodiny v BCD formátu
+
+    I2C1_Host_Write(RTC_ADDR, payload, 4); // odešle data do RTC, první byte je adresa registru pro sekundy a další 3 byty jsou hodnoty pro sekundy, minuty a hodiny v BCD formátu
 
 }
 
@@ -219,4 +240,18 @@ void timer(void){
             ms_sync_counter = 0;
         }
     }
+}
+
+void My_I2C1_Interrupt(void){ // toto je callback funkce pro dokončení I2C přenosu, která se volá, když je I2C přenos dokončen
+    I2C_trasmission_complete = true; //nastaví se flag pro indikaci dokončení I2C přenosu
+}
+
+void process_data_from_RTC(){ //tato funkce se bude volat, když je dokončen I2C přenos a aktualizuje čas na displeji podle dat z RTC
+    bcd_numbers_recieved[0] = bcd_numbers_recieved[0] & 0x7F; //bitwisový operátor AND (&) nechá všechny bity stejné kromě bitu 7 který nastaví na 0 protože bit 7 v registru pro sekundy je pro oscilátor a nechceme ho zobrazovat na displeji
+    numbers_out[4] = bcd_numbers_recieved[0] >> 4; //vyextrahuje desítky sekund z BCD hodnoty
+    numbers_out[5] = bcd_numbers_recieved[0] & 0x0F; //vyextrahuje jednotky sekund z BCD hodnoty
+    numbers_out[3] = bcd_numbers_recieved[1] >> 4; //vyextrahuje desítky minut z BCD hodnoty
+    numbers_out[2] = bcd_numbers_recieved[1] & 0x0F; //vyextrahuje jednotky minut z BCD hodnoty
+    numbers_out[1] = bcd_numbers_recieved[2] >> 4; //vyextrahuje desítky hodin z BCD hodnoty
+    numbers_out[0] = bcd_numbers_recieved[2] & 0x0F; //vyextrahuje jednotky hodin z BCD hodnoty
 }
