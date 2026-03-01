@@ -92,8 +92,9 @@ void clock_init(uint8_t numbers_out[6]) {
             __delay_ms(10);
             if (hold_button_time > theshold) {
                 // tady se odešlou hodnoty z numbers out do RTC přes I2C a zapnase oscilátor
+                I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
                 WRITE_RTC(); //tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
-                while (TL_SET == 1) {
+                while (TL_SET == 1 || !I2C_trasmission_complete) { //čeká se na uvolnění tlačítka nebo dokončení I2C přenosu, aby se zabránilo tomu, že se během přenosu změní nastavené hodnoty nebo se odešle neúplný přenos
                     __delay_ms(10);
                     LATB |= 0x3F; //nastaví všechny tranzistory na high takže se vypnou protože PNP display zhasne
                 }
@@ -185,19 +186,14 @@ void READ_RTC(){
 }
 
 void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
-    bcd_numbers[3] = time_to_BCD(numbers_out[4], numbers_out[5]);
-    bcd_numbers[2] = time_to_BCD(numbers_out[2], numbers_out[3]);
-    bcd_numbers[1] = time_to_BCD(numbers_out[0], numbers_out[1]);
 
     payload[0] = SEC_REG; // adresa registru pro sekundy
-    bcd_numbers[3] = bcd_numbers[3] | 0x80; // bitwisový operátor OR (|) také funguje jako přenastavitel bitů nechá všechny bity stejné krom
-    // bit 7 který nastaví na 1 což zapne oscilátor v RTC
-    payload[1] = bcd_numbers[3]; // hodnota pro sekundy v BCD formátu
-    payload[2] = bcd_numbers[2]; // hodnota pro minuty v BCD formátu
-    payload[3] = bcd_numbers[1]; // hodnota pro hodiny v BCD formátu
+    payload[1] = time_to_BCD(numbers_out[4], numbers_out[5]);
+    payload[1] = payload[1] | 0x80; // bitwisový operátor OR (|) také funguje jako přenastavitel bitů nechá všechny bity stejné kromě bitu 7 který nastaví na 1 což zapne oscilátor v RTC
+    payload[2] = time_to_BCD(numbers_out[2], numbers_out[3]); // hodnota pro minuty v BCD formátu
+    payload[3] = time_to_BCD(numbers_out[0], numbers_out[1]); // hodnota pro hodiny v BCD formátu
 
     I2C1_Host_Write(RTC_ADDR, payload, 4); // odešle data do RTC, první byte je adresa registru pro sekundy a další 3 byty jsou hodnoty pro sekundy, minuty a hodiny v BCD formátu
-
 }
 
 void system_clock(){ //tato funkce se bude volat každou sekundu a bude aktualizovat čas na displeji a je založena na funkci timer()
@@ -250,8 +246,11 @@ void process_data_from_RTC(){ //tato funkce se bude volat, když je dokončen I2
     bcd_numbers_recieved[0] = bcd_numbers_recieved[0] & 0x7F; //bitwisový operátor AND (&) nechá všechny bity stejné kromě bitu 7 který nastaví na 0 protože bit 7 v registru pro sekundy je pro oscilátor a nechceme ho zobrazovat na displeji
     numbers_out[4] = bcd_numbers_recieved[0] >> 4; //vyextrahuje desítky sekund z BCD hodnoty
     numbers_out[5] = bcd_numbers_recieved[0] & 0x0F; //vyextrahuje jednotky sekund z BCD hodnoty
-    numbers_out[3] = bcd_numbers_recieved[1] >> 4; //vyextrahuje desítky minut z BCD hodnoty
-    numbers_out[2] = bcd_numbers_recieved[1] & 0x0F; //vyextrahuje jednotky minut z BCD hodnoty
-    numbers_out[1] = bcd_numbers_recieved[2] >> 4; //vyextrahuje desítky hodin z BCD hodnoty
-    numbers_out[0] = bcd_numbers_recieved[2] & 0x0F; //vyextrahuje jednotky hodin z BCD hodnoty
+
+    numbers_out[2] = bcd_numbers_recieved[1] >> 4; //vyextrahuje desítky minut z BCD hodnoty
+    numbers_out[3] = bcd_numbers_recieved[1] & 0x0F; //vyextrahuje jednotky minut z BCD hodnoty
+    
+    bcd_numbers_recieved[2] = bcd_numbers_recieved[2] & 0x3F; //bitwisový operátor AND (&) nechá všechny bity stejné kromě bitů 6 a 7 které nastaví na 0 protože bity 6 a 7 v registru pro hodiny jsou pro 12/24 hodinový režim a AM/PM a nechceme je zobrazovat na displeji
+    numbers_out[0] = bcd_numbers_recieved[2] >> 4; //vyextrahuje desítky hodin z BCD hodnoty
+    numbers_out[1] = bcd_numbers_recieved[2] & 0x0F; //vyextrahuje jednotky hodin z BCD hodnoty
 }

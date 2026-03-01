@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXbmHAnG/driver_tmp_3.o
+ /tmp/xcXcdcPPN/driver_tmp_3.o
  -O/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hex
  -logfile=/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hxl
  -addressing=1
@@ -9,25 +9,29 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  8h - 105h		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  FE7Eh - FFFEh		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  10000h - 1163Dh		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  11640h - 11649h		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  300000h - 300007h		(/tmp/xcXbmHAnG/driver_tmp_3.o)
-  300009h - 300009h		(/tmp/xcXbmHAnG/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  8h - 105h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  FE7Eh - FFFEh		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  10000h - 10AE9h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  10AECh - 1145Dh		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  11460h - 1164Dh		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  11650h - 11659h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
+  300009h - 300009h		(/tmp/xcXcdcPPN/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   106h - FE7Dh
   FFFFh - FFFFh
-  1163Eh - 1163Fh
-  1164Ah - 2FFFFFh
+  10AEAh - 10AEBh
+  1145Eh - 1145Fh
+  1164Eh - 1164Fh
+  1165Ah - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXbmHAnG/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXcdcPPN/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -248,7 +252,7 @@
 00010AB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00010AC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00010AD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00010AE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00010AE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
 00010AF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00010B00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00010B10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -399,7 +403,7 @@
 00011420 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011430 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011440 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00011450 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011450 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00011460 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011470 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -429,8 +433,9 @@
 00011600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00011630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
-00011640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
+00011630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00011650 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --
