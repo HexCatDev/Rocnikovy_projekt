@@ -41,7 +41,7 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - návrh schéma byl konzultován s panem Máchou a také byl upravován v souladu s dokumentací jednotlivých součástek s jejich doporučeními.
 
 <figure>
-  <img src="Dokumentace/Schema.png" alt="Schéma">
+  <img src="Dokumentace/Schema.pdf" alt="Schéma">
   <figcaption align="center"><i>Obrázek 2: Schéma zapojení hodin</i></figcaption>
 </figure>
 
