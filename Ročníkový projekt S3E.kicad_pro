@@ -643,7 +643,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "/home/nontoxiccat/Desktop/KiCad projects/Ročníkový projekt S3E/",
+    "plot_directory": "Dokumentace/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
