@@ -1,5 +1,26 @@
 {
-    "version": "1.9",
+    "version": "1.8",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC18F47Q43",
+            "imageType": "application",
+            "imagePath": "./out/Hodiny/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "Simulator",
+            "packs": [
+                {
+                    "name": "PIC18F-Q_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.28.451"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8",
+            "userVariables": "default-uservariables_1"
+        }
+    ],
     "propertyGroups": [
         {
             "name": "default-uservariables",
@@ -60,28 +81,6 @@
                 "My_MCC_Config/mcc/mcc_generated_files/timer/tmr0.h",
                 "My_MCC_Config/mcc/mcc_generated_files/timer/timer_interface.h"
             ]
-        }
-    ],
-    "configurations": [
-        {
-            "name": "default",
-            "id": "",
-            "device": "PIC18F47Q43",
-            "imageType": "application",
-            "imagePath": "./out/Hodiny/default.elf",
-            "toolProperties": "default-tool-base",
-            "tool": "Simulator",
-            "packs": [
-                {
-                    "name": "PIC18F-Q_DFP",
-                    "vendor": "Microchip",
-                    "version": "1.28.451"
-                }
-            ],
-            "fileSet": "default",
-            "toolchain": "default-XC8",
-            "userVariables": "default-uservariables_1",
-            "includeLegacyMacros": true
         }
     ]
 }

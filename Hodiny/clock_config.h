@@ -8,14 +8,14 @@
 #include <xc.h>
 #include <stdbool.h>
 
-#define DP = LATDbits.LATD7;
-#define A = LATDbits.LATD6;
-#define B = LATDbits.LATD5;
-#define C = LATDbits.LATD4;
-#define D = LATCbits.LATC7;
-#define E = LATCbits.LATC6;
-#define F = LATCbits.LATC5;
-#define G = LATDbits.LATD3;
+#define G = TRISDbits.TRISD7 = 0; //G
+#define F = TRISDbits.TRISD6 = 0; //F
+#define E = TRISDbits.TRISD5 = 0; //E
+#define D = TRISDbits.TRISD4 = 0; //D
+#define DP = TRISDbits.TRISD3 = 0; //DP
+#define C = TRISCbits.TRISC7 = 0; //C
+#define B = TRISCbits.TRISC6 = 0; //B
+#define A = TRISCbits.TRISC5 = 0; //A
 
 #define time_to_BCD(tens, ones) ( (uint8_t) ((tens) << 4) | (ones)) //toto je makro vloží se do něj dvě hodnoty desítky a jednotky a ono vrátí hodnotu
 // v BCD formátu tj. pro třeba 45 sec máme 4 a 5, tens 4 ones 5 makro vezme 4 převede ho do binárního formátu což je 0100 a posune ji 
@@ -72,14 +72,14 @@ static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
     TRISB &= ~0x3F; //nastavení výstupů pro B0-B5 transzistory PNP bitwisová operace AND s negací 0x3F (0011 1111) nastaví bity 0-5 na 0 (výstup) a zbytek ponechá beze změny
 
     // Tyto hodnoty reprezentují segmenty A_DP
-    TRISDbits.TRISD7 = 0; // Nastavení výstupů pro D7-D3
-    TRISDbits.TRISD6 = 0;
-    TRISDbits.TRISD5 = 0;
-    TRISDbits.TRISD4 = 0;
-    TRISDbits.TRISD3 = 0;
-    TRISCbits.TRISC7 = 0; // Nastavení výstupů pro C7-C5
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC5 = 0;
+    TRISDbits.TRISD7 = 0; //G
+    TRISDbits.TRISD6 = 0; //F
+    TRISDbits.TRISD5 = 0; //E
+    TRISDbits.TRISD4 = 0; //D
+    TRISDbits.TRISD3 = 0; //DP
+    TRISCbits.TRISC7 = 0; //C
+    TRISCbits.TRISC6 = 0; //B
+    TRISCbits.TRISC5 = 0; //A
 
     //nastavení vstupů pro tlačítka
     TRISAbits.TRISA0 = 1; // hodiny zpět 
