@@ -41,28 +41,31 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - návrh schéma byl konzultován s panem Máchou a také byl upravován v souladu s dokumentací jednotlivých součástek s jejich doporučeními.
 
 <figure>
-  <img src="Dokumentace/str1.png" alt="Schéma">
-  <figcaption align="center"><i>Obrázek 2: Schéma zapojení hodin</i></figcaption>
+  <img src="Dokumentace/str1.png" alt="Schéma strana hlavní">
+  <figcaption align="center"><i>Obr. 1.: Schéma zapojení</i></figcaption>
 </figure>
 
-  <img src="Dokumentace/str2.png" alt="Schéma">
-  <figcaption align="center"><i>Obrázek 3: Schéma zapojení hodin</i></figcaption>
+  <img src="Dokumentace/str2.png" alt="Schéma zapojení Displeje">
+  <figcaption align="center"><i>Obr. 2: Schéma zapojení</i></figcaption>
 </figure>
 
+  <img src="Dokumentace/str3.png" alt="Schéma zapojení Displeje">
+  <figcaption align="center"><i>Obr. 3: Schéma zapojení</i></figcaption>
+</figure>
 
 <figure>
   <img src="Dokumentace/PCB_front_side.png" alt="PCB">
-  <figcaption align="center"><i>Obrázek 4: Plně osazená PCB deska z horní strany (některé 3D modely chybí)</i></figcaption>
+  <figcaption align="center"><i>Obr. 4: Plně osazená PCB deska z horní strany (některé 3D modely chybí)</i></figcaption>
 </figure>
 
 <figure>
   <img src="Dokumentace/PCB_front_side_without_components.png" alt="PCB">
-  <figcaption align="center"><i>Obrázek 5: Neosazená PCB deska z horní strany strany</i></figcaption>
+  <figcaption align="center"><i>Obr. 5: Neosazená PCB deska z horní strany strany</i></figcaption>
 </figure>
 
 <figure>
   <img src="Dokumentace/PCB_back_side.png" alt="PCB">
-  <figcaption align="center"><i>Obrázek 6: Plně osazená PCB deska ze spodní strany</i></figcaption>
+  <figcaption align="center"><i>Obr. 6: Plně osazená PCB deska ze spodní strany</i></figcaption>
 </figure>
 
 <figure>
