@@ -86,7 +86,6 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - Headry:
 	+ 2X https://ecom.cz/eshop/detail/84648
 	+ 5X https://ecom.cz/eshop/detail/84654
-	+ 18X https://ecom.cz/eshop/detail/47661
 - Patice
 	+ SIL 1X10 https://ecom.cz/eshop/detail/85244-SILPZ-1X10-V13-JK
 	+ SIL 1X20(zkrácena na 18) https://ecom.cz/eshop/detail/85248-SILPZ-1X20-V13-JK
