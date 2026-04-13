@@ -502,7 +502,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e7b5e35-ee52-48fe-aaa4-a5d7fc33ed67")
-		(property "Reference" "J6"
+		(property "Reference" "J8"
 			(at 78.74 76.2 0)
 			(effects
 				(font
@@ -626,7 +626,7 @@
 		(instances
 			(project ""
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J6")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -642,7 +642,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "13e4b923-88c6-46d8-ba20-80cf94364b38")
-		(property "Reference" "S3"
+		(property "Reference" "S2"
 			(at 156.21 76.2 0)
 			(effects
 				(font
@@ -752,7 +752,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S3")
+					(reference "S2")
 					(unit 1)
 				)
 			)
@@ -768,7 +768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "227dd674-9131-41fe-8352-1a1cd4081ef8")
-		(property "Reference" "S4"
+		(property "Reference" "S3"
 			(at 204.47 76.2 0)
 			(effects
 				(font
@@ -878,7 +878,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S4")
+					(reference "S3")
 					(unit 1)
 				)
 			)
@@ -894,7 +894,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bf09655-6b99-4ef2-8002-24e7f04630ef")
-		(property "Reference" "J7"
+		(property "Reference" "J6"
 			(at 127 76.2 0)
 			(effects
 				(font
@@ -1018,7 +1018,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J7")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -1034,7 +1034,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4713f60a-6667-43cf-a5b1-e9d9e9ebf847")
-		(property "Reference" "J8"
+		(property "Reference" "J7"
 			(at 175.26 76.2 0)
 			(effects
 				(font
@@ -1158,7 +1158,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J8")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -1174,7 +1174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0c32825-0f5a-4d24-a5d8-adb6f06bc97e")
-		(property "Reference" "S2"
+		(property "Reference" "S1"
 			(at 107.95 76.2 0)
 			(effects
 				(font
@@ -1284,7 +1284,7 @@
 		(instances
 			(project ""
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S2")
+					(reference "S1")
 					(unit 1)
 				)
 			)
