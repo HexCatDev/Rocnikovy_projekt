@@ -10,4 +10,4 @@ _autosave-*
 *.kicad_prl
 # Backups folder
 *-backups/
-
+.history
