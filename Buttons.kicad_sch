@@ -474,6 +474,16 @@
 		)
 		(uuid "e97f3b3e-e34f-4dc7-91ef-e03c4a88e2c1")
 	)
+	(label ""
+		(at 30.48 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a804f1a8-488a-43ae-a78b-6e1810317e94")
+	)
 	(hierarchical_label "VCC_IN"
 		(shape input)
 		(at 190.5 86.36 270)
@@ -552,7 +562,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e7b5e35-ee52-48fe-aaa4-a5d7fc33ed67")
-		(property "Reference" "J8"
+		(property "Reference" "J6"
 			(at 78.74 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -572,7 +582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "HDRV2W64P0X254_1X2_508X254X588P"
+		(property "Footprint" "SamacSys_Parts:HDRV2W64P0X254_1X2_508X254X588P"
 			(at 72.39 -8.56 0)
 			(hide yes)
 			(show_name no)
@@ -700,7 +710,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J8")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -718,7 +728,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "13e4b923-88c6-46d8-ba20-80cf94364b38")
-		(property "Reference" "S2"
+		(property "Reference" "S5"
 			(at 156.21 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -738,7 +748,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TACT67NF"
+		(property "Footprint" "My parts:TACT67NF"
 			(at 162.56 178.74 0)
 			(hide yes)
 			(show_name no)
@@ -848,7 +858,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S2")
+					(reference "S5")
 					(unit 1)
 				)
 			)
@@ -866,7 +876,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "227dd674-9131-41fe-8352-1a1cd4081ef8")
-		(property "Reference" "S3"
+		(property "Reference" "S6"
 			(at 204.47 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -886,7 +896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TACT67NF"
+		(property "Footprint" "My parts:TACT67NF"
 			(at 210.82 178.74 0)
 			(hide yes)
 			(show_name no)
@@ -996,7 +1006,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S3")
+					(reference "S6")
 					(unit 1)
 				)
 			)
@@ -1014,7 +1024,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bf09655-6b99-4ef2-8002-24e7f04630ef")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 127 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1034,7 +1044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "HDRV2W64P0X254_1X2_508X254X588P"
+		(property "Footprint" "SamacSys_Parts:HDRV2W64P0X254_1X2_508X254X588P"
 			(at 120.65 -8.56 0)
 			(hide yes)
 			(show_name no)
@@ -1162,7 +1172,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -1180,7 +1190,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4713f60a-6667-43cf-a5b1-e9d9e9ebf847")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 175.26 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1200,7 +1210,7 @@
 				)
 			)
 		)
-		(property "Footprint" "HDRV2W64P0X254_1X2_508X254X588P"
+		(property "Footprint" "SamacSys_Parts:HDRV2W64P0X254_1X2_508X254X588P"
 			(at 168.91 -8.56 0)
 			(hide yes)
 			(show_name no)
@@ -1328,7 +1338,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -1346,7 +1356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0c32825-0f5a-4d24-a5d8-adb6f06bc97e")
-		(property "Reference" "S1"
+		(property "Reference" "S4"
 			(at 107.95 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1366,7 +1376,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TACT67NF"
+		(property "Footprint" "My parts:TACT67NF"
 			(at 114.3 178.74 0)
 			(hide yes)
 			(show_name no)
@@ -1476,7 +1486,7 @@
 		(instances
 			(project "Ročníkový projekt S3E"
 				(path "/c4e08560-2444-47e9-8324-16df61887a86/fbd34285-b602-47a7-9c37-182089d835a8"
-					(reference "S1")
+					(reference "S4")
 					(unit 1)
 				)
 			)
