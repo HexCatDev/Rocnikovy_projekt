@@ -144,7 +144,7 @@
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
-        "min_via_annular_width": 0.3,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -551,7 +551,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "/home/nontoxiccat/Downloads/",
+      "plot": "/home/nontoxiccat/Downloads/JLCPCB/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -772,7 +772,7 @@
         "uuid": "c4e08560-2444-47e9-8324-16df61887a86"
       }
     ],
-    "used_designators": "",
+    "used_designators": "S1-6,R1-21,J1-10,IC1-3,U1,Q1-6,Conn1-2,D1,C1-10,Y1,#PWR1-33,#FLG1-2",
     "variants": [
       {
         "name": "V2"
