@@ -54,19 +54,10 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 </figure>
 
 <figure>
-  <img src="Dokumentace/PCB_front_side.png" alt="PCB">
-  <figcaption align="center"><i>Obr. 4: Plně osazená PCB deska z horní strany (některé 3D modely chybí)</i></figcaption>
-</figure>
-
-<figure>
   <img src="Dokumentace/PCB_front_side_without_components.png" alt="PCB">
   <figcaption align="center"><i>Obr. 5: Neosazená PCB deska z horní strany strany</i></figcaption>
 </figure>
 
-<figure>
-  <img src="Dokumentace/PCB_back_side.png" alt="PCB">
-  <figcaption align="center"><i>Obr. 6: Plně osazená PCB deska ze spodní strany</i></figcaption>
-</figure>
 
 <figure>
   <img src="Dokumentace/PCB_back_side_without_components.png" alt="PCB">
