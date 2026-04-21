@@ -772,7 +772,7 @@
         "uuid": "c4e08560-2444-47e9-8324-16df61887a86"
       }
     ],
-    "used_designators": "S1-6,R1-21,J1-10,IC1-3,U1,Q1-6,Conn1-2,D1,C1-10,Y1,#PWR1-33,#FLG1-2",
+    "used_designators": "",
     "variants": [
       {
         "name": "V2"
