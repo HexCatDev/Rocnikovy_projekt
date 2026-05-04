@@ -254,18 +254,6 @@
 			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
-			"name" : "CMAKE_C_COMPILER_WORKS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Tell CMake that the compiler works, but cannot be run during the configuration stage"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "YES"
-		},
-		{
 			"name" : "CMAKE_C_FLAGS",
 			"properties" : 
 			[
@@ -1071,10 +1059,10 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "The CMake toolchain file"
 				}
 			],
-			"type" : "UNINITIALIZED",
+			"type" : "FILEPATH",
 			"value" : "/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/cmake/Hodiny/default/.generated/toolchain.cmake"
 		},
 		{

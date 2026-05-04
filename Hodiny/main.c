@@ -14,14 +14,15 @@
 #include <pic18f47q43.h>
 // Configuration bits for PIC18F47Q43
 #pragma config WDTE = OFF              // Watchdog Timer disabled
+#pragma config LVP = ON
 
 #define _XTAL_FREQ 64000000 // Define the operating frequency for delay functions
 #define RTC_ADDR 0x6F      // adress 7 bit 110 1111 
 #define SEC_REG 0x00        // seconds register
 #define MIN_REG 0X01        // minutes register
 #define HOUR_REG 0X02       // hours register
-#define TL_SET PORTAbits.RA0 // tlačítko pro nastavení pozice
-#define TL_ADD PORTAbits.RA1 // tlačítko pro přidání hodin
+#define TL_SET PORTAbits.RA1 // tlačítko pro nastavení pozice
+#define TL_ADD PORTAbits.RA0 // tlačítko pro přidání hodin
 #define TL_SUB PORTAbits.RA2 // tlačítko pro odečtení hodin
 
 #include "My_MCC_Config/mcc/mcc_generated_files/timer/tmr0.h"
@@ -71,15 +72,16 @@ int main(void)
     return 0;
 }
 
-void display_digit(const int segments[8]){
-    LATDbits.LATD7 = segments[DPS] & 0x1;
-    LATDbits.LATD6 = segments[As] & 0x1;
-    LATDbits.LATD5 = segments[BS] & 0x1;
-    LATDbits.LATD4 = segments[CS] & 0x1;
-    LATCbits.LATC7 = segments[DS] & 0x1;
-    LATCbits.LATC6 = segments[ES] & 0x1;
-    LATCbits.LATC5 = segments[FS] & 0x1;
-    LATDbits.LATD3 = segments[GS] & 0x1;
+void display_digit(const uint8_t *segments){ // Změna na ukazatel *
+    // Indexy v poli: 0=DP, 1=G, 2=F, 3=E, 4=D, 5=C, 6=B, 7=A
+    LATDbits.LATD3 = segments[0] & 0x1; // DP
+    LATDbits.LATD7 = segments[1] & 0x1; // G
+    LATDbits.LATD6 = segments[2] & 0x1; // F
+    LATDbits.LATD5 = segments[3] & 0x1; // E
+    LATDbits.LATD4 = segments[4] & 0x1; // D
+    LATCbits.LATC7 = segments[5] & 0x1; // C
+    LATCbits.LATC6 = segments[6] & 0x1; // B
+    LATCbits.LATC5 = segments[7] & 0x1; // A
 }
 
 void clock_init(uint8_t numbers_out[6]) {
@@ -94,7 +96,7 @@ void clock_init(uint8_t numbers_out[6]) {
                 // tady se odešlou hodnoty z numbers out do RTC přes I2C a zapnase oscilátor
                 I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
                 WRITE_RTC(); //tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
-                while (TL_SET == 1 || !I2C_trasmission_complete) { //čeká se na uvolnění tlačítka nebo dokončení I2C přenosu, aby se zabránilo tomu, že se během přenosu změní nastavené hodnoty nebo se odešle neúplný přenos
+                while (!I2C_trasmission_complete) { //čeká se na uvolnění tlačítka nebo dokončení I2C přenosu, aby se zabránilo tomu, že se během přenosu změní nastavené hodnoty nebo se odešle neúplný přenos
                     __delay_ms(10);
                     LATB |= 0x3F; //nastaví všechny tranzistory na high takže se vypnou protože PNP display zhasne
                 }
@@ -143,10 +145,10 @@ void clock_init(uint8_t numbers_out[6]) {
 
             // nastaví určitý tranzistor na low takže se zapne
             switch (selected_digit) {
-                case 0: display_digit(numbers_DP[numbers_out[0]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
-                case 1: display_digit(numbers_DP[numbers_out[1]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
-                case 2: display_digit(numbers_DP[numbers_out[2]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
-                case 3: display_digit(numbers_DP[numbers_out[3]]); LATBbits.LATB2 = 0; __delay_us(500); break; 
+                case 0: display_digit(numbers_DP[numbers_out[0]]); LATBbits.LATB2 = 0; __delay_us(500); break; 
+                case 1: display_digit(numbers_DP[numbers_out[1]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
+                case 2: display_digit(numbers_DP[numbers_out[2]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
+                case 3: display_digit(numbers_DP[numbers_out[3]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
                 case 4: display_digit(numbers_DP[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; 
                 case 5: display_digit(numbers_DP[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; 
             }
@@ -155,7 +157,7 @@ void clock_init(uint8_t numbers_out[6]) {
 }
 
 void display_controll(){
-    if (PORTAbits.RA0 == 1) {
+    if (TL_SET == 1) {
         TMR0_Stop(); //zastaví časovač aby se zabránilo konfliktu mezi timerem a zobrazením číslic při nastavení hodin
         ms_sync_counter = 0; //resetuje se čítač pro synchronizaci s RTC aby se zabránilo tomu, že se během nastavení hodin synchronizuje čas s RTC a změní se nám nastavené hodnoty
         ms_counter = 0; //resetuje se čítač pro synchronizaci s RTC aby se zabránilo tomu, že se během nastavení hodin synchronizuje čas s RTC a změní se nám nastavené hodnoty
@@ -170,12 +172,12 @@ void display_controll(){
         LATB |= 0x3F;
         // nastaví určitý tranzistor na low takže se zapne
         switch (i) {
-            case 0: display_digit(numbers[numbers_out[0]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
-            case 1: display_digit(numbers[numbers_out[1]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
-            case 2: display_digit(numbers[numbers_out[2]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
-            case 3: display_digit(numbers[numbers_out[3]]); LATBbits.LATB2 = 0; __delay_us(500); break; 
-            case 4: display_digit(numbers[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; 
-            case 5: display_digit(numbers[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; 
+            case 0: display_digit(numbers[numbers_out[0]]); LATBbits.LATB2 = 0; __delay_us(500); break;
+            case 1: display_digit(numbers[numbers_out[1]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
+            case 2: display_digit(numbers[numbers_out[2]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
+            case 3: display_digit(numbers[numbers_out[3]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
+            case 4: display_digit(numbers[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; // je správně
+            case 5: display_digit(numbers[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; // je správně
         }
     }
 }

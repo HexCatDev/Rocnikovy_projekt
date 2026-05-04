@@ -1,0 +1,1992 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F16952 `(v ~T0 @X0 0 tf ]
+[v F16954 `(v ~T0 @X0 0 tf ]
+[v F16956 `(v ~T0 @X0 0 tf ]
+[v F16958 `(v ~T0 @X0 0 tf ]
+[v F16960 `(v ~T0 @X0 0 tf1`ul ]
+[v F16963 `(ul ~T0 @X0 0 tf ]
+[v F16965 `(ul ~T0 @X0 0 tf ]
+[v F16967 `(v ~T0 @X0 0 tf1`ul ]
+[v F16970 `(ul ~T0 @X0 0 tf ]
+[v F16973 `(v ~T0 @X0 0 tf ]
+[v F16972 `(v ~T0 @X0 0 tf1`*F16973 ]
+[v F16976 `(v ~T0 @X0 0 tf ]
+"64 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/../timer_interface.h
+[s S2399 `*F16952 1 `*F16954 1 `*F16956 1 `*F16958 1 `*F16960 1 `*F16963 1 `*F16965 1 `*F16967 1 `*F16970 1 `*F16972 1 `*F16976 1 ]
+[n S2399 TIMER_INTERFACE Initialize Deinitialize Start Stop PeriodSet PeriodGet CounterGet CounterSet MaxCountGet TimeoutCallbackRegister Tasks ]
+"151 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/../tmr0.h
+[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
+"159
+[v _TMR0_Deinitialize `(v ~T0 @X0 0 ef ]
+"168
+[v _TMR0_Start `(v ~T0 @X0 0 ef ]
+"177
+[v _TMR0_Stop `(v ~T0 @X0 0 ef ]
+"204
+[v _TMR0_PeriodSet `(v ~T0 @X0 0 ef1`ul ]
+"213
+[v _TMR0_PeriodGet `(ul ~T0 @X0 0 ef ]
+"186
+[v _TMR0_CounterGet `(ul ~T0 @X0 0 ef ]
+"195
+[v _TMR0_CounterSet `(v ~T0 @X0 0 ef1`ul ]
+"221
+[v _TMR0_MaxCountGet `(ul ~T0 @X0 0 ef ]
+[v F16990 `(v ~T0 @X0 0 tf ]
+"230
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F16990 ]
+[v F17008 `(v ~T0 @X0 0 tf ]
+[v F17011 `(v ~T0 @X0 0 tf ]
+"22916 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f47q43.h
+[v _TMR0H `Vuc ~T0 @X0 0 e@793 ]
+"22778
+[v _TMR0L `Vuc ~T0 @X0 0 e@792 ]
+"23294
+[v _T0CON1 `Vuc ~T0 @X0 0 e@795 ]
+"54 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_DefaultOverflowCallback `(v ~T0 @X0 0 sf ]
+"47322 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f47q43.h
+[s S2230 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2230 . SPI1RXIF SPI1TXIF SPI1IF TMR2IF TMR1IF TMR1GIF CCP1IF TMR0IF ]
+"47321
+[u S2229 `S2230 1 ]
+[n S2229 . . ]
+"47333
+[v _PIR3bits `VS2229 ~T0 @X0 0 e@1201 ]
+"46448
+[s S2198 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2198 . SPI1RXIE SPI1TXIE SPI1IE TMR2IE TMR1IE TMR1GIE CCP1IE TMR0IE ]
+"46447
+[u S2197 `S2198 1 ]
+[n S2197 . . ]
+"46459
+[v _PIE3bits `VS2197 ~T0 @X0 0 e@1185 ]
+"23170
+[v _T0CON0 `Vuc ~T0 @X0 0 e@794 ]
+"23176
+[s S1121 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1121 . OUTPS MD16 OUT . EN ]
+"23183
+[s S1122 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1122 . T0OUTPS T0MD16 T0OUT . T0EN ]
+"23190
+[s S1123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1123 . OUTPS0 OUTPS1 OUTPS2 OUTPS3 T016BIT ]
+"23197
+[s S1124 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1124 . T0OUTPS0 T0OUTPS1 T0OUTPS2 T0OUTPS3 ]
+"23175
+[u S1120 `S1121 1 `S1122 1 `S1123 1 `S1124 1 ]
+[n S1120 . . . . . ]
+"23204
+[v _T0CON0bits `VS1120 ~T0 @X0 0 e@794 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt irq ( TMR0 ) base ( 8 ) ]
+[v F17030 `(v ~T0 @X0 0 tf ]
+[v F17032 `(v ~T0 @X0 0 tf ]
+[v F17034 `(v ~T0 @X0 0 tf ]
+"256 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f47q43.h
+[; <" CLKRCON equ 039h ;# ">
+"360
+[; <" CLKRCLK equ 03Ah ;# ">
+"444
+[; <" NVMCON0 equ 040h ;# ">
+"488
+[; <" NVMCON1 equ 041h ;# ">
+"523
+[; <" NVMLOCK equ 042h ;# ">
+"545
+[; <" NVMADR equ 043h ;# ">
+"552
+[; <" NVMADRL equ 043h ;# ">
+"622
+[; <" NVMADRH equ 044h ;# ">
+"692
+[; <" NVMADRU equ 045h ;# ">
+"750
+[; <" NVMDAT equ 046h ;# ">
+"757
+[; <" NVMDATL equ 046h ;# ">
+"827
+[; <" NVMDATH equ 047h ;# ">
+"897
+[; <" VREGCON equ 048h ;# ">
+"951
+[; <" BORCON equ 049h ;# ">
+"978
+[; <" HLVDCON0 equ 04Ah ;# ">
+"1058
+[; <" HLVDCON1 equ 04Bh ;# ">
+"1130
+[; <" ZCDCON equ 04Ch ;# ">
+"1210
+[; <" PMD0 equ 060h ;# ">
+"1267
+[; <" PMD1 equ 061h ;# ">
+"1329
+[; <" PMD3 equ 063h ;# ">
+"1380
+[; <" PMD4 equ 064h ;# ">
+"1436
+[; <" PMD5 equ 065h ;# ">
+"1487
+[; <" PMD6 equ 066h ;# ">
+"1549
+[; <" PMD7 equ 067h ;# ">
+"1611
+[; <" PMD8 equ 068h ;# ">
+"1661
+[; <" MD1CON0 equ 06Ah ;# ">
+"1729
+[; <" MD1CON1 equ 06Bh ;# ">
+"1795
+[; <" MD1SRC equ 06Ch ;# ">
+"1899
+[; <" MD1CARL equ 06Dh ;# ">
+"1991
+[; <" MD1CARH equ 06Eh ;# ">
+"2083
+[; <" CMOUT equ 06Fh ;# ">
+"2109
+[; <" CM1CON0 equ 070h ;# ">
+"2189
+[; <" CM1CON1 equ 071h ;# ">
+"2229
+[; <" CM1NCH equ 072h ;# ">
+"2289
+[; <" CM1PCH equ 073h ;# ">
+"2349
+[; <" CM2CON0 equ 074h ;# ">
+"2429
+[; <" CM2CON1 equ 075h ;# ">
+"2469
+[; <" CM2NCH equ 076h ;# ">
+"2529
+[; <" CM2PCH equ 077h ;# ">
+"2589
+[; <" WDTCON0 equ 078h ;# ">
+"2700
+[; <" WDTCON1 equ 079h ;# ">
+"2820
+[; <" WDTPS equ 07Ah ;# ">
+"2827
+[; <" WDTPSL equ 07Ah ;# ">
+"2905
+[; <" WDTPSH equ 07Bh ;# ">
+"2983
+[; <" WDTTMR equ 07Ch ;# ">
+"3080
+[; <" DAC1DAT equ 07Dh ;# ">
+"3087
+[; <" DAC1DATL equ 07Dh ;# ">
+"3165
+[; <" DAC1CON equ 07Fh ;# ">
+"3268
+[; <" SPI1RXB equ 080h ;# ">
+"3338
+[; <" SPI1TXB equ 081h ;# ">
+"3408
+[; <" SPI1TCNT equ 082h ;# ">
+"3415
+[; <" SPI1TCNTL equ 082h ;# ">
+"3435
+[; <" SPI1TCNTH equ 083h ;# ">
+"3455
+[; <" SPI1CON0 equ 084h ;# ">
+"3521
+[; <" SPI1CON1 equ 085h ;# ">
+"3623
+[; <" SPI1CON2 equ 086h ;# ">
+"3701
+[; <" SPI1STATUS equ 087h ;# ">
+"3783
+[; <" SPI1TWIDTH equ 088h ;# ">
+"3823
+[; <" SPI1BAUD equ 089h ;# ">
+"3893
+[; <" SPI1INTF equ 08Ah ;# ">
+"3985
+[; <" SPI1INTE equ 08Bh ;# ">
+"4077
+[; <" SPI1CLK equ 08Ch ;# ">
+"4169
+[; <" SPI2RXB equ 08Dh ;# ">
+"4239
+[; <" SPI2TXB equ 08Eh ;# ">
+"4309
+[; <" SPI2TCNT equ 08Fh ;# ">
+"4316
+[; <" SPI2TCNTL equ 08Fh ;# ">
+"4336
+[; <" SPI2TCNTH equ 090h ;# ">
+"4356
+[; <" SPI2CON0 equ 091h ;# ">
+"4422
+[; <" SPI2CON1 equ 092h ;# ">
+"4524
+[; <" SPI2CON2 equ 093h ;# ">
+"4602
+[; <" SPI2STATUS equ 094h ;# ">
+"4684
+[; <" SPI2TWIDTH equ 095h ;# ">
+"4724
+[; <" SPI2BAUD equ 096h ;# ">
+"4794
+[; <" SPI2INTF equ 097h ;# ">
+"4886
+[; <" SPI2INTE equ 098h ;# ">
+"4978
+[; <" SPI2CLK equ 099h ;# ">
+"5070
+[; <" ACTCON equ 0ACh ;# ">
+"5140
+[; <" OSCCON1 equ 0ADh ;# ">
+"5210
+[; <" OSCCON2 equ 0AEh ;# ">
+"5280
+[; <" OSCCON3 equ 0AFh ;# ">
+"5320
+[; <" OSCTUNE equ 0B0h ;# ">
+"5378
+[; <" OSCFRQ equ 0B1h ;# ">
+"5383
+[; <" OSCFREQ equ 0B1h ;# ">
+"5468
+[; <" OSCSTAT equ 0B2h ;# ">
+"5473
+[; <" OSCSTAT1 equ 0B2h ;# ">
+"5580
+[; <" OSCEN equ 0B3h ;# ">
+"5637
+[; <" PRLOCK equ 0B4h ;# ">
+"5657
+[; <" SCANPR equ 0B5h ;# ">
+"5725
+[; <" DMA1PR equ 0B6h ;# ">
+"5793
+[; <" DMA2PR equ 0B7h ;# ">
+"5861
+[; <" DMA3PR equ 0B8h ;# ">
+"5929
+[; <" DMA4PR equ 0B9h ;# ">
+"5997
+[; <" DMA5PR equ 0BAh ;# ">
+"6065
+[; <" DMA6PR equ 0BBh ;# ">
+"6133
+[; <" MAINPR equ 0BEh ;# ">
+"6201
+[; <" ISRPR equ 0BFh ;# ">
+"6269
+[; <" CLCDATA equ 0D4h ;# ">
+"6331
+[; <" CLCSELECT equ 0D5h ;# ">
+"6371
+[; <" CLCnCON equ 0D6h ;# ">
+"6441
+[; <" CLCnPOL equ 0D7h ;# ">
+"6486
+[; <" CLCnSEL0 equ 0D8h ;# ">
+"6556
+[; <" CLCnSEL1 equ 0D9h ;# ">
+"6626
+[; <" CLCnSEL2 equ 0DAh ;# ">
+"6696
+[; <" CLCnSEL3 equ 0DBh ;# ">
+"6766
+[; <" CLCnGLS0 equ 0DCh ;# ">
+"6828
+[; <" CLCnGLS1 equ 0DDh ;# ">
+"6890
+[; <" CLCnGLS2 equ 0DEh ;# ">
+"6952
+[; <" CLCnGLS3 equ 0DFh ;# ">
+"7014
+[; <" DMASELECT equ 0E8h ;# ">
+"7054
+[; <" DMAnBUF equ 0E9h ;# ">
+"7124
+[; <" DMAnDCNT equ 0EAh ;# ">
+"7131
+[; <" DMAnDCNTL equ 0EAh ;# ">
+"7201
+[; <" DMAnDCNTH equ 0EBh ;# ">
+"7247
+[; <" DMAnDPTR equ 0ECh ;# ">
+"7254
+[; <" DMAnDPTRL equ 0ECh ;# ">
+"7324
+[; <" DMAnDPTRH equ 0EDh ;# ">
+"7394
+[; <" DMAnDSZ equ 0EEh ;# ">
+"7401
+[; <" DMAnDSZL equ 0EEh ;# ">
+"7471
+[; <" DMAnDSZH equ 0EFh ;# ">
+"7517
+[; <" DMAnDSA equ 0F0h ;# ">
+"7524
+[; <" DMAnDSAL equ 0F0h ;# ">
+"7594
+[; <" DMAnDSAH equ 0F1h ;# ">
+"7664
+[; <" DMAnSCNT equ 0F2h ;# ">
+"7671
+[; <" DMAnSCNTL equ 0F2h ;# ">
+"7741
+[; <" DMAnSCNTH equ 0F3h ;# ">
+"7789
+[; <" DMAnSPTR equ 0F4h ;# ">
+"7796
+[; <" DMAnSPTRL equ 0F4h ;# ">
+"7866
+[; <" DMAnSPTRH equ 0F5h ;# ">
+"7936
+[; <" DMAnSPTRU equ 0F6h ;# ">
+"7994
+[; <" DMAnSSZ equ 0F7h ;# ">
+"8001
+[; <" DMAnSSZL equ 0F7h ;# ">
+"8071
+[; <" DMAnSSZH equ 0F8h ;# ">
+"8119
+[; <" DMAnSSA equ 0F9h ;# ">
+"8126
+[; <" DMAnSSAL equ 0F9h ;# ">
+"8196
+[; <" DMAnSSAH equ 0FAh ;# ">
+"8266
+[; <" DMAnSSAU equ 0FBh ;# ">
+"8324
+[; <" DMAnCON0 equ 0FCh ;# ">
+"8370
+[; <" DMAnCON1 equ 0FDh ;# ">
+"8414
+[; <" DMAnAIRQ equ 0FEh ;# ">
+"8484
+[; <" DMAnSIRQ equ 0FFh ;# ">
+"8554
+[; <" PPSLOCK equ 0200h ;# ">
+"8574
+[; <" RA0PPS equ 0201h ;# ">
+"8630
+[; <" RA1PPS equ 0202h ;# ">
+"8686
+[; <" RA2PPS equ 0203h ;# ">
+"8742
+[; <" RA3PPS equ 0204h ;# ">
+"8798
+[; <" RA4PPS equ 0205h ;# ">
+"8854
+[; <" RA5PPS equ 0206h ;# ">
+"8910
+[; <" RA6PPS equ 0207h ;# ">
+"8966
+[; <" RA7PPS equ 0208h ;# ">
+"9022
+[; <" RB0PPS equ 0209h ;# ">
+"9078
+[; <" RB1PPS equ 020Ah ;# ">
+"9134
+[; <" RB2PPS equ 020Bh ;# ">
+"9190
+[; <" RB3PPS equ 020Ch ;# ">
+"9246
+[; <" RB4PPS equ 020Dh ;# ">
+"9302
+[; <" RB5PPS equ 020Eh ;# ">
+"9358
+[; <" RB6PPS equ 020Fh ;# ">
+"9414
+[; <" RB7PPS equ 0210h ;# ">
+"9470
+[; <" RC0PPS equ 0211h ;# ">
+"9526
+[; <" RC1PPS equ 0212h ;# ">
+"9582
+[; <" RC2PPS equ 0213h ;# ">
+"9638
+[; <" RC3PPS equ 0214h ;# ">
+"9694
+[; <" RC4PPS equ 0215h ;# ">
+"9750
+[; <" RC5PPS equ 0216h ;# ">
+"9806
+[; <" RC6PPS equ 0217h ;# ">
+"9862
+[; <" RC7PPS equ 0218h ;# ">
+"9918
+[; <" RD0PPS equ 0219h ;# ">
+"9974
+[; <" RD1PPS equ 021Ah ;# ">
+"10030
+[; <" RD2PPS equ 021Bh ;# ">
+"10086
+[; <" RD3PPS equ 021Ch ;# ">
+"10142
+[; <" RD4PPS equ 021Dh ;# ">
+"10198
+[; <" RD5PPS equ 021Eh ;# ">
+"10254
+[; <" RD6PPS equ 021Fh ;# ">
+"10310
+[; <" RD7PPS equ 0220h ;# ">
+"10366
+[; <" RE0PPS equ 0221h ;# ">
+"10422
+[; <" RE1PPS equ 0222h ;# ">
+"10478
+[; <" RE2PPS equ 0223h ;# ">
+"10534
+[; <" INT0PPS equ 023Eh ;# ">
+"10594
+[; <" INT1PPS equ 023Fh ;# ">
+"10660
+[; <" INT2PPS equ 0240h ;# ">
+"10732
+[; <" T0CKIPPS equ 0241h ;# ">
+"10804
+[; <" T1CKIPPS equ 0242h ;# ">
+"10876
+[; <" T1GPPS equ 0243h ;# ">
+"10942
+[; <" T3CKIPPS equ 0244h ;# ">
+"11014
+[; <" T3GPPS equ 0245h ;# ">
+"11080
+[; <" T5CKIPPS equ 0246h ;# ">
+"11152
+[; <" T5GPPS equ 0247h ;# ">
+"11218
+[; <" T2INPPS equ 0248h ;# ">
+"11284
+[; <" T4INPPS equ 0249h ;# ">
+"11350
+[; <" T6INPPS equ 024Ah ;# ">
+"11416
+[; <" CCP1PPS equ 024Fh ;# ">
+"11488
+[; <" CCP2PPS equ 0250h ;# ">
+"11560
+[; <" CCP3PPS equ 0251h ;# ">
+"11626
+[; <" PWM1ERSPPS equ 0253h ;# ">
+"11692
+[; <" PWM2ERSPPS equ 0254h ;# ">
+"11764
+[; <" PWM3ERSPPS equ 0255h ;# ">
+"11830
+[; <" PWMIN0PPS equ 0257h ;# ">
+"11902
+[; <" PWMIN1PPS equ 0258h ;# ">
+"11974
+[; <" SMT1WINPPS equ 0259h ;# ">
+"12046
+[; <" SMT1SIGPPS equ 025Ah ;# ">
+"12118
+[; <" CWG1PPS equ 025Bh ;# ">
+"12123
+[; <" CWG1INPPS equ 025Bh ;# ">
+"12328
+[; <" CWG2PPS equ 025Ch ;# ">
+"12333
+[; <" CWG2INPPS equ 025Ch ;# ">
+"12538
+[; <" CWG3PPS equ 025Dh ;# ">
+"12543
+[; <" CWG3INPPS equ 025Dh ;# ">
+"12748
+[; <" MD1CARLPPS equ 025Eh ;# ">
+"12753
+[; <" MDCARLPPS equ 025Eh ;# ">
+"12878
+[; <" MD1CARHPPS equ 025Fh ;# ">
+"12883
+[; <" MDCARHPPS equ 025Fh ;# ">
+"13008
+[; <" MD1SRCPPS equ 0260h ;# ">
+"13013
+[; <" MDSRCPPS equ 0260h ;# ">
+"13138
+[; <" CLCIN0PPS equ 0261h ;# ">
+"13204
+[; <" CLCIN1PPS equ 0262h ;# ">
+"13270
+[; <" CLCIN2PPS equ 0263h ;# ">
+"13336
+[; <" CLCIN3PPS equ 0264h ;# ">
+"13402
+[; <" CLCIN4PPS equ 0265h ;# ">
+"13468
+[; <" CLCIN5PPS equ 0266h ;# ">
+"13534
+[; <" CLCIN6PPS equ 0267h ;# ">
+"13600
+[; <" CLCIN7PPS equ 0268h ;# ">
+"13666
+[; <" ADACTPPS equ 0269h ;# ">
+"13732
+[; <" SPI1SCKPPS equ 026Ah ;# ">
+"13798
+[; <" SPI1SDIPPS equ 026Bh ;# ">
+"13864
+[; <" SPI1SSPPS equ 026Ch ;# ">
+"13930
+[; <" SPI2SCKPPS equ 026Dh ;# ">
+"13996
+[; <" SPI2SDIPPS equ 026Eh ;# ">
+"14062
+[; <" SPI2SSPPS equ 026Fh ;# ">
+"14128
+[; <" I2C1SDAPPS equ 0270h ;# ">
+"14194
+[; <" I2C1SCLPPS equ 0271h ;# ">
+"14260
+[; <" U1RXPPS equ 0272h ;# ">
+"14332
+[; <" U1CTSPPS equ 0273h ;# ">
+"14404
+[; <" U2RXPPS equ 0274h ;# ">
+"14470
+[; <" U2CTSPPS equ 0275h ;# ">
+"14536
+[; <" U3RXPPS equ 0276h ;# ">
+"14608
+[; <" U3CTSPPS equ 0277h ;# ">
+"14680
+[; <" U4RXPPS equ 0278h ;# ">
+"14746
+[; <" U4CTSPPS equ 0279h ;# ">
+"14812
+[; <" U5RXPPS equ 027Ah ;# ">
+"14884
+[; <" U5CTSPPS equ 027Bh ;# ">
+"14956
+[; <" RC4I2C equ 0286h ;# ">
+"15088
+[; <" RC3I2C equ 0287h ;# ">
+"15220
+[; <" RB2I2C equ 0288h ;# ">
+"15352
+[; <" RB1I2C equ 0289h ;# ">
+"15484
+[; <" I2C1RXB equ 028Bh ;# ">
+"15504
+[; <" I2C1TXB equ 028Ch ;# ">
+"15524
+[; <" I2C1CNT equ 028Dh ;# ">
+"15594
+[; <" I2C1ADB0 equ 028Eh ;# ">
+"15614
+[; <" I2C1ADB1 equ 028Fh ;# ">
+"15634
+[; <" I2C1ADR0 equ 0290h ;# ">
+"15654
+[; <" I2C1ADR1 equ 0291h ;# ">
+"15675
+[; <" I2C1ADR2 equ 0292h ;# ">
+"15695
+[; <" I2C1ADR3 equ 0293h ;# ">
+"15716
+[; <" I2C1CON0 equ 0294h ;# ">
+"15793
+[; <" I2C1CON1 equ 0295h ;# ">
+"15850
+[; <" I2C1CON2 equ 0296h ;# ">
+"15926
+[; <" I2C1ERR equ 0297h ;# ">
+"16016
+[; <" I2C1STAT0 equ 0298h ;# ">
+"16106
+[; <" I2C1STAT1 equ 0299h ;# ">
+"16153
+[; <" I2C1PIR equ 029Ah ;# ">
+"16255
+[; <" I2C1PIE equ 029Bh ;# ">
+"16357
+[; <" I2C1CLK equ 029Ch ;# ">
+"16449
+[; <" I2C1BTO equ 029Dh ;# ">
+"16529
+[; <" U1RXB equ 02A1h ;# ">
+"16534
+[; <" U1RXBL equ 02A1h ;# ">
+"16567
+[; <" U1RXCHK equ 02A2h ;# ">
+"16587
+[; <" U1TXB equ 02A3h ;# ">
+"16592
+[; <" U1TXBL equ 02A3h ;# ">
+"16625
+[; <" U1TXCHK equ 02A4h ;# ">
+"16645
+[; <" U1P1 equ 02A5h ;# ">
+"16652
+[; <" U1P1L equ 02A5h ;# ">
+"16672
+[; <" U1P1H equ 02A6h ;# ">
+"16692
+[; <" U1P2 equ 02A7h ;# ">
+"16699
+[; <" U1P2L equ 02A7h ;# ">
+"16719
+[; <" U1P2H equ 02A8h ;# ">
+"16739
+[; <" U1P3 equ 02A9h ;# ">
+"16746
+[; <" U1P3L equ 02A9h ;# ">
+"16766
+[; <" U1P3H equ 02AAh ;# ">
+"16786
+[; <" U1CON0 equ 02ABh ;# ">
+"16914
+[; <" U1CON1 equ 02ACh ;# ">
+"16994
+[; <" U1CON2 equ 02ADh ;# ">
+"17136
+[; <" U1BRG equ 02AEh ;# ">
+"17143
+[; <" U1BRGL equ 02AEh ;# ">
+"17163
+[; <" U1BRGH equ 02AFh ;# ">
+"17183
+[; <" U1FIFO equ 02B0h ;# ">
+"17313
+[; <" U1UIR equ 02B1h ;# ">
+"17369
+[; <" U1ERRIR equ 02B2h ;# ">
+"17481
+[; <" U1ERRIE equ 02B3h ;# ">
+"17593
+[; <" U2RXB equ 02B4h ;# ">
+"17598
+[; <" U2RXBL equ 02B4h ;# ">
+"17631
+[; <" U2TXB equ 02B6h ;# ">
+"17636
+[; <" U2TXBL equ 02B6h ;# ">
+"17669
+[; <" U2P1 equ 02B8h ;# ">
+"17676
+[; <" U2P1L equ 02B8h ;# ">
+"17696
+[; <" U2P2 equ 02BAh ;# ">
+"17703
+[; <" U2P2L equ 02BAh ;# ">
+"17723
+[; <" U2P3 equ 02BCh ;# ">
+"17730
+[; <" U2P3L equ 02BCh ;# ">
+"17750
+[; <" U2CON0 equ 02BEh ;# ">
+"17866
+[; <" U2CON1 equ 02BFh ;# ">
+"17946
+[; <" U2CON2 equ 02C0h ;# ">
+"18078
+[; <" U2BRG equ 02C1h ;# ">
+"18085
+[; <" U2BRGL equ 02C1h ;# ">
+"18105
+[; <" U2BRGH equ 02C2h ;# ">
+"18125
+[; <" U2FIFO equ 02C3h ;# ">
+"18255
+[; <" U2UIR equ 02C4h ;# ">
+"18311
+[; <" U2ERRIR equ 02C5h ;# ">
+"18423
+[; <" U2ERRIE equ 02C6h ;# ">
+"18535
+[; <" U3RXB equ 02C7h ;# ">
+"18540
+[; <" U3RXBL equ 02C7h ;# ">
+"18573
+[; <" U3TXB equ 02C9h ;# ">
+"18578
+[; <" U3TXBL equ 02C9h ;# ">
+"18611
+[; <" U3P1 equ 02CBh ;# ">
+"18618
+[; <" U3P1L equ 02CBh ;# ">
+"18638
+[; <" U3P2 equ 02CDh ;# ">
+"18645
+[; <" U3P2L equ 02CDh ;# ">
+"18665
+[; <" U3P3 equ 02CFh ;# ">
+"18672
+[; <" U3P3L equ 02CFh ;# ">
+"18692
+[; <" U3CON0 equ 02D1h ;# ">
+"18808
+[; <" U3CON1 equ 02D2h ;# ">
+"18888
+[; <" U3CON2 equ 02D3h ;# ">
+"19020
+[; <" U3BRG equ 02D4h ;# ">
+"19027
+[; <" U3BRGL equ 02D4h ;# ">
+"19047
+[; <" U3BRGH equ 02D5h ;# ">
+"19067
+[; <" U3FIFO equ 02D6h ;# ">
+"19197
+[; <" U3UIR equ 02D7h ;# ">
+"19253
+[; <" U3ERRIR equ 02D8h ;# ">
+"19365
+[; <" U3ERRIE equ 02D9h ;# ">
+"19477
+[; <" U4RXB equ 02DAh ;# ">
+"19482
+[; <" U4RXBL equ 02DAh ;# ">
+"19515
+[; <" U4TXB equ 02DCh ;# ">
+"19520
+[; <" U4TXBL equ 02DCh ;# ">
+"19553
+[; <" U4P1 equ 02DEh ;# ">
+"19560
+[; <" U4P1L equ 02DEh ;# ">
+"19580
+[; <" U4P2 equ 02E0h ;# ">
+"19587
+[; <" U4P2L equ 02E0h ;# ">
+"19607
+[; <" U4P3 equ 02E2h ;# ">
+"19614
+[; <" U4P3L equ 02E2h ;# ">
+"19634
+[; <" U4CON0 equ 02E4h ;# ">
+"19750
+[; <" U4CON1 equ 02E5h ;# ">
+"19830
+[; <" U4CON2 equ 02E6h ;# ">
+"19962
+[; <" U4BRG equ 02E7h ;# ">
+"19969
+[; <" U4BRGL equ 02E7h ;# ">
+"19989
+[; <" U4BRGH equ 02E8h ;# ">
+"20009
+[; <" U4FIFO equ 02E9h ;# ">
+"20139
+[; <" U4UIR equ 02EAh ;# ">
+"20195
+[; <" U4ERRIR equ 02EBh ;# ">
+"20307
+[; <" U4ERRIE equ 02ECh ;# ">
+"20419
+[; <" U5RXB equ 02EDh ;# ">
+"20424
+[; <" U5RXBL equ 02EDh ;# ">
+"20457
+[; <" U5TXB equ 02EFh ;# ">
+"20462
+[; <" U5TXBL equ 02EFh ;# ">
+"20495
+[; <" U5P1 equ 02F1h ;# ">
+"20502
+[; <" U5P1L equ 02F1h ;# ">
+"20522
+[; <" U5P2 equ 02F3h ;# ">
+"20529
+[; <" U5P2L equ 02F3h ;# ">
+"20549
+[; <" U5P3 equ 02F5h ;# ">
+"20556
+[; <" U5P3L equ 02F5h ;# ">
+"20576
+[; <" U5CON0 equ 02F7h ;# ">
+"20692
+[; <" U5CON1 equ 02F8h ;# ">
+"20772
+[; <" U5CON2 equ 02F9h ;# ">
+"20904
+[; <" U5BRG equ 02FAh ;# ">
+"20911
+[; <" U5BRGL equ 02FAh ;# ">
+"20931
+[; <" U5BRGH equ 02FBh ;# ">
+"20951
+[; <" U5FIFO equ 02FCh ;# ">
+"21081
+[; <" U5UIR equ 02FDh ;# ">
+"21137
+[; <" U5ERRIR equ 02FEh ;# ">
+"21249
+[; <" U5ERRIE equ 02FFh ;# ">
+"21363
+[; <" SMT1TMR equ 0300h ;# ">
+"21370
+[; <" SMT1TMRL equ 0300h ;# ">
+"21440
+[; <" SMT1TMRH equ 0301h ;# ">
+"21510
+[; <" SMT1TMRU equ 0302h ;# ">
+"21582
+[; <" SMT1CPR equ 0303h ;# ">
+"21589
+[; <" SMT1CPRL equ 0303h ;# ">
+"21659
+[; <" SMT1CPRH equ 0304h ;# ">
+"21729
+[; <" SMT1CPRU equ 0305h ;# ">
+"21801
+[; <" SMT1CPW equ 0306h ;# ">
+"21808
+[; <" SMT1CPWL equ 0306h ;# ">
+"21878
+[; <" SMT1CPWH equ 0307h ;# ">
+"21948
+[; <" SMT1CPWU equ 0308h ;# ">
+"22020
+[; <" SMT1PR equ 0309h ;# ">
+"22027
+[; <" SMT1PRL equ 0309h ;# ">
+"22097
+[; <" SMT1PRH equ 030Ah ;# ">
+"22167
+[; <" SMT1PRU equ 030Bh ;# ">
+"22237
+[; <" SMT1CON0 equ 030Ch ;# ">
+"22302
+[; <" SMT1CON1 equ 030Dh ;# ">
+"22402
+[; <" SMT1STAT equ 030Eh ;# ">
+"22492
+[; <" SMT1CLK equ 030Fh ;# ">
+"22572
+[; <" SMT1SIG equ 0310h ;# ">
+"22676
+[; <" SMT1WIN equ 0311h ;# ">
+"22780
+[; <" TMR0L equ 0318h ;# ">
+"22785
+[; <" TMR0 equ 0318h ;# ">
+"22918
+[; <" TMR0H equ 0319h ;# ">
+"22923
+[; <" PR0 equ 0319h ;# ">
+"23172
+[; <" T0CON0 equ 031Ah ;# ">
+"23296
+[; <" T0CON1 equ 031Bh ;# ">
+"23438
+[; <" TMR1 equ 031Ch ;# ">
+"23445
+[; <" TMR1L equ 031Ch ;# ">
+"23565
+[; <" TMR1H equ 031Dh ;# ">
+"23685
+[; <" T1CON equ 031Eh ;# ">
+"23690
+[; <" TMR1CON equ 031Eh ;# ">
+"23907
+[; <" T1GCON equ 031Fh ;# ">
+"23912
+[; <" TMR1GCON equ 031Fh ;# ">
+"24193
+[; <" T1GATE equ 0320h ;# ">
+"24198
+[; <" TMR1GATE equ 0320h ;# ">
+"24383
+[; <" T1CLK equ 0321h ;# ">
+"24388
+[; <" TMR1CLK equ 0321h ;# ">
+"24392
+[; <" PR1 equ 0321h ;# ">
+"24629
+[; <" T2TMR equ 0322h ;# ">
+"24634
+[; <" TMR2 equ 0322h ;# ">
+"24667
+[; <" T2PR equ 0323h ;# ">
+"24672
+[; <" PR2 equ 0323h ;# ">
+"24705
+[; <" T2CON equ 0324h ;# ">
+"24851
+[; <" T2HLT equ 0325h ;# ">
+"24979
+[; <" T2CLKCON equ 0326h ;# ">
+"24984
+[; <" T2CLK equ 0326h ;# ">
+"25185
+[; <" T2RST equ 0327h ;# ">
+"25301
+[; <" TMR3 equ 0328h ;# ">
+"25308
+[; <" TMR3L equ 0328h ;# ">
+"25428
+[; <" TMR3H equ 0329h ;# ">
+"25548
+[; <" T3CON equ 032Ah ;# ">
+"25553
+[; <" TMR3CON equ 032Ah ;# ">
+"25770
+[; <" T3GCON equ 032Bh ;# ">
+"25775
+[; <" TMR3GCON equ 032Bh ;# ">
+"26056
+[; <" T3GATE equ 032Ch ;# ">
+"26061
+[; <" TMR3GATE equ 032Ch ;# ">
+"26246
+[; <" T3CLK equ 032Dh ;# ">
+"26251
+[; <" TMR3CLK equ 032Dh ;# ">
+"26255
+[; <" PR3 equ 032Dh ;# ">
+"26492
+[; <" T4TMR equ 032Eh ;# ">
+"26497
+[; <" TMR4 equ 032Eh ;# ">
+"26530
+[; <" T4PR equ 032Fh ;# ">
+"26535
+[; <" PR4 equ 032Fh ;# ">
+"26568
+[; <" T4CON equ 0330h ;# ">
+"26714
+[; <" T4HLT equ 0331h ;# ">
+"26842
+[; <" T4CLKCON equ 0332h ;# ">
+"26847
+[; <" T4CLK equ 0332h ;# ">
+"27048
+[; <" T4RST equ 0333h ;# ">
+"27164
+[; <" TMR5 equ 0334h ;# ">
+"27171
+[; <" TMR5L equ 0334h ;# ">
+"27291
+[; <" TMR5H equ 0335h ;# ">
+"27411
+[; <" T5CON equ 0336h ;# ">
+"27416
+[; <" TMR5CON equ 0336h ;# ">
+"27633
+[; <" T5GCON equ 0337h ;# ">
+"27638
+[; <" TMR5GCON equ 0337h ;# ">
+"27919
+[; <" T5GATE equ 0338h ;# ">
+"27924
+[; <" TMR5GATE equ 0338h ;# ">
+"28109
+[; <" T5CLK equ 0339h ;# ">
+"28114
+[; <" TMR5CLK equ 0339h ;# ">
+"28118
+[; <" PR5 equ 0339h ;# ">
+"28355
+[; <" T6TMR equ 033Ah ;# ">
+"28360
+[; <" TMR6 equ 033Ah ;# ">
+"28393
+[; <" T6PR equ 033Bh ;# ">
+"28398
+[; <" PR6 equ 033Bh ;# ">
+"28431
+[; <" T6CON equ 033Ch ;# ">
+"28577
+[; <" T6HLT equ 033Dh ;# ">
+"28705
+[; <" T6CLKCON equ 033Eh ;# ">
+"28710
+[; <" T6CLK equ 033Eh ;# ">
+"28911
+[; <" T6RST equ 033Fh ;# ">
+"29027
+[; <" CCPR1 equ 0340h ;# ">
+"29034
+[; <" CCPR1L equ 0340h ;# ">
+"29054
+[; <" CCPR1H equ 0341h ;# ">
+"29074
+[; <" CCP1CON equ 0342h ;# ">
+"29192
+[; <" CCP1CAP equ 0343h ;# ">
+"29272
+[; <" CCPR2 equ 0344h ;# ">
+"29279
+[; <" CCPR2L equ 0344h ;# ">
+"29299
+[; <" CCPR2H equ 0345h ;# ">
+"29319
+[; <" CCP2CON equ 0346h ;# ">
+"29437
+[; <" CCP2CAP equ 0347h ;# ">
+"29517
+[; <" CCPR3 equ 0348h ;# ">
+"29524
+[; <" CCPR3L equ 0348h ;# ">
+"29544
+[; <" CCPR3H equ 0349h ;# ">
+"29564
+[; <" CCP3CON equ 034Ah ;# ">
+"29682
+[; <" CCP3CAP equ 034Bh ;# ">
+"29762
+[; <" CCPTMRS0 equ 034Ch ;# ">
+"29832
+[; <" CRCDATA equ 034Fh ;# ">
+"29839
+[; <" CRCDATL equ 034Fh ;# ">
+"29901
+[; <" CRCDATH equ 0350h ;# ">
+"29963
+[; <" CRCACC equ 0351h ;# ">
+"29970
+[; <" CRCACCL equ 0351h ;# ">
+"30032
+[; <" CRCACCH equ 0352h ;# ">
+"30094
+[; <" CRCSHFT equ 0353h ;# ">
+"30101
+[; <" CRCSHIFTL equ 0353h ;# ">
+"30163
+[; <" CRCSHIFTH equ 0354h ;# ">
+"30225
+[; <" CRCXOR equ 0355h ;# ">
+"30232
+[; <" CRCXORL equ 0355h ;# ">
+"30289
+[; <" CRCXORH equ 0356h ;# ">
+"30351
+[; <" CRCCON0 equ 0357h ;# ">
+"30411
+[; <" CRCCON1 equ 0358h ;# ">
+"30489
+[; <" SCANLADR equ 035Ah ;# ">
+"30496
+[; <" SCANLADRL equ 035Ah ;# ">
+"30624
+[; <" SCANLADRH equ 035Bh ;# ">
+"30752
+[; <" SCANLADRU equ 035Ch ;# ">
+"30858
+[; <" SCANHADR equ 035Dh ;# ">
+"30865
+[; <" SCANHADRL equ 035Dh ;# ">
+"30993
+[; <" SCANHADRH equ 035Eh ;# ">
+"31121
+[; <" SCANHADRU equ 035Fh ;# ">
+"31225
+[; <" SCANCON0 equ 0360h ;# ">
+"31285
+[; <" SCANTRIG equ 0361h ;# ">
+"31345
+[; <" IPR0 equ 0362h ;# ">
+"31397
+[; <" IPR1 equ 0363h ;# ">
+"31459
+[; <" IPR2 equ 0364h ;# ">
+"31504
+[; <" IPR3 equ 0365h ;# ">
+"31566
+[; <" IPR4 equ 0366h ;# ">
+"31617
+[; <" IPR5 equ 0367h ;# ">
+"31674
+[; <" IPR6 equ 0368h ;# ">
+"31736
+[; <" IPR7 equ 0369h ;# ">
+"31793
+[; <" IPR8 equ 036Ah ;# ">
+"31855
+[; <" IPR9 equ 036Bh ;# ">
+"31900
+[; <" IPR10 equ 036Ch ;# ">
+"31962
+[; <" IPR11 equ 036Dh ;# ">
+"32024
+[; <" IPR12 equ 036Eh ;# ">
+"32086
+[; <" IPR13 equ 036Fh ;# ">
+"32148
+[; <" IPR14 equ 0370h ;# ">
+"32181
+[; <" IPR15 equ 0371h ;# ">
+"32219
+[; <" STATUS_CSHAD equ 0373h ;# ">
+"32308
+[; <" WREG_CSHAD equ 0374h ;# ">
+"32328
+[; <" BSR_CSHAD equ 0375h ;# ">
+"32335
+[; <" SHADCON equ 0376h ;# ">
+"32355
+[; <" STATUS_SHAD equ 0377h ;# ">
+"32444
+[; <" WREG_SHAD equ 0378h ;# ">
+"32464
+[; <" BSR_SHAD equ 0379h ;# ">
+"32471
+[; <" PCLATH_SHAD equ 037Ah ;# ">
+"32491
+[; <" PCLATU_SHAD equ 037Bh ;# ">
+"32511
+[; <" FSR0SH equ 037Ch ;# ">
+"32518
+[; <" FSR0L_SHAD equ 037Ch ;# ">
+"32538
+[; <" FSR0H_SHAD equ 037Dh ;# ">
+"32558
+[; <" FSR1SH equ 037Eh ;# ">
+"32565
+[; <" FSR1L_SHAD equ 037Eh ;# ">
+"32585
+[; <" FSR1H_SHAD equ 037Fh ;# ">
+"32605
+[; <" FSR2SH equ 0380h ;# ">
+"32612
+[; <" FSR2L_SHAD equ 0380h ;# ">
+"32632
+[; <" FSR2H_SHAD equ 0381h ;# ">
+"32652
+[; <" PRODSH equ 0382h ;# ">
+"32659
+[; <" PRODL_SHAD equ 0382h ;# ">
+"32679
+[; <" PRODH_SHAD equ 0383h ;# ">
+"32699
+[; <" CWG1CLK equ 03BCh ;# ">
+"32704
+[; <" CWG1CLKCON equ 03BCh ;# ">
+"32753
+[; <" CWG1ISM equ 03BDh ;# ">
+"32758
+[; <" CWG1DAT equ 03BDh ;# ">
+"32871
+[; <" CWG1DBR equ 03BEh ;# ">
+"32975
+[; <" CWG1DBF equ 03BFh ;# ">
+"33079
+[; <" CWG1CON0 equ 03C0h ;# ">
+"33180
+[; <" CWG1CON1 equ 03C1h ;# ">
+"33258
+[; <" CWG1AS0 equ 03C2h ;# ">
+"33420
+[; <" CWG1AS1 equ 03C3h ;# ">
+"33482
+[; <" CWG1STR equ 03C4h ;# ">
+"33594
+[; <" CWG2CLK equ 03C5h ;# ">
+"33599
+[; <" CWG2CLKCON equ 03C5h ;# ">
+"33648
+[; <" CWG2ISM equ 03C6h ;# ">
+"33653
+[; <" CWG2DAT equ 03C6h ;# ">
+"33766
+[; <" CWG2DBR equ 03C7h ;# ">
+"33870
+[; <" CWG2DBF equ 03C8h ;# ">
+"33974
+[; <" CWG2CON0 equ 03C9h ;# ">
+"34075
+[; <" CWG2CON1 equ 03CAh ;# ">
+"34153
+[; <" CWG2AS0 equ 03CBh ;# ">
+"34315
+[; <" CWG2AS1 equ 03CCh ;# ">
+"34377
+[; <" CWG2STR equ 03CDh ;# ">
+"34489
+[; <" CWG3CLK equ 03CEh ;# ">
+"34494
+[; <" CWG3CLKCON equ 03CEh ;# ">
+"34543
+[; <" CWG3ISM equ 03CFh ;# ">
+"34548
+[; <" CWG3DAT equ 03CFh ;# ">
+"34661
+[; <" CWG3DBR equ 03D0h ;# ">
+"34765
+[; <" CWG3DBF equ 03D1h ;# ">
+"34869
+[; <" CWG3CON0 equ 03D2h ;# ">
+"34970
+[; <" CWG3CON1 equ 03D3h ;# ">
+"35048
+[; <" CWG3AS0 equ 03D4h ;# ">
+"35210
+[; <" CWG3AS1 equ 03D5h ;# ">
+"35272
+[; <" CWG3STR equ 03D6h ;# ">
+"35384
+[; <" FVRCON equ 03D7h ;# ">
+"35473
+[; <" ADCPCON equ 03D8h ;# ">
+"35478
+[; <" ADCP equ 03D8h ;# ">
+"35573
+[; <" ADLTH equ 03D9h ;# ">
+"35580
+[; <" ADLTHL equ 03D9h ;# ">
+"35708
+[; <" ADLTHH equ 03DAh ;# ">
+"35836
+[; <" ADUTH equ 03DBh ;# ">
+"35843
+[; <" ADUTHL equ 03DBh ;# ">
+"35971
+[; <" ADUTHH equ 03DCh ;# ">
+"36099
+[; <" ADERR equ 03DDh ;# ">
+"36106
+[; <" ADERRL equ 03DDh ;# ">
+"36234
+[; <" ADERRH equ 03DEh ;# ">
+"36362
+[; <" ADSTPT equ 03DFh ;# ">
+"36369
+[; <" ADSTPTL equ 03DFh ;# ">
+"36497
+[; <" ADSTPTH equ 03E0h ;# ">
+"36625
+[; <" ADFLTR equ 03E1h ;# ">
+"36632
+[; <" ADFLTRL equ 03E1h ;# ">
+"36760
+[; <" ADFLTRH equ 03E2h ;# ">
+"36890
+[; <" ADACC equ 03E3h ;# ">
+"36897
+[; <" ADACCL equ 03E3h ;# ">
+"37025
+[; <" ADACCH equ 03E4h ;# ">
+"37153
+[; <" ADACCU equ 03E5h ;# ">
+"37281
+[; <" ADCNT equ 03E6h ;# ">
+"37409
+[; <" ADRPT equ 03E7h ;# ">
+"37537
+[; <" ADPREV equ 03E8h ;# ">
+"37544
+[; <" ADPREVL equ 03E8h ;# ">
+"37672
+[; <" ADPREVH equ 03E9h ;# ">
+"37800
+[; <" ADRES equ 03EAh ;# ">
+"37807
+[; <" ADRESL equ 03EAh ;# ">
+"37935
+[; <" ADRESH equ 03EBh ;# ">
+"38055
+[; <" ADPCH equ 03ECh ;# ">
+"38113
+[; <" ADACQ equ 03EEh ;# ">
+"38120
+[; <" ADACQL equ 03EEh ;# ">
+"38248
+[; <" ADACQH equ 03EFh ;# ">
+"38340
+[; <" ADCAP equ 03F0h ;# ">
+"38392
+[; <" ADPRE equ 03F1h ;# ">
+"38399
+[; <" ADPREL equ 03F1h ;# ">
+"38527
+[; <" ADPREH equ 03F2h ;# ">
+"38619
+[; <" ADCON0 equ 03F3h ;# ">
+"38737
+[; <" ADCON1 equ 03F4h ;# ">
+"38803
+[; <" ADCON2 equ 03F5h ;# ">
+"38945
+[; <" ADCON3 equ 03F6h ;# ">
+"39075
+[; <" ADSTAT equ 03F7h ;# ">
+"39207
+[; <" ADREF equ 03F8h ;# ">
+"39289
+[; <" ADACT equ 03F9h ;# ">
+"39393
+[; <" ADCLK equ 03FAh ;# ">
+"39497
+[; <" ANSELA equ 0400h ;# ">
+"39559
+[; <" WPUA equ 0401h ;# ">
+"39621
+[; <" ODCONA equ 0402h ;# ">
+"39683
+[; <" SLRCONA equ 0403h ;# ">
+"39745
+[; <" INLVLA equ 0404h ;# ">
+"39807
+[; <" IOCAP equ 0405h ;# ">
+"39869
+[; <" IOCAN equ 0406h ;# ">
+"39931
+[; <" IOCAF equ 0407h ;# ">
+"39993
+[; <" ANSELB equ 0408h ;# ">
+"40055
+[; <" WPUB equ 0409h ;# ">
+"40117
+[; <" ODCONB equ 040Ah ;# ">
+"40179
+[; <" SLRCONB equ 040Bh ;# ">
+"40241
+[; <" INLVLB equ 040Ch ;# ">
+"40303
+[; <" IOCBP equ 040Dh ;# ">
+"40365
+[; <" IOCBN equ 040Eh ;# ">
+"40427
+[; <" IOCBF equ 040Fh ;# ">
+"40489
+[; <" ANSELC equ 0410h ;# ">
+"40551
+[; <" WPUC equ 0411h ;# ">
+"40613
+[; <" ODCONC equ 0412h ;# ">
+"40675
+[; <" SLRCONC equ 0413h ;# ">
+"40737
+[; <" INLVLC equ 0414h ;# ">
+"40799
+[; <" IOCCP equ 0415h ;# ">
+"40861
+[; <" IOCCN equ 0416h ;# ">
+"40923
+[; <" IOCCF equ 0417h ;# ">
+"40985
+[; <" ANSELD equ 0418h ;# ">
+"41047
+[; <" WPUD equ 0419h ;# ">
+"41109
+[; <" ODCOND equ 041Ah ;# ">
+"41171
+[; <" SLRCOND equ 041Bh ;# ">
+"41233
+[; <" INLVLD equ 041Ch ;# ">
+"41295
+[; <" ANSELE equ 0420h ;# ">
+"41327
+[; <" WPUE equ 0421h ;# ">
+"41365
+[; <" ODCONE equ 0422h ;# ">
+"41397
+[; <" SLRCONE equ 0423h ;# ">
+"41429
+[; <" INLVLE equ 0424h ;# ">
+"41467
+[; <" IOCEP equ 0425h ;# ">
+"41488
+[; <" IOCEN equ 0426h ;# ">
+"41509
+[; <" IOCEF equ 0427h ;# ">
+"41532
+[; <" NCO1ACC equ 0440h ;# ">
+"41539
+[; <" NCO1ACCL equ 0440h ;# ">
+"41667
+[; <" NCO1ACCH equ 0441h ;# ">
+"41795
+[; <" NCO1ACCU equ 0442h ;# ">
+"41877
+[; <" NCO1INC equ 0443h ;# ">
+"41884
+[; <" NCO1INCL equ 0443h ;# ">
+"42012
+[; <" NCO1INCH equ 0444h ;# ">
+"42140
+[; <" NCO1INCU equ 0445h ;# ">
+"42220
+[; <" NCO1CON equ 0446h ;# ">
+"42288
+[; <" NCO1CLK equ 0447h ;# ">
+"42430
+[; <" NCO2ACC equ 0448h ;# ">
+"42437
+[; <" NCO2ACCL equ 0448h ;# ">
+"42565
+[; <" NCO2ACCH equ 0449h ;# ">
+"42693
+[; <" NCO2ACCU equ 044Ah ;# ">
+"42775
+[; <" NCO2INC equ 044Bh ;# ">
+"42782
+[; <" NCO2INCL equ 044Bh ;# ">
+"42910
+[; <" NCO2INCH equ 044Ch ;# ">
+"43038
+[; <" NCO2INCU equ 044Dh ;# ">
+"43118
+[; <" NCO2CON equ 044Eh ;# ">
+"43186
+[; <" NCO2CLK equ 044Fh ;# ">
+"43328
+[; <" NCO3ACC equ 0450h ;# ">
+"43335
+[; <" NCO3ACCL equ 0450h ;# ">
+"43463
+[; <" NCO3ACCH equ 0451h ;# ">
+"43591
+[; <" NCO3ACCU equ 0452h ;# ">
+"43673
+[; <" NCO3INC equ 0453h ;# ">
+"43680
+[; <" NCO3INCL equ 0453h ;# ">
+"43808
+[; <" NCO3INCH equ 0454h ;# ">
+"43936
+[; <" NCO3INCU equ 0455h ;# ">
+"44016
+[; <" NCO3CON equ 0456h ;# ">
+"44084
+[; <" NCO3CLK equ 0457h ;# ">
+"44224
+[; <" IVTLOCK equ 0459h ;# ">
+"44246
+[; <" IVTAD equ 045Ah ;# ">
+"44253
+[; <" IVTADL equ 045Ah ;# ">
+"44315
+[; <" IVTADH equ 045Bh ;# ">
+"44377
+[; <" IVTADU equ 045Ch ;# ">
+"44423
+[; <" IVTBASE equ 045Dh ;# ">
+"44430
+[; <" IVTBASEL equ 045Dh ;# ">
+"44492
+[; <" IVTBASEH equ 045Eh ;# ">
+"44554
+[; <" IVTBASEU equ 045Fh ;# ">
+"44598
+[; <" PWM1ERS equ 0460h ;# ">
+"44668
+[; <" PWM1CLK equ 0461h ;# ">
+"44738
+[; <" PWM1LDS equ 0462h ;# ">
+"44808
+[; <" PWM1PR equ 0463h ;# ">
+"44815
+[; <" PWM1PRL equ 0463h ;# ">
+"44835
+[; <" PWM1PRH equ 0464h ;# ">
+"44855
+[; <" PWM1CPRE equ 0465h ;# ">
+"44875
+[; <" PWM1PIPOS equ 0466h ;# ">
+"44895
+[; <" PWM1GIR equ 0467h ;# ">
+"44921
+[; <" PWM1GIE equ 0468h ;# ">
+"44947
+[; <" PWM1CON equ 0469h ;# ">
+"44986
+[; <" PWM1S1CFG equ 046Ah ;# ">
+"45045
+[; <" PWM1S1P1 equ 046Bh ;# ">
+"45052
+[; <" PWM1S1P1L equ 046Bh ;# ">
+"45072
+[; <" PWM1S1P1H equ 046Ch ;# ">
+"45092
+[; <" PWM1S1P2 equ 046Dh ;# ">
+"45099
+[; <" PWM1S1P2L equ 046Dh ;# ">
+"45119
+[; <" PWM1S1P2H equ 046Eh ;# ">
+"45139
+[; <" PWM2ERS equ 046Fh ;# ">
+"45209
+[; <" PWM2CLK equ 0470h ;# ">
+"45279
+[; <" PWM2LDS equ 0471h ;# ">
+"45349
+[; <" PWM2PR equ 0472h ;# ">
+"45356
+[; <" PWM2PRL equ 0472h ;# ">
+"45376
+[; <" PWM2PRH equ 0473h ;# ">
+"45396
+[; <" PWM2CPRE equ 0474h ;# ">
+"45416
+[; <" PWM2PIPOS equ 0475h ;# ">
+"45436
+[; <" PWM2GIR equ 0476h ;# ">
+"45462
+[; <" PWM2GIE equ 0477h ;# ">
+"45488
+[; <" PWM2CON equ 0478h ;# ">
+"45527
+[; <" PWM2S1CFG equ 0479h ;# ">
+"45586
+[; <" PWM2S1P1 equ 047Ah ;# ">
+"45593
+[; <" PWM2S1P1L equ 047Ah ;# ">
+"45613
+[; <" PWM2S1P1H equ 047Bh ;# ">
+"45633
+[; <" PWM2S1P2 equ 047Ch ;# ">
+"45640
+[; <" PWM2S1P2L equ 047Ch ;# ">
+"45660
+[; <" PWM2S1P2H equ 047Dh ;# ">
+"45680
+[; <" PWM3ERS equ 047Eh ;# ">
+"45750
+[; <" PWM3CLK equ 047Fh ;# ">
+"45820
+[; <" PWM3LDS equ 0480h ;# ">
+"45890
+[; <" PWM3PR equ 0481h ;# ">
+"45897
+[; <" PWM3PRL equ 0481h ;# ">
+"45917
+[; <" PWM3PRH equ 0482h ;# ">
+"45937
+[; <" PWM3CPRE equ 0483h ;# ">
+"45957
+[; <" PWM3PIPOS equ 0484h ;# ">
+"45977
+[; <" PWM3GIR equ 0485h ;# ">
+"46003
+[; <" PWM3GIE equ 0486h ;# ">
+"46029
+[; <" PWM3CON equ 0487h ;# ">
+"46068
+[; <" PWM3S1CFG equ 0488h ;# ">
+"46127
+[; <" PWM3S1P1 equ 0489h ;# ">
+"46134
+[; <" PWM3S1P1L equ 0489h ;# ">
+"46154
+[; <" PWM3S1P1H equ 048Ah ;# ">
+"46174
+[; <" PWM3S1P2 equ 048Bh ;# ">
+"46181
+[; <" PWM3S1P2L equ 048Bh ;# ">
+"46201
+[; <" PWM3S1P2H equ 048Ch ;# ">
+"46221
+[; <" PWMLOAD equ 049Ch ;# ">
+"46253
+[; <" PWMEN equ 049Dh ;# ">
+"46285
+[; <" PIE0 equ 049Eh ;# ">
+"46337
+[; <" PIE1 equ 049Fh ;# ">
+"46399
+[; <" PIE2 equ 04A0h ;# ">
+"46444
+[; <" PIE3 equ 04A1h ;# ">
+"46506
+[; <" PIE4 equ 04A2h ;# ">
+"46557
+[; <" PIE5 equ 04A3h ;# ">
+"46614
+[; <" PIE6 equ 04A4h ;# ">
+"46676
+[; <" PIE7 equ 04A5h ;# ">
+"46733
+[; <" PIE8 equ 04A6h ;# ">
+"46795
+[; <" PIE9 equ 04A7h ;# ">
+"46840
+[; <" PIE10 equ 04A8h ;# ">
+"46902
+[; <" PIE11 equ 04A9h ;# ">
+"46964
+[; <" PIE12 equ 04AAh ;# ">
+"47026
+[; <" PIE13 equ 04ABh ;# ">
+"47088
+[; <" PIE14 equ 04ACh ;# ">
+"47121
+[; <" PIE15 equ 04ADh ;# ">
+"47159
+[; <" PIR0 equ 04AEh ;# ">
+"47211
+[; <" PIR1 equ 04AFh ;# ">
+"47273
+[; <" PIR2 equ 04B0h ;# ">
+"47318
+[; <" PIR3 equ 04B1h ;# ">
+"47380
+[; <" PIR4 equ 04B2h ;# ">
+"47431
+[; <" PIR5 equ 04B3h ;# ">
+"47488
+[; <" PIR6 equ 04B4h ;# ">
+"47550
+[; <" PIR7 equ 04B5h ;# ">
+"47607
+[; <" PIR8 equ 04B6h ;# ">
+"47669
+[; <" PIR9 equ 04B7h ;# ">
+"47714
+[; <" PIR10 equ 04B8h ;# ">
+"47776
+[; <" PIR11 equ 04B9h ;# ">
+"47838
+[; <" PIR12 equ 04BAh ;# ">
+"47900
+[; <" PIR13 equ 04BBh ;# ">
+"47962
+[; <" PIR14 equ 04BCh ;# ">
+"47995
+[; <" PIR15 equ 04BDh ;# ">
+"48033
+[; <" LATA equ 04BEh ;# ">
+"48095
+[; <" LATB equ 04BFh ;# ">
+"48157
+[; <" LATC equ 04C0h ;# ">
+"48219
+[; <" LATD equ 04C1h ;# ">
+"48281
+[; <" LATE equ 04C2h ;# ">
+"48313
+[; <" TRISA equ 04C6h ;# ">
+"48375
+[; <" TRISB equ 04C7h ;# ">
+"48437
+[; <" TRISC equ 04C8h ;# ">
+"48499
+[; <" TRISD equ 04C9h ;# ">
+"48561
+[; <" TRISE equ 04CAh ;# ">
+"48593
+[; <" PORTA equ 04CEh ;# ">
+"48655
+[; <" PORTB equ 04CFh ;# ">
+"48717
+[; <" PORTC equ 04D0h ;# ">
+"48779
+[; <" PORTD equ 04D1h ;# ">
+"48841
+[; <" PORTE equ 04D2h ;# ">
+"48879
+[; <" INTCON0 equ 04D6h ;# ">
+"48939
+[; <" INTCON1 equ 04D7h ;# ">
+"48975
+[; <" STATUS equ 04D8h ;# ">
+"49064
+[; <" FSR2 equ 04D9h ;# ">
+"49071
+[; <" FSR2L equ 04D9h ;# ">
+"49091
+[; <" FSR2H equ 04DAh ;# ">
+"49098
+[; <" PLUSW2 equ 04DBh ;# ">
+"49118
+[; <" PREINC2 equ 04DCh ;# ">
+"49138
+[; <" POSTDEC2 equ 04DDh ;# ">
+"49158
+[; <" POSTINC2 equ 04DEh ;# ">
+"49178
+[; <" INDF2 equ 04DFh ;# ">
+"49198
+[; <" BSR equ 04E0h ;# ">
+"49205
+[; <" FSR1 equ 04E1h ;# ">
+"49212
+[; <" FSR1L equ 04E1h ;# ">
+"49232
+[; <" FSR1H equ 04E2h ;# ">
+"49239
+[; <" PLUSW1 equ 04E3h ;# ">
+"49259
+[; <" PREINC1 equ 04E4h ;# ">
+"49279
+[; <" POSTDEC1 equ 04E5h ;# ">
+"49299
+[; <" POSTINC1 equ 04E6h ;# ">
+"49319
+[; <" INDF1 equ 04E7h ;# ">
+"49339
+[; <" WREG equ 04E8h ;# ">
+"49377
+[; <" FSR0 equ 04E9h ;# ">
+"49384
+[; <" FSR0L equ 04E9h ;# ">
+"49404
+[; <" FSR0H equ 04EAh ;# ">
+"49411
+[; <" PLUSW0 equ 04EBh ;# ">
+"49431
+[; <" PREINC0 equ 04ECh ;# ">
+"49451
+[; <" POSTDEC0 equ 04EDh ;# ">
+"49471
+[; <" POSTINC0 equ 04EEh ;# ">
+"49491
+[; <" INDF0 equ 04EFh ;# ">
+"49511
+[; <" PCON0 equ 04F0h ;# ">
+"49664
+[; <" PCON1 equ 04F1h ;# ">
+"49731
+[; <" CPUDOZE equ 04F2h ;# ">
+"49796
+[; <" PROD equ 04F3h ;# ">
+"49803
+[; <" PRODL equ 04F3h ;# ">
+"49823
+[; <" PRODH equ 04F4h ;# ">
+"49843
+[; <" TABLAT equ 04F5h ;# ">
+"49865
+[; <" TBLPTR equ 04F6h ;# ">
+"49872
+[; <" TBLPTRL equ 04F6h ;# ">
+"49892
+[; <" TBLPTRH equ 04F7h ;# ">
+"49912
+[; <" TBLPTRU equ 04F8h ;# ">
+"49943
+[; <" PCLAT equ 04F9h ;# ">
+"49950
+[; <" PCL equ 04F9h ;# ">
+"49970
+[; <" PCLATH equ 04FAh ;# ">
+"49990
+[; <" PCLATU equ 04FBh ;# ">
+"50010
+[; <" STKPTR equ 04FCh ;# ">
+"50108
+[; <" TOS equ 04FDh ;# ">
+"50115
+[; <" TOSL equ 04FDh ;# ">
+"50135
+[; <" TOSH equ 04FEh ;# ">
+"50155
+[; <" TOSU equ 04FFh ;# ">
+"38 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/tmr0.c
+[v _Timer0 `CS2399 ~T0 @X0 1 e ]
+[i _Timer0
+:U ..
+:U ..
+&U _TMR0_Initialize
+&U _TMR0_Deinitialize
+&U _TMR0_Start
+&U _TMR0_Stop
+&U _TMR0_PeriodSet
+&U _TMR0_PeriodGet
+&U _TMR0_CounterGet
+&U _TMR0_CounterSet
+&U _TMR0_MaxCountGet
+&U _TMR0_OverflowCallbackRegister
+-> -> -> 0 `i `*v `*F17008
+..
+..
+]
+"52
+[v _tmr0PeriodCount `Vus ~T0 @X0 1 s ]
+"53
+[v _TMR0_OverflowCallback `*F17011 ~T0 @X0 1 s ]
+"60
+[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
+"61
+{
+[e :U _TMR0_Initialize ]
+[f ]
+"62
+[e = _TMR0H -> -> 6 `i `uc ]
+"63
+[e = _TMR0L -> -> 0 `i `uc ]
+"65
+[e = _T0CON1 -> | | << -> 3 `i -> 5 `i << -> 0 `i -> 0 `i << -> 1 `i -> 4 `i `uc ]
+"69
+[e = _tmr0PeriodCount -> | << -> -> _TMR0H `us `ui -> 8 `i -> _TMR0L `ui `us ]
+"71
+[e = _TMR0_OverflowCallback &U _TMR0_DefaultOverflowCallback ]
+"73
+[e = . . _PIR3bits 0 7 -> -> 0 `ui `uc ]
+"74
+[e = . . _PIE3bits 0 7 -> -> 1 `ui `uc ]
+"76
+[e = _T0CON0 -> | | << -> 0 `i -> 0 `i << -> 1 `i -> 7 `i << -> 1 `i -> 4 `i `uc ]
+"79
+[e :UE 2400 ]
+}
+"81
+[v _TMR0_Deinitialize `(v ~T0 @X0 1 ef ]
+"82
+{
+[e :U _TMR0_Deinitialize ]
+[f ]
+"83
+[e = . . _T0CON0bits 1 4 -> -> 0 `ui `uc ]
+"85
+[e = . . _PIR3bits 0 7 -> -> 0 `ui `uc ]
+"86
+[e = . . _PIE3bits 0 7 -> -> 0 `ui `uc ]
+"88
+[e = _T0CON0 -> -> 0 `i `uc ]
+"89
+[e = _T0CON1 -> -> 0 `i `uc ]
+"90
+[e = _TMR0H -> -> 255 `i `uc ]
+"91
+[e = _TMR0L -> -> 0 `i `uc ]
+"92
+[e :UE 2401 ]
+}
+"94
+[v _TMR0_Start `(v ~T0 @X0 1 ef ]
+"95
+{
+[e :U _TMR0_Start ]
+[f ]
+"96
+[e = . . _T0CON0bits 1 4 -> -> 1 `ui `uc ]
+"97
+[e :UE 2402 ]
+}
+"99
+[v _TMR0_Stop `(v ~T0 @X0 1 ef ]
+"100
+{
+[e :U _TMR0_Stop ]
+[f ]
+"101
+[e = . . _T0CON0bits 1 4 -> -> 0 `ui `uc ]
+"102
+[e :UE 2403 ]
+}
+"104
+[v _TMR0_CounterGet `(ul ~T0 @X0 1 ef ]
+"105
+{
+[e :U _TMR0_CounterGet ]
+[f ]
+"106
+[v _counterValue `us ~T0 @X0 1 a ]
+"107
+[v _counterLowByte `uc ~T0 @X0 1 a ]
+"108
+[v _counterHighByte `uc ~T0 @X0 1 a ]
+"110
+[e = _counterLowByte _TMR0L ]
+"111
+[e = _counterHighByte _TMR0H ]
+"112
+[e = _counterValue -> + << -> -> _counterHighByte `us `ui -> 8 `i -> _counterLowByte `ui `us ]
+"114
+[e ) -> _counterValue `ul ]
+[e $UE 2404  ]
+"115
+[e :UE 2404 ]
+}
+"117
+[v _TMR0_CounterSet `(v ~T0 @X0 1 ef1`ul ]
+"118
+{
+[e :U _TMR0_CounterSet ]
+"117
+[v _counterValue `ul ~T0 @X0 1 r1 ]
+"118
+[f ]
+"119
+[e = _TMR0H -> >> _counterValue -> 8 `i `uc ]
+"120
+[e = _TMR0L -> _counterValue `uc ]
+"121
+[e :UE 2405 ]
+}
+"123
+[v _TMR0_PeriodSet `(v ~T0 @X0 1 ef1`ul ]
+"124
+{
+[e :U _TMR0_PeriodSet ]
+"123
+[v _periodCount `ul ~T0 @X0 1 r1 ]
+"124
+[f ]
+"125
+[e = _tmr0PeriodCount -> - -> 65535 `ui -> -> _periodCount `us `ui `us ]
+"127
+[e = _TMR0H -> >> -> _tmr0PeriodCount `ui -> 8 `i `uc ]
+"128
+[e = _TMR0L -> _tmr0PeriodCount `uc ]
+"129
+[e :UE 2406 ]
+}
+"131
+[v _TMR0_PeriodGet `(ul ~T0 @X0 1 ef ]
+"132
+{
+[e :U _TMR0_PeriodGet ]
+[f ]
+"133
+[e ) - -> -> 65535 `ui `ul -> _tmr0PeriodCount `ul ]
+[e $UE 2407  ]
+"134
+[e :UE 2407 ]
+}
+"136
+[v _TMR0_MaxCountGet `(ul ~T0 @X0 1 ef ]
+"137
+{
+[e :U _TMR0_MaxCountGet ]
+[f ]
+"138
+[e ) -> -> 65535 `ui `ul ]
+[e $UE 2408  ]
+"139
+[e :UE 2408 ]
+}
+[v $root$_TMR0_ISR `(v ~T0 @X0 0 e ]
+"141
+[v _TMR0_ISR `(v ~T1 @X0 1 ef ]
+"142
+{
+[e :U _TMR0_ISR ]
+[f ]
+"143
+[e = _TMR0H -> >> -> _tmr0PeriodCount `ui -> 8 `i `uc ]
+"144
+[e = _TMR0L -> _tmr0PeriodCount `uc ]
+"146
+[e $ ! != -> -> -> 0 `i `*v `*F17030 _TMR0_OverflowCallback 2410  ]
+"147
+{
+"148
+[e ( *U _TMR0_OverflowCallback ..  ]
+"149
+}
+[e :U 2410 ]
+"150
+[e = . . _PIR3bits 0 7 -> -> 0 `ui `uc ]
+"151
+[e :UE 2409 ]
+}
+"153
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 1 ef1`*F17032 ]
+"154
+{
+[e :U _TMR0_OverflowCallbackRegister ]
+"153
+[v _callbackHandler `*F17034 ~T0 @X0 1 r1 ]
+"154
+[f ]
+"155
+[e = _TMR0_OverflowCallback _callbackHandler ]
+"156
+[e :UE 2411 ]
+}
+"158
+[v _TMR0_DefaultOverflowCallback `(v ~T0 @X0 1 sf ]
+"159
+{
+[e :U _TMR0_DefaultOverflowCallback ]
+[f ]
+"161
+[e :UE 2412 ]
+}

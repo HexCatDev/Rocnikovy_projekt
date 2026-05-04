@@ -73,13 +73,13 @@
 			{
 				"command" : 2,
 				"file" : 2,
-				"line" : 87,
+				"line" : 83,
 				"parent" : 4
 			},
 			{
 				"command" : 4,
 				"file" : 2,
-				"line" : 88,
+				"line" : 84,
 				"parent" : 4
 			}
 		]
@@ -99,7 +99,7 @@
 				},
 				{
 					"backtrace" : 5,
-					"fragment" : "-mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8"
+					"fragment" : "-mdfp=/home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8"
 				},
 				{
 					"backtrace" : 5,
@@ -171,10 +171,6 @@
 				{
 					"backtrace" : 6,
 					"define" : "__18F47Q43__"
-				},
-				{
-					"backtrace" : 6,
-					"define" : "__DEBUG=1"
 				}
 			],
 			"language" : "C",

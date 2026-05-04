@@ -7,8 +7,7 @@ function(Hodiny_default_default_XC8_assemble_rule target)
         "-c"
         "${MP_EXTRA_AS_PRE}"
         "-mcpu=18F47Q43"
-        "${DEBUGGER_NAME}"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.28.451/xc8"
+        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.30.487/xc8"
         "-fno-short-double"
         "-fno-short-float"
         "-memi=wordwrite"
@@ -28,7 +27,6 @@ function(Hodiny_default_default_XC8_assemble_rule target)
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__18F47Q43__"
-        PRIVATE "__DEBUG=1"
         PRIVATE "XPRJ_default=default")
 endfunction()
 function(Hodiny_default_default_XC8_assemblePreprocess_rule target)
@@ -38,7 +36,7 @@ function(Hodiny_default_default_XC8_assemblePreprocess_rule target)
         "-mcpu=18F47Q43"
         "-x"
         "assembler-with-cpp"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.28.451/xc8"
+        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.30.487/xc8"
         "-fno-short-double"
         "-fno-short-float"
         "-memi=wordwrite"
@@ -58,7 +56,6 @@ function(Hodiny_default_default_XC8_assemblePreprocess_rule target)
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__18F47Q43__"
-        PRIVATE "__DEBUG=1"
         PRIVATE "XPRJ_default=default")
 endfunction()
 function(Hodiny_default_default_XC8_compile_rule target)
@@ -66,8 +63,7 @@ function(Hodiny_default_default_XC8_compile_rule target)
         "-c"
         "${MP_EXTRA_CC_PRE}"
         "-mcpu=18F47Q43"
-        "${DEBUGGER_NAME}"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.28.451/xc8"
+        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.30.487/xc8"
         "-fno-short-double"
         "-fno-short-float"
         "-memi=wordwrite"
@@ -87,7 +83,6 @@ function(Hodiny_default_default_XC8_compile_rule target)
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__18F47Q43__"
-        PRIVATE "__DEBUG=1"
         PRIVATE "XPRJ_default=default")
 endfunction()
 function(Hodiny_default_link_rule target)
@@ -95,9 +90,8 @@ function(Hodiny_default_link_rule target)
         "-Wl,-Map=mem.map"
         "${MP_EXTRA_LD_PRE}"
         "-mcpu=18F47Q43"
-        "${DEBUGGER_NAME}"
         "-Wl,--defsym=__MPLAB_BUILD=1"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.28.451/xc8"
+        "-mdfp=${PACK_REPO_PATH}/Microchip/PIC18F-Q_DFP/1.30.487/xc8"
         "-fno-short-double"
         "-fno-short-float"
         "-memi=wordwrite"
@@ -116,7 +110,5 @@ function(Hodiny_default_link_rule target)
         "-Wl,--memorysummary,memoryfile.xml")
     list(REMOVE_ITEM options "")
     target_link_options(${target} PRIVATE "${options}")
-    target_compile_definitions(${target}
-        PRIVATE "__DEBUG=1"
-        PRIVATE "XPRJ_default=default")
+    target_compile_definitions(${target} PRIVATE "XPRJ_default=default")
 endfunction()

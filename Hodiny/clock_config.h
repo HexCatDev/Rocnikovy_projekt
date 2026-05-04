@@ -5,7 +5,7 @@
 #include <language_support.h>
 #include <pic18f47q43.h>
 #include <stdint.h>
-#include <xc.h>
+#include <xc.h> 
 #include <stdbool.h>
 
 #define G = TRISDbits.TRISD7 = 0; //G
@@ -36,7 +36,7 @@ void My_I2C1_Interrupt(void);
 void process_data_from_RTC(void);
 
 
-const int numbers[10][8] = {
+const uint8_t numbers[10][8] = {
     {0, 0, 1, 1, 1, 1, 1, 1}, //0
     {0, 0, 0, 0, 0, 1, 1, 0}, //1
     {0, 1, 0, 1, 1, 0, 1, 1}, //2
@@ -49,7 +49,7 @@ const int numbers[10][8] = {
     {0, 1, 1, 0, 1, 1, 1, 1} //9
 };      // DP,    G,      F,    E,      D,    C,     B,     A
 
-const int numbers_DP[10][8] = {
+const uint8_t numbers_DP[10][8] = {
     {1, 0, 1, 1, 1, 1, 1, 1}, //0
     {1, 0, 0, 0, 0, 1, 1, 0}, //1
     {1, 1, 0, 1, 1, 0, 1, 1}, //2
@@ -80,10 +80,11 @@ static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
     TRISCbits.TRISC7 = 0; //C
     TRISCbits.TRISC6 = 0; //B
     TRISCbits.TRISC5 = 0; //A
+    
 
     //nastavení vstupů pro tlačítka
-    TRISAbits.TRISA0 = 1; // hodiny zpět 
-    TRISAbits.TRISA1 = 1; // výběr pozice
+    TRISAbits.TRISA1 = 1; // hodiny zpět 
+    TRISAbits.TRISA0 = 1; // výběr pozice
     TRISAbits.TRISA2 = 1; // hodiny vpřed
 
     INTCON0bits.IPEN = 1; // povolení priorit přerušení
