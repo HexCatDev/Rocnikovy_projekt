@@ -17,7 +17,7 @@
 #pragma config LVP = ON
 
 #define _XTAL_FREQ 64000000 // Define the operating frequency for delay functions
-#define RTC_ADDR 0x6F      // adress 7 bit 110 1111 
+#define RTC_ADDR 0xDE      // adress 7 bit 110 1111 
 #define SEC_REG 0x00        // seconds register
 #define MIN_REG 0X01        // minutes register
 #define HOUR_REG 0X02       // hours register
@@ -88,6 +88,7 @@ void clock_init(uint8_t numbers_out[6]) {
     in_setup_mode = 1; // nastaví se, že jsme v režimu nastavení hodin
     int selected_digit = 4;
     int hold_button_time = 0, theshold = 100; // proměnné pro detekci dlouhého stisku tlačítka, threshold je počet 10ms intervalů pro detekci dlouhého stisku
+    int timeout = 0; // proměnná pro detekci timeoutu při čekání na dokončení I2C přenosu, aby se zabránilo nekonečnému čekání pokud by došlo k nějaké chybě v komunikaci s RTC
     while (1) {
         if (TL_SET == 1) {
             hold_button_time++;
@@ -96,8 +97,9 @@ void clock_init(uint8_t numbers_out[6]) {
                 // tady se odešlou hodnoty z numbers out do RTC přes I2C a zapnase oscilátor
                 I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
                 WRITE_RTC(); //tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
-                while (!I2C_trasmission_complete) { //čeká se na uvolnění tlačítka nebo dokončení I2C přenosu, aby se zabránilo tomu, že se během přenosu změní nastavené hodnoty nebo se odešle neúplný přenos
+                while (!I2C_trasmission_complete && timeout < 100) { //čeká se na uvolnění tlačítka nebo dokončení I2C přenosu, aby se zabránilo tomu, že se během přenosu změní nastavené hodnoty nebo se odešle neúplný přenos
                     __delay_ms(10);
+                    timeout++;
                     LATB |= 0x3F; //nastaví všechny tranzistory na high takže se vypnou protože PNP display zhasne
                 }
             in_setup_mode = 0; // po uvolnění tlačítka se vypne režim nastavení hodin
@@ -176,13 +178,14 @@ void display_controll(){
             case 1: display_digit(numbers[numbers_out[1]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
             case 2: display_digit(numbers[numbers_out[2]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
             case 3: display_digit(numbers[numbers_out[3]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
-            case 4: display_digit(numbers[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; // je správně
-            case 5: display_digit(numbers[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; // je správně
+            case 4: display_digit(numbers[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; //s
+            case 5: display_digit(numbers[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; //ss
         }
     }
 }
 
 void READ_RTC(){
+    waiting_for_data = true; //nastaví se flag pro čekání na data z RTC, protože jsme právě zahájili nový I2C přenos a čekáme na data z RTC
     I2C1_WriteRead(RTC_ADDR, SEC_REG, 1, bcd_numbers_recieved, 3); //odešle do RTC adresu registru pro sekundy a počet bytů k přečtení (3 pro sekundy, minuty a hodiny) a pole pro uložení přijatých dat
     I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
 }
@@ -199,26 +202,25 @@ void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro
 }
 
 void system_clock(){ //tato funkce se bude volat každou sekundu a bude aktualizovat čas na displeji a je založena na funkci timer()
-    numbers_out[5]++; //zvýší sekundy o 1
-    if (numbers_out[5] >= 10) { //pokud jsou ss větší nebo rovny 10, resetuje se na 0 a zvýší se minuty
+    numbers_out[5]++; 
+    if (numbers_out[5] >= 10) { 
         numbers_out[5] = 0;
         numbers_out[4]++;
-        if (numbers_out[4] >= 6){ //když s je větší než 6
+        if (numbers_out[4] >= 6){ 
             numbers_out[4] = 0;
             numbers_out[3]++;
-            if (numbers_out[3] >= 10){//když je mm větší než 10
+            if (numbers_out[3] >= 10){
                 numbers_out[3] = 0;
                 numbers_out[2]++;
-                if (numbers_out[2] >= 6){ //když je m větší než 6
+                if (numbers_out[2] >= 6){ 
                     numbers_out[2] = 0;
                     numbers_out[1]++;
-                    if (numbers_out[1] >= 10){ //když je h větší než 10
+                    if (numbers_out[0] == 2 && numbers_out[1] >= 4) { 
+                        memset(numbers_out, 0, sizeof(numbers_out));
+                    } else if (numbers_out[1] >= 10) {
                         numbers_out[1] = 0;
                         numbers_out[0]++;
-                        if (numbers_out[0] >= 2){ //když je hh větší než 2, resetuje se na 0
-                            memset(numbers_out, 0, sizeof(numbers_out)); //nastvaí všechny hodnoty v numbers_out na 0
-                        }
-                    }       
+                    }
                 }
             }
         }
