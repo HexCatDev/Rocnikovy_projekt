@@ -6,9 +6,9 @@ A také  panu Jiřímu Vinterovi za rady a kontakty.
 ## To-do list
 - [x] Navrhnout schéma 
 - [x] Objednat součástky
-- [ ] Otestovat na breadboardu
+- [x] Otestovat na breadboardu
 - [x] Navrhnout PCB
-- [ ] Vyrobit PCB osadit, otestovat
+- [x] Vyrobit PCB osadit, otestovat
 
 ## Princip a popis
 Původní myšlenka jak zhotovit tento obvod byla, že by se jednotlivé výstupy na zobrazovače připojily přes posuvné registry, ovšem bylo by jich zapotřebí 6 kousků (HH:mm:ss) převod časového údaje z RTC by bylo zhotoveno přímo v PIC.
@@ -78,7 +78,8 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 	+ 2X https://ecom.cz/eshop/detail/84648
 	+ 5X https://ecom.cz/eshop/detail/84654
 - Patice
-	+ SIL 1X10 https://ecom.cz/eshop/detail/85244-SILPZ-1X10-V13-JK
+	+ SIL 1X5 https://ecom.cz/eshop/detail/85256
+  + SIL 1X9 https://ecom.cz/eshop/detail/85261
 	+ DIP 18 https://ecom.cz/eshop/detail/64634-DIL-18-3-NT-1
 	+ DIP 40 https://ecom.cz/eshop/detail/64639-DIL-40-6-YT-1
 - Zobrazovače
@@ -91,7 +92,7 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
 		* 470R https://ecom.cz/eshop/detail/71620-R1206-470R-1--WRX
 		* 100uF/35V https://ecom.cz/eshop/detail/78716-CERA-100-35-6-3x11-KM
-		* 220R 
+		* 220R https://ecom.cz/eshop/detail/71588
 - Svorkovnice https://ecom.cz/eshop/detail/6649-DG126-5-0-02P-14-02
 - Tlačítka https://ecom.cz/eshop/detail/55539-T-0670HIM-160G
 - Napájecí vidlice (zásuvka) https://ecom.cz/eshop/detail/78223-KNAPZP-25-1610-01
