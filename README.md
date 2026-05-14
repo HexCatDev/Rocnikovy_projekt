@@ -82,8 +82,8 @@ Video: https://youtu.be/Hi3HrBMFoAA
 - Patice
 	+ SIL 1X5 https://ecom.cz/eshop/detail/85256
   + SIL 1X9 https://ecom.cz/eshop/detail/85261
-	+ DIP 18 https://ecom.cz/eshop/detail/64634-DIL-18-3-NT-1
-	+ DIP 40 https://ecom.cz/eshop/detail/64639-DIL-40-6-YT-1
+  + DIP 18 https://ecom.cz/eshop/detail/64634-DIL-18-3-NT-1
+  + DIP 40 https://ecom.cz/eshop/detail/64639-DIL-40-6-YT-1
 - Zobrazovače
 	+ 7 segment 2X 20,32mm: https://ecom.cz/eshop/detail/29807-LD-FYD-8021DUHR-21
 	+ 7 segment 10mm: https://ecom.cz/eshop/detail/29798-LD-FYD-3921BUHR-21
