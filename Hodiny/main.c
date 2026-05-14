@@ -72,7 +72,7 @@ int main(void)
     return 0;
 }
 
-void display_digit(const uint8_t *segments){ // Změna na ukazatel *
+void display_digit(const uint8_t *segments){
     // Indexy v poli: 0=DP, 1=G, 2=F, 3=E, 4=D, 5=C, 6=B, 7=A
     LATDbits.LATD3 = segments[0] & 0x1; // DP
     LATDbits.LATD7 = segments[1] & 0x1; // G

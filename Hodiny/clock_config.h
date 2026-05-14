@@ -63,7 +63,7 @@ const uint8_t numbers_DP[10][8] = {
 };      // DP,    G,      F,    E,      D,    C,     B,     A
 
 static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
-    // Configure allpins to digital
+    // všechny piny na Digital
     ANSELA = 0x00;
     ANSELB = 0x00;
     ANSELC = 0x00;
