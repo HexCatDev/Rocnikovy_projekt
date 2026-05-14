@@ -37,6 +37,8 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 
 - tranzistory IRLML5203 SMD[8] P-MOSFET Uds max. 30V Ic 3A P 1.25W tyto tranzistory zajišťují spojení daného segmentu s napětím VCC tzn. pokud bude na 1. digitu svítit znak "A" ULN2804A[5] přivede na pin A napětí a poté tranzistor sepne a tím přivede na anodu proud poteče přes segmenty které jsou uzemněné a v důsledku toho se rozsvítí.
 
+Video: https://youtu.be/Hi3HrBMFoAA
+
 ## Návrh schéma a PCB
 - návrh schéma byl konzultován s panem Máchou a také byl upravován v souladu s dokumentací jednotlivých součástek s jejich doporučeními.
 
