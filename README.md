@@ -29,13 +29,13 @@ V této podkapitole budou popsány hlavně podstatné součástky RTC, PIC, tran
 - Mozkem obvodu je PIC18F47Q43-I-P[2] má na starosti komunikaci s RTC, multiplexování a řízení hodin. 
 
 - RTC (Real Time Clock)[3] a Krystal[4] 
-Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1]. Doporučená hodnota kondenzátorů které slouží jako kapacitní zátěž je 6-9pF.[3, kap. 4.2.1] Kondenzáty byly zapojeny podle doporučeného zapojení v citaci 3 kapitole FIGURE 4-3[3, kap. FIGURE 4-3].
+Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento údaj je poskytován v dekadickém formátu. Má také externí zdroj oscilací krystal o frekvenci 32 768 Hz tato hodnota je definovaná v jeho dokumentaci[3, kap. 4.2.1]. Doporučená hodnota kondenzátorů které slouží jako kapacitní zátěž je 20pF.[3, kap. 4.2.1] Kondenzáty byly zapojeny podle doporučeného zapojení v citaci 3 kapitole FIGURE 4-3[3, kap. FIGURE 4-3].
 
 - Tranzistorové pole ULN2804A[5] tento IO ve svém pouzdře DIP 18 obsahuje 8x NPN transistorů se spol. emitorem s max. kolektorovím  proudem 0,5A a max. napětím mezi kolektorem a emitorem 50V tento IO slouží pro výběr segmentu který bude svítit (A-DP)
 
 - 7 Segmentové zobrazovače[6][7] 2x 20,32mm a 2x 10mm se společnou katodou obsahují 16x znaků v pouzdře 2x8 (7+DP) jsou připojeny na přes rezistory na ULN2804A[5] a jednotlivé znaky jsou připojeny přes tranzistory DTA123JCA[8] které uzemňují daný znak.
 
-- tranzistory DTA123JCA[8] PNP Uce max. 50V Ic 100mA P 0.2W se zabudovanými rezistory R1 2.2KOhm a R2 47KOhm tyto tranzistory zajišťují spojení daného segmentu s napětím VCC tzn. pokud bude na 1. digitu svítit znak "A" ULN2804A[5] přivede na pin A napětí a poté tranzistor sepne a tím přivede na anodu proud poteče přes segmenty které jsou uzemněné a v důsledku toho se rozsvítí.
+- tranzistory IRLML5203 SMD[8] P-MOSFET Uds max. 30V Ic 3A P 1.25W tyto tranzistory zajišťují spojení daného segmentu s napětím VCC tzn. pokud bude na 1. digitu svítit znak "A" ULN2804A[5] přivede na pin A napětí a poté tranzistor sepne a tím přivede na anodu proud poteče přes segmenty které jsou uzemněné a v důsledku toho se rozsvítí.
 
 ## Návrh schéma a PCB
 - návrh schéma byl konzultován s panem Máchou a také byl upravován v souladu s dokumentací jednotlivých součástek s jejich doporučeními.
@@ -70,7 +70,7 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 	+ MCU https://ecom.cz/eshop/detail/73426-PIC18F47Q43-I-P
 	+ RTC https://ecom.cz/eshop/detail/39997-MCP7940M-I-SN
 	+ T. pole https://ecom.cz/eshop/detail/5723-ULN2804A
-	+ Tranzistory SMD https://ecom.cz/eshop/detail/59753-DTA123JCA-SMD
+	+ Tranzistory SMD https://ecom.cz/eshop/detail/80941
 	+ Dioda SMD https://ecom.cz/eshop/detail/82063-M7-SMD-T-R
 - Krystal
 	+ Crystal https://www.tme.eu/cz/details/32.768k-38-sr/krystalove-rezonatory-tht/sr-passives/32-768k-3-8-sr/
@@ -79,7 +79,6 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 	+ 5X https://ecom.cz/eshop/detail/84654
 - Patice
 	+ SIL 1X10 https://ecom.cz/eshop/detail/85244-SILPZ-1X10-V13-JK
-	+ SIL 1X20(zkrácena na 18) https://ecom.cz/eshop/detail/85248-SILPZ-1X20-V13-JK
 	+ DIP 18 https://ecom.cz/eshop/detail/64634-DIL-18-3-NT-1
 	+ DIP 40 https://ecom.cz/eshop/detail/64639-DIL-40-6-YT-1
 - Zobrazovače
@@ -88,10 +87,11 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - Pasivní součástky
 	+ Rezistory a Kondenzátory
 		* 4K7 https://ecom.cz/eshop/detail/71624-R1206-4K7-1--WRX
-		* 6.8 pF https://ecom.cz/eshop/detail/14473-C0603-6-8PF-NPO-50V-DNCC
+		* 22 pF https://ecom.cz/eshop/detail/53662
 		* 100 nF https://ecom.cz/eshop/detail/21330-C1206-0-1UF-X7R-100V-KNCC
 		* 470R https://ecom.cz/eshop/detail/71620-R1206-470R-1--WRX
 		* 100uF/35V https://ecom.cz/eshop/detail/78716-CERA-100-35-6-3x11-KM
+		* 220R 
 - Svorkovnice https://ecom.cz/eshop/detail/6649-DG126-5-0-02P-14-02
 - Tlačítka https://ecom.cz/eshop/detail/55539-T-0670HIM-160G
 - Napájecí vidlice (zásuvka) https://ecom.cz/eshop/detail/78223-KNAPZP-25-1610-01
@@ -105,6 +105,6 @@ Tento IO komunikuje pomocí I2C protokolu s PIC a poskytuje časový údaj tento
 - [5] STMICROELECTRONICS. *ULN2801A, ULN2802A, ULN2803A, ULN2804A: Eight Darlington Transistor Arrays*. 2012. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D05723.pdf&nazev=ECOM_05723_ULN2804A.pdf
 - [6] FORYARD OPTOELECTRONICS. *FYD-8021DUHR-21: Dual Digit 7-Segment Display Specification*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D29806.pdf&nazev=ECOM_29807_LD-FYD-8021DUHR-21.pdf
 - [7] FORYARD OPTOELECTRONICS. *FYD-3921BUHR-21: Single Digit 7-Segment Display Specification*. Dostupné z:https://ecom.cz/data/exportdokumentu?soubor=D29797.pdf&nazev=ECOM_29798_LD-FYD-3921BUHR-21.pdf
-- [8] TSC - TAIWAN SEMICONDUCTORS. *DTA123JCA PNP 100mA 5OV R1 2.2K R2 47K*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D59753.pdf&nazev=ECOM_59753_DTA123JCA-SMD.pdf
+- [8] 	IRF - Infineon/International Rectifier. *	Tranzistor MFET-P, Uds=30V, Id=3A, P=1.25W, Ron=165mOhm*. Dostupné z: https://ecom.cz/data/exportdokumentu?soubor=D80941.pdf&nazev=ECOM_80941_IRLML5203-SMD.pdf
 - [10] WIKIPEDIA CONTRIBUTORS. *Decoupling*. Wikipedia: The Free Encyclopedia [online]. Dostupné z: https://en.wikipedia.org/wiki/Capacitor#Decoupling
 - [11] KOME *M7 SMD T/R* Dostupné z: https://www.tme.eu/Document/4a413fd76a83438d5e8f54eb6b2d20d6/m1.pdf

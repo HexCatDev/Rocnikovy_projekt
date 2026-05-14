@@ -41,7 +41,7 @@ int main(void)
     I2C1_Initialize();
     pin_init();
 
-    //interrupt stuff
+    //interrupt
     I2C1_Host_CallbackRegister(My_I2C1_Interrupt); //registrace callback funkce pro dokončení I2C přenosu, která se volá, když je I2C přenos dokončen
     TMR0_OverflowCallbackRegister(timer); //registrace callback funkce pro přerušení od časovače tzn. když nastane přerušení spustí se fukce timer()
     TMR0_Start(); //spuštění časovače
@@ -140,6 +140,11 @@ void clock_init(uint8_t numbers_out[6]) {
                 case 4: numbers_out[4] = (numbers_out[4] -1 ) < 0 ? 5 : numbers_out[4] - 1; break; //ss 0-6
                 case 5: numbers_out[5] = (numbers_out[5] -1 ) < 0 ? 9 : numbers_out[5] - 1; break; //s 0-9
             }
+        }
+
+        if (numbers_out[0] == 2 && numbers_out[1] >= 4) { // pokud jsou hodiny nastaveny na 24 nebo více, resetuje se na 00
+            numbers_out[0] = 0;
+            numbers_out[1] = 0;
         }
 
         for (int i = 0; i < 6; i++) {
