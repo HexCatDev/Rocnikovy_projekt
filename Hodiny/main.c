@@ -46,6 +46,9 @@ int main(void)
     TMR0_OverflowCallbackRegister(timer); //registrace callback funkce pro přerušení od časovače tzn. když nastane přerušení spustí se fukce timer()
     TMR0_Start(); //spuštění časovače
 
+    INTCON0bits.GIEH = 1; 
+    INTCON0bits.GIEL = 1;
+
     
     while (1) {
         if (in_setup_mode == 0) { //pokud nejsme v režimu nastavení hodin, aktualizujeme čas a synchronizujeme s RTC
