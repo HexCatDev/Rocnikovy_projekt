@@ -34,7 +34,7 @@ void timer(void);
 void display_controll(void);
 void My_I2C1_Interrupt(void);
 void process_data_from_RTC(void);
-
+void refresh_setup_display(int selected_digit, uint8_t numbers_out[6]);
 
 const uint8_t numbers[10][8] = {
     {0, 0, 1, 1, 1, 1, 1, 1}, //0
@@ -68,6 +68,10 @@ static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
     ANSELB = 0x00;
     ANSELC = 0x00;
     ANSELD = 0x00; 
+
+    // Nastavení I2C pinů jako VSTUPY podle dokumentace k I2C modulu
+    TRISCbits.TRISC3 = 1; // SCL jako vstup
+    TRISCbits.TRISC4 = 1; // SDA jako vstup
 
     TRISB &= ~0x3F; //nastavení výstupů pro B0-B5 transzistory PNP bitwisová operace AND s negací 0x3F (0011 1111) nastaví bity 0-5 na 0 (výstup) a zbytek ponechá beze změny
 

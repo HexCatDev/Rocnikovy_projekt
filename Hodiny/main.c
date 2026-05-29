@@ -17,13 +17,13 @@
 #pragma config LVP = ON
 
 #define _XTAL_FREQ 64000000 // Define the operating frequency for delay functions
-#define RTC_ADDR 0xDE      // adress 7 bit 110 1111 
+#define RTC_ADDR 0x6F    // adress 7 bit 110 1111 
 #define SEC_REG 0x00        // seconds register
 #define MIN_REG 0X01        // minutes register
 #define HOUR_REG 0X02       // hours register
 #define TL_SET PORTAbits.RA1 // tlačítko pro nastavení pozice
-#define TL_ADD PORTAbits.RA0 // tlačítko pro přidání hodin
-#define TL_SUB PORTAbits.RA2 // tlačítko pro odečtení hodin
+#define TL_ADD PORTAbits.RA2 // tlačítko pro přidání hodin
+#define TL_SUB PORTAbits.RA0 // tlačítko pro odečtení hodin
 
 #include "My_MCC_Config/mcc/mcc_generated_files/timer/tmr0.h"
 #include "My_MCC_Config/mcc/mcc_generated_files/system/system.h"
@@ -90,12 +90,12 @@ void display_digit(const uint8_t *segments){
 void clock_init(uint8_t numbers_out[6]) {
     in_setup_mode = 1; // nastaví se, že jsme v režimu nastavení hodin
     int selected_digit = 4;
-    int hold_button_time = 0, theshold = 100; // proměnné pro detekci dlouhého stisku tlačítka, threshold je počet 10ms intervalů pro detekci dlouhého stisku
+    int hold_button_time = 0, theshold = 500; // proměnné pro detekci dlouhého stisku tlačítka, threshold je počet 10ms intervalů pro detekci dlouhého stisku
     int timeout = 0; // proměnná pro detekci timeoutu při čekání na dokončení I2C přenosu, aby se zabránilo nekonečnému čekání pokud by došlo k nějaké chybě v komunikaci s RTC
+    int threshold = 333;
     while (1) {
         if (TL_SET == 1) {
             hold_button_time++;
-            __delay_ms(10);
             if (hold_button_time > theshold) {
                 // tady se odešlou hodnoty z numbers out do RTC přes I2C a zapnase oscilátor
                 I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
@@ -113,15 +113,14 @@ void clock_init(uint8_t numbers_out[6]) {
         
         }
         else {
-            if (hold_button_time > 5 && hold_button_time < theshold) { //pokud je tlačítko drženo více ne 5ms ale méně než threshold, přepne se na další číslici
-                selected_digit = (selected_digit + 1) % 6; // přepínání mezi číslicemi
-            }
+            // Ochrana proti zákmitům (debouncing): tlačítko muselo být stisknuto alespoň 15 průchodů (cca 45 ms)
+        if (hold_button_time > 15 && hold_button_time < theshold) { 
+            selected_digit = (selected_digit + 1) % 6; // přepnutí na další číslici
+        }
             hold_button_time = 0; // reset času držení tlačítka
-            __delay_ms(10);
         }
 
         if (TL_ADD == 1) {
-            __delay_ms(300);
             switch (selected_digit) {
                 case 0: numbers_out[0] = (numbers_out[0] >= 2) ? 0 : numbers_out[0] + 1; break; //hh 0,1,2
                 case 1: numbers_out[1] = (numbers_out[1] >= 9) ? 0 : numbers_out[1] + 1; break; //h 0-9
@@ -130,10 +129,12 @@ void clock_init(uint8_t numbers_out[6]) {
                 case 4: numbers_out[4] = (numbers_out[4] >= 5) ? 0 : numbers_out[4] + 1; break; //ss 0-6
                 case 5: numbers_out[5] = (numbers_out[5] >= 9) ? 0 : numbers_out[5] + 1; break; //s 0-9
             }
+            for (int d = 0; d < 100; d++) {
+                refresh_setup_display(selected_digit, numbers_out);
+            }
         }
 
         if (TL_SUB == 1) {
-            __delay_ms(300);
             switch (selected_digit) {
                 //tady jsem použil ternary operace tj. (kondice) ? (je pravda) : (není pravda) protože když odečítám 1 od 0, chci aby se číslo změnilo na maximum (např. pro minuty když je 00 a odečtu 1, chci aby se změnilo na 59)
                 case 0: numbers_out[0] = (numbers_out[0] -1 ) < 0 ? 2 : numbers_out[0] - 1; break; //hh 0,1,2
@@ -143,25 +144,35 @@ void clock_init(uint8_t numbers_out[6]) {
                 case 4: numbers_out[4] = (numbers_out[4] -1 ) < 0 ? 5 : numbers_out[4] - 1; break; //ss 0-6
                 case 5: numbers_out[5] = (numbers_out[5] -1 ) < 0 ? 9 : numbers_out[5] - 1; break; //s 0-9
             }
+            for (int d = 0; d < 100; d++) {
+                refresh_setup_display(selected_digit, numbers_out);
+            }
         }
 
         if (numbers_out[0] == 2 && numbers_out[1] >= 4) { // pokud jsou hodiny nastaveny na 24 nebo více, resetuje se na 00
             numbers_out[0] = 0;
             numbers_out[1] = 0;
         }
+        refresh_setup_display(selected_digit, numbers_out);
+    }
+}
 
-        for (int i = 0; i < 6; i++) {
-            LATB |= 0x3F; //nastaví všechny tranzistory na high takže se vypnou protože PNP
+void refresh_setup_display(int selected_digit, uint8_t numbers_out[6]) {
+    for (int i = 0; i < 6; i++) {
+        LATB |= 0x3F; // vypnutí všech tranzistorů (PNP displej zhasne)
 
-            // nastaví určitý tranzistor na low takže se zapne
-            switch (selected_digit) {
-                case 0: display_digit(numbers_DP[numbers_out[0]]); LATBbits.LATB2 = 0; __delay_us(500); break; 
-                case 1: display_digit(numbers_DP[numbers_out[1]]); LATBbits.LATB3 = 0; __delay_us(500); break; 
-                case 2: display_digit(numbers_DP[numbers_out[2]]); LATBbits.LATB4 = 0; __delay_us(500); break; 
-                case 3: display_digit(numbers_DP[numbers_out[3]]); LATBbits.LATB5 = 0; __delay_us(500); break; 
-                case 4: display_digit(numbers_DP[numbers_out[4]]); LATBbits.LATB1 = 0; __delay_us(500); break; 
-                case 5: display_digit(numbers_DP[numbers_out[5]]); LATBbits.LATB0 = 0; __delay_us(500); break; 
-            }
+        // Pokud index odpovídá vybrané pozici (selected_digit), použijeme znak s tečkou, jinak běžný znak
+        const uint8_t *current_segments = (i == selected_digit) ? numbers_DP[numbers_out[i]] : numbers[numbers_out[i]];
+
+        // Spínání tranzistorů podle aktuálního indexu 'i'
+        switch (i) {
+            case 0: display_digit(current_segments); LATBbits.LATB2 = 0; __delay_us(500); break; 
+            case 1: display_digit(current_segments); LATBbits.LATB3 = 0; __delay_us(500); break; 
+            case 2: display_digit(current_segments); LATBbits.LATB4 = 0; __delay_us(500); break; 
+            case 3: display_digit(current_segments); LATBbits.LATB5 = 0; __delay_us(500); break; 
+            case 4: display_digit(current_segments); LATBbits.LATB1 = 0; __delay_us(500); break; 
+            case 5: display_digit(current_segments); LATBbits.LATB0 = 0; __delay_us(500); break; 
+            default: break;
         }
     }
 }
@@ -194,8 +205,8 @@ void display_controll(){
 
 void READ_RTC(){
     waiting_for_data = true; //nastaví se flag pro čekání na data z RTC, protože jsme právě zahájili nový I2C přenos a čekáme na data z RTC
-    I2C1_WriteRead(RTC_ADDR, SEC_REG, 1, bcd_numbers_recieved, 3); //odešle do RTC adresu registru pro sekundy a počet bytů k přečtení (3 pro sekundy, minuty a hodiny) a pole pro uložení přijatých dat
     I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
+    I2C1_WriteRead(RTC_ADDR, SEC_REG, 1, bcd_numbers_recieved, 3); //odešle do RTC adresu registru pro sekundy a počet bytů k přečtení (3 pro sekundy, minuty a hodiny) a pole pro uložení přijatých dat
 }
 
 void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
@@ -206,6 +217,7 @@ void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro
     payload[2] = time_to_BCD(numbers_out[2], numbers_out[3]); // hodnota pro minuty v BCD formátu
     payload[3] = time_to_BCD(numbers_out[0], numbers_out[1]); // hodnota pro hodiny v BCD formátu
 
+    I2C_trasmission_complete = false;
     I2C1_Host_Write(RTC_ADDR, payload, 4); // odešle data do RTC, první byte je adresa registru pro sekundy a další 3 byty jsou hodnoty pro sekundy, minuty a hodiny v BCD formátu
 }
 
@@ -238,12 +250,12 @@ void system_clock(){ //tato funkce se bude volat každou sekundu a bude aktualiz
 void timer(void){
     ms_sync_counter++; //inkrementace čítače pro měření času v milisekundách
     ms_counter++; //inkrementace čítače pro měření času v milisekundách
-    if (ms_counter >= 1000 && in_setup_mode == 0) { //když uplyne 1 sekunda
+    if (ms_counter >= 997 && in_setup_mode == 0) { //když uplyne 1 sekunda
         sys_clock = true; //nastaví se flag pro sys clock
         ms_counter = 0;
     }
     if (in_setup_mode == 0) {
-        if (ms_sync_counter >= 900000) { //když uplyne 15 minut, synchronizuje se čas s RTC
+        if (ms_sync_counter >= 5000) { //když uplyne 15 minut, synchronizuje se čas s RTC
             RTC_sync = true; //nastaví se flag pro RTC sync
             ms_sync_counter = 0;
         }

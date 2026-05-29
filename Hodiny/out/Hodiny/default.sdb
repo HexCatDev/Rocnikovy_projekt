@@ -18,19 +18,21 @@ I2C_ERROR_BUS_COLLISION 3
 [v _display_digit display_digit `(v  1 e 1 0 ]
 "90
 [v _clock_init clock_init `(v  1 e 1 0 ]
-"169
+"160
+[v _refresh_setup_display refresh_setup_display `(v  1 e 1 0 ]
+"180
 [v _display_controll display_controll `(v  1 e 1 0 ]
-"195
+"206
 [v _READ_RTC READ_RTC `(v  1 e 1 0 ]
-"201
-[v _WRITE_RTC WRITE_RTC `(v  1 e 1 0 ]
 "212
+[v _WRITE_RTC WRITE_RTC `(v  1 e 1 0 ]
+"224
 [v _system_clock system_clock `(v  1 e 1 0 ]
-"238
+"250
 [v _timer timer `(v  1 e 1 0 ]
-"253
+"265
 [v _My_I2C1_Interrupt My_I2C1_Interrupt `(v  1 e 1 0 ]
-"257
+"269
 [v _process_data_from_RTC process_data_from_RTC `(v  1 e 1 0 ]
 "100 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -636,7 +638,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
 "48093
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
-[s S1479 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1485 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -646,10 +648,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 LATB7 1 0 :1:7 
 ]
 "48110
-[u S1488 . 1 `S1479 1 . 1 0 ]
+[u S1494 . 1 `S1485 1 . 1 0 ]
 "48110
 "48110
-[v _LATBbits LATBbits `VES1488  1 e 1 @1215 ]
+[v _LATBbits LATBbits `VES1494  1 e 1 @1215 ]
 "48155
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
 [s S1430 . 1 `uc 1 LATC0 1 0 :1:0 
@@ -704,7 +706,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "48435
 [v _TRISC TRISC `VEuc  1 e 1 @1224 ]
-[s S1320 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S1298 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -714,13 +716,13 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "48452
-[u S1329 . 1 `S1320 1 . 1 0 ]
+[u S1307 . 1 `S1298 1 . 1 0 ]
 "48452
 "48452
-[v _TRISCbits TRISCbits `VES1329  1 e 1 @1224 ]
+[v _TRISCbits TRISCbits `VES1307  1 e 1 @1224 ]
 "48497
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
-[s S1299 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S1320 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -730,10 +732,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "48514
-[u S1308 . 1 `S1299 1 . 1 0 ]
+[u S1329 . 1 `S1320 1 . 1 0 ]
 "48514
 "48514
-[v _TRISDbits TRISDbits `VES1308  1 e 1 @1225 ]
+[v _TRISDbits TRISDbits `VES1329  1 e 1 @1225 ]
 "48559
 [v _TRISE TRISE `VEuc  1 e 1 @1226 ]
 [s S1451 . 1 `uc 1 RA0 1 0 :1:0 
@@ -773,25 +775,25 @@ I2C_ERROR_BUS_COLLISION 3
 [v _numbers numbers `C[10][8]uc  1 e 80 0 ]
 "52
 [v _numbers_DP numbers_DP `C[10][8]uc  1 e 80 0 ]
-"97
-[v _numbers_out numbers_out `[6]uc  1 e 6 0 ]
-"98
-[v _in_setup_mode in_setup_mode `uc  1 e 1 0 ]
-"100
-[v _payload payload `[4]uc  1 e 4 0 ]
 "101
-[v _bcd_numbers_recieved bcd_numbers_recieved `[3]uc  1 e 3 0 ]
+[v _numbers_out numbers_out `[6]uc  1 e 6 0 ]
 "102
-[v _ms_sync_counter ms_sync_counter `VEul  1 e 4 0 ]
-"103
-[v _ms_counter ms_counter `VEus  1 e 2 0 ]
+[v _in_setup_mode in_setup_mode `uc  1 e 1 0 ]
+"104
+[v _payload payload `[4]uc  1 e 4 0 ]
+"105
+[v _bcd_numbers_recieved bcd_numbers_recieved `[3]uc  1 e 3 0 ]
 "106
-[v _I2C_trasmission_complete I2C_trasmission_complete `VEa  1 e 1 0 ]
+[v _ms_sync_counter ms_sync_counter `VEul  1 e 4 0 ]
 "107
+[v _ms_counter ms_counter `VEus  1 e 2 0 ]
+"110
+[v _I2C_trasmission_complete I2C_trasmission_complete `VEa  1 e 1 0 ]
+"111
 [v _sys_clock sys_clock `VEa  1 e 1 0 ]
-"108
+"112
 [v _RTC_sync RTC_sync `VEa  1 e 1 0 ]
-"109
+"113
 [v _waiting_for_data waiting_for_data `a  1 s 1 waiting_for_data ]
 "94 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Callback I2C1_Callback `*.38(v  1 s 3 I2C1_Callback ]
@@ -813,10 +815,10 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "76
 } 0
-"212
+"224
 [v _system_clock system_clock `(v  1 e 1 0 ]
 {
-"236
+"248
 } 0
 "3 /opt/microchip/xc8/v3.10/pic/sources/c99/common/memset.c
 [v _memset memset `(*.39v  1 e 3 0 ]
@@ -829,38 +831,52 @@ I2C_ERROR_BUS_COLLISION 3
 [v memset@n n `ui  1 p 2 17 ]
 "10
 } 0
-"257 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"269 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _process_data_from_RTC process_data_from_RTC `(v  1 e 1 0 ]
 {
-"268
+"280
 } 0
 "65 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/clock_config.h
 [v _pin_init pin_init `T(v  1 s 1 pin_init ]
 {
-"93
+"97
 } 0
-"169 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"180 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _display_controll display_controll `(v  1 e 1 0 ]
 {
-"180
-[v display_controll@i i `i  1 a 2 2 ]
-"193
+"191
+[v display_controll@i i `i  1 a 2 36 ]
+"204
 } 0
 "90
 [v _clock_init clock_init `(v  1 e 1 0 ]
 {
-"153
-[v clock_init@i i `i  1 a 2 52 ]
+"147
+[v clock_init@d_1613 d `i  1 a 2 30 ]
+"132
+[v clock_init@d d `i  1 a 2 28 ]
 "92
-[v clock_init@selected_digit selected_digit `i  1 a 2 56 ]
+[v clock_init@selected_digit selected_digit `i  1 a 2 34 ]
 "93
-[v clock_init@hold_button_time hold_button_time `i  1 a 2 54 ]
-[v clock_init@theshold theshold `i  1 a 2 50 ]
+[v clock_init@hold_button_time hold_button_time `i  1 a 2 32 ]
+[v clock_init@theshold theshold `i  1 a 2 26 ]
 "94
-[v clock_init@timeout timeout `i  1 a 2 24 ]
+[v clock_init@timeout timeout `i  1 a 2 0 ]
 "90
-[v clock_init@numbers_out numbers_out `*.39uc  1 p 2 20 ]
-"167
+[v clock_init@numbers_out numbers_out `*.39uc  1 p 2 25 ]
+"158
+} 0
+"160
+[v _refresh_setup_display refresh_setup_display `(v  1 e 1 0 ]
+{
+"165
+[v refresh_setup_display@current_segments current_segments `*.31Cuc  1 a 1 24 ]
+"161
+[v refresh_setup_display@i i `i  1 a 2 22 ]
+"160
+[v refresh_setup_display@selected_digit selected_digit `i  1 p 2 16 ]
+[v refresh_setup_display@numbers_out numbers_out `*.39uc  1 p 2 18 ]
+"178
 } 0
 "78
 [v _display_digit display_digit `(v  1 e 1 0 ]
@@ -879,10 +895,10 @@ I2C_ERROR_BUS_COLLISION 3
 [v ___awmod@divisor divisor `i  1 p 2 15 ]
 "34
 } 0
-"201 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"212 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _WRITE_RTC WRITE_RTC `(v  1 e 1 0 ]
 {
-"210
+"222
 } 0
 "155 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
@@ -963,10 +979,10 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "58
 } 0
-"195 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"206 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _READ_RTC READ_RTC `(v  1 e 1 0 ]
 {
-"199
+"210
 } 0
 "193 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_WriteRead I2C1_WriteRead `(a  1 e 1 0 ]
@@ -1104,10 +1120,10 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "299
 } 0
-"253 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"265 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _My_I2C1_Interrupt My_I2C1_Interrupt `(v  1 e 1 0 ]
 {
-"255
+"267
 } 0
 "431 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
@@ -1224,8 +1240,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "161
 } 0
-"238 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
+"250 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 [v _timer timer `(v  1 e 1 0 ]
 {
-"251
+"263
 } 0
