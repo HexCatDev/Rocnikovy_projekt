@@ -1,5 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39495 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f47q43.h
+"40617 /home/nontoxiccat/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f47q43.h
+[s S1921 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1921 . ODCC0 ODCC1 ODCC2 ODCC3 ODCC4 ODCC5 ODCC6 ODCC7 ]
+"40616
+[u S1920 `S1921 1 ]
+[n S1920 . . ]
+"40628
+[v _ODCONCbits `VS1920 ~T0 @X0 0 e@1042 ]
+"15086
+[v _RC3I2C `Vuc ~T0 @X0 0 e@647 ]
+"14954
+[v _RC4I2C `Vuc ~T0 @X0 0 e@646 ]
+"39495
 [v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
 "39991
 [v _ANSELB `Vuc ~T0 @X0 0 e@1032 ]
@@ -2028,51 +2040,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _pin_init ]
 [f ]
 "67
-[e = _ANSELA -> -> 0 `i `uc ]
+[e = . . _ODCONCbits 0 3 -> -> 1 `i `uc ]
 "68
-[e = _ANSELB -> -> 0 `i `uc ]
-"69
-[e = _ANSELC -> -> 0 `i `uc ]
-"70
-[e = _ANSELD -> -> 0 `i `uc ]
-"73
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-"74
-[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+[e = . . _ODCONCbits 0 4 -> -> 1 `i `uc ]
+"71
+[e = _RC3I2C -> -> 1 `i `uc ]
+"72
+[e = _RC4I2C -> -> 1 `i `uc ]
+"75
+[e = _ANSELA -> -> 0 `i `uc ]
 "76
-[e =& _TRISB -> ~ -> 63 `i `Vuc ]
-"79
-[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
-"80
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+[e = _ANSELB -> -> 0 `i `uc ]
+"77
+[e = _ANSELC -> -> 0 `i `uc ]
+"78
+[e = _ANSELD -> -> 0 `i `uc ]
 "81
-[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
 "82
-[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-"83
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
 "84
-[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-"85
-[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"86
-[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+[e =& _TRISB -> ~ -> 63 `i `Vuc ]
+"87
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+"88
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+"89
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
 "90
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
 "91
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
 "92
-[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
+"93
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
 "94
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"98
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"99
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"100
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+"102
 [e = . . _INTCON0bits 0 4 -> -> 1 `i `uc ]
-"95
+"103
 [e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
-"96
+"104
 [e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
-"97
+"105
 [e :UE 2404 ]
 }
-"101
+"109
 [v _numbers_out `uc ~T0 @X0 -> 6 `i e ]
 [i _numbers_out
 :U ..
@@ -2084,12 +2104,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"102
+"110
 [v _in_setup_mode `uc ~T0 @X0 1 e ]
 [i _in_setup_mode
 -> -> 0 `i `uc
 ]
-"103
+"111
 [v _bcd_numbers `uc ~T0 @X0 -> 4 `i e ]
 [i _bcd_numbers
 :U ..
@@ -2098,7 +2118,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"104
+"112
 [v _payload `uc ~T0 @X0 -> 4 `i e ]
 [i _payload
 :U ..
@@ -2108,7 +2128,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"105
+"113
 [v _bcd_numbers_recieved `uc ~T0 @X0 -> 3 `i e ]
 [i _bcd_numbers_recieved
 :U ..
@@ -2117,32 +2137,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"106
+"114
 [v _ms_sync_counter `Vul ~T0 @X0 1 e ]
 [i _ms_sync_counter
 -> -> -> 0 `i `l `ul
 ]
-"107
+"115
 [v _ms_counter `Vus ~T0 @X0 1 e ]
 [i _ms_counter
 -> -> 0 `i `us
 ]
-"110
+"118
 [v _I2C_trasmission_complete `Va ~T0 @X0 1 e ]
 [i _I2C_trasmission_complete
 -> -> 0 `i `a
 ]
-"111
+"119
 [v _sys_clock `Va ~T0 @X0 1 e ]
 [i _sys_clock
 -> -> 0 `i `a
 ]
-"112
+"120
 [v _RTC_sync `Va ~T0 @X0 1 e ]
 [i _RTC_sync
 -> -> 0 `i `a
 ]
-"113
+"121
 [v _waiting_for_data `a ~T0 @X0 1 s ]
 [i _waiting_for_data
 -> -> 0 `i `a
@@ -2676,171 +2696,176 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _waiting_for_data -> -> 1 `i `a ]
 "208
 [e = _I2C_trasmission_complete -> -> 0 `i `a ]
-"209
-[e ( _I2C1_WriteRead (4 , , , , -> -> 111 `i `us -> -> 0 `i `*uc -> -> 1 `i `ui &U _bcd_numbers_recieved -> -> 3 `i `ui ]
-"210
+"211
+[v F17336 `uc ~T0 @X0 1 s reg_addr ]
+[i F17336
+-> -> 0 `i `uc
+]
+"214
+[e ( _I2C1_WriteRead (4 , , , , -> -> 111 `i `us &U F17336 -> -> 1 `i `ui &U _bcd_numbers_recieved -> -> 3 `i `ui ]
+"215
 [e :UE 2477 ]
 }
-"212
+"217
 [v _WRITE_RTC `(v ~T0 @X0 1 ef ]
 {
 [e :U _WRITE_RTC ]
 [f ]
-"214
+"219
 [e = *U + &U _payload * -> -> -> 0 `i `ui `ux -> -> # *U &U _payload `ui `ux -> -> 0 `i `uc ]
-"215
-[e = *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
-"216
-[e = *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux `i -> 128 `i `uc ]
-"217
-[e = *U + &U _payload * -> -> -> 2 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
-"218
-[e = *U + &U _payload * -> -> -> 3 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
 "220
-[e = _I2C_trasmission_complete -> -> 0 `i `a ]
+[e = *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
 "221
-[e ( _I2C1_Write (3 , , -> -> 111 `i `us &U _payload -> -> 4 `i `ui ]
+[e = *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> *U + &U _payload * -> -> -> 1 `i `ui `ux -> -> # *U &U _payload `ui `ux `i -> 128 `i `uc ]
 "222
+[e = *U + &U _payload * -> -> -> 2 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
+"223
+[e = *U + &U _payload * -> -> -> 3 `i `ui `ux -> -> # *U &U _payload `ui `ux -> | -> -> << -> *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i `uc `i -> *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i `uc ]
+"225
+[e = _I2C_trasmission_complete -> -> 0 `i `a ]
+"226
+[e ( _I2C1_Write (3 , , -> -> 111 `i `us &U _payload -> -> 4 `i `ui ]
+"227
 [e :UE 2478 ]
 }
-"224
+"229
 [v _system_clock `(v ~T0 @X0 1 ef ]
 {
 [e :U _system_clock ]
 [f ]
-"225
+"230
 [e ++ *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"226
+"231
 [e $ ! >= -> *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 10 `i 2480  ]
 {
-"227
+"232
 [e = *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 0 `i `uc ]
-"228
+"233
 [e ++ *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"229
+"234
 [e $ ! >= -> *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 6 `i 2481  ]
 {
-"230
+"235
 [e = *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 0 `i `uc ]
-"231
+"236
 [e ++ *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"232
+"237
 [e $ ! >= -> *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 10 `i 2482  ]
 {
-"233
+"238
 [e = *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 0 `i `uc ]
-"234
+"239
 [e ++ *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"235
+"240
 [e $ ! >= -> *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 6 `i 2483  ]
 {
-"236
+"241
 [e = *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 0 `i `uc ]
-"237
+"242
 [e ++ *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"238
+"243
 [e $ ! && == -> *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 2 `i >= -> *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 4 `i 2484  ]
 {
-"239
+"244
 [e ( _memset (3 , , -> &U _numbers_out `*v -> 0 `i -> # _numbers_out `ui ]
-"240
+"245
 }
 [e $U 2485  ]
 [e :U 2484 ]
 [e $ ! >= -> *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux `i -> 10 `i 2486  ]
 {
-"241
+"246
 [e = *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 0 `i `uc ]
-"242
+"247
 [e ++ *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> -> 1 `i `uc ]
-"243
+"248
 }
 [e :U 2486 ]
 [e :U 2485 ]
-"244
+"249
 }
 [e :U 2483 ]
-"245
+"250
 }
 [e :U 2482 ]
-"246
+"251
 }
 [e :U 2481 ]
-"247
+"252
 }
 [e :U 2480 ]
-"248
+"253
 [e :UE 2479 ]
 }
-"250
+"255
 [v _timer `(v ~T0 @X0 1 ef ]
 {
 [e :U _timer ]
 [f ]
-"251
+"256
 [e ++ _ms_sync_counter -> -> 1 `i `Vul ]
-"252
+"257
 [e ++ _ms_counter -> -> 1 `i `Vus ]
-"253
+"258
 [e $ ! && >= -> _ms_counter `ui -> -> 997 `i `ui == -> _in_setup_mode `i -> 0 `i 2488  ]
 {
-"254
-[e = _sys_clock -> -> 1 `i `a ]
-"255
-[e = _ms_counter -> -> 0 `i `us ]
-"256
-}
-[e :U 2488 ]
-"257
-[e $ ! == -> _in_setup_mode `i -> 0 `i 2489  ]
-{
-"258
-[e $ ! >= _ms_sync_counter -> -> -> 5000 `i `l `ul 2490  ]
-{
 "259
-[e = _RTC_sync -> -> 1 `i `a ]
+[e = _sys_clock -> -> 1 `i `a ]
 "260
-[e = _ms_sync_counter -> -> -> 0 `i `l `ul ]
+[e = _ms_counter -> -> 0 `i `us ]
 "261
 }
-[e :U 2490 ]
+[e :U 2488 ]
 "262
+[e $ ! == -> _in_setup_mode `i -> 0 `i 2489  ]
+{
+"263
+[e $ ! >= _ms_sync_counter -> -> -> 5000 `i `l `ul 2490  ]
+{
+"264
+[e = _RTC_sync -> -> 1 `i `a ]
+"265
+[e = _ms_sync_counter -> -> -> 0 `i `l `ul ]
+"266
+}
+[e :U 2490 ]
+"267
 }
 [e :U 2489 ]
-"263
+"268
 [e :UE 2487 ]
 }
-"265
+"270
 [v _My_I2C1_Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _My_I2C1_Interrupt ]
 [f ]
-"266
+"271
 [e = _I2C_trasmission_complete -> -> 1 `i `a ]
-"267
+"272
 [e :UE 2491 ]
 }
-"269
+"274
 [v _process_data_from_RTC `(v ~T0 @X0 1 ef ]
 {
 [e :U _process_data_from_RTC ]
 [f ]
-"270
-[e = *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 127 `i `uc ]
-"271
-[e = *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
-"272
-[e = *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
-"274
-[e = *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 1 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
 "275
-[e = *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 1 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
+[e = *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 127 `i `uc ]
+"276
+[e = *U + &U _numbers_out * -> -> -> 4 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
 "277
-[e = *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 63 `i `uc ]
-"278
-[e = *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
+[e = *U + &U _numbers_out * -> -> -> 5 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 0 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
 "279
-[e = *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
+[e = *U + &U _numbers_out * -> -> -> 2 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 1 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
 "280
+[e = *U + &U _numbers_out * -> -> -> 3 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 1 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
+"282
+[e = *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 63 `i `uc ]
+"283
+[e = *U + &U _numbers_out * -> -> -> 0 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> >> -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 4 `i `uc ]
+"284
+[e = *U + &U _numbers_out * -> -> -> 1 `i `ui `ux -> -> # *U &U _numbers_out `ui `ux -> & -> *U + &U _bcd_numbers_recieved * -> -> -> 2 `i `ui `ux -> -> # *U &U _bcd_numbers_recieved `ui `ux `i -> 15 `i `uc ]
+"285
 [e :UE 2492 ]
 }

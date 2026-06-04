@@ -63,6 +63,14 @@ const uint8_t numbers_DP[10][8] = {
 };      // DP,    G,      F,    E,      D,    C,     B,     A
 
 static inline void pin_init() { //nastavení pinů jako výstupy a vstupy
+    // I2C vyžaduje Open-Drain konfiguraci pro piny RC3 a RC4
+    ODCONCbits.ODCC3 = 1;
+    ODCONCbits.ODCC4 = 1;
+
+    // Konfigurace specifických I2C úrovní (Slew rate a SMBus/I2C thresholds)
+    RC3I2C = 0x01; // SCL 
+    RC4I2C = 0x01; // SDA
+
     // všechny piny na Digital
     ANSELA = 0x00;
     ANSELB = 0x00;

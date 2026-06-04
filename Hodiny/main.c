@@ -63,7 +63,7 @@ int main(void)
                 READ_RTC(); //tato funkce se bude volat každých 15 minut a bude synchronizovat čas s RTC
                 RTC_sync = false; //reset flagu pro RTC sync
             }
-            if (!I2C_trasmission_complete) {
+            if (!I2C_trasmission_complete ) {
                 waiting_for_data = false; //reset flagu pro čekání na data z RTC
             }
             if (waiting_for_data && I2C_trasmission_complete) { //pokud jsme čekali na data z RTC a I2C přenos je dokončen, aktualizujeme čas na displeji
@@ -203,10 +203,15 @@ void display_controll(){
     }
 }
 
-void READ_RTC(){
-    waiting_for_data = true; //nastaví se flag pro čekání na data z RTC, protože jsme právě zahájili nový I2C přenos a čekáme na data z RTC
-    I2C_trasmission_complete = false; //reset flagu pro indikaci dokončení I2C přenosu, protože jsme právě zahájili nový přenos
-    I2C1_WriteRead(RTC_ADDR, SEC_REG, 1, bcd_numbers_recieved, 3); //odešle do RTC adresu registru pro sekundy a počet bytů k přečtení (3 pro sekundy, minuty a hodiny) a pole pro uložení přijatých dat
+void READ_RTC(void){
+    waiting_for_data = true; 
+    I2C_trasmission_complete = false; 
+
+    // Vytvoření proměnné pro adresu registru RTC
+    static uint8_t reg_addr = SEC_REG; 
+
+    // Předání adresy paměti (&reg_addr) místo konstanty 0x00
+    I2C1_WriteRead(RTC_ADDR, &reg_addr, 1, bcd_numbers_recieved, 3); 
 }
 
 void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
