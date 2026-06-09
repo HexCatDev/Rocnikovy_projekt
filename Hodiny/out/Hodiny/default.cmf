@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$/tmp/xcXMfGCjh/driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
 $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 ivt0x8 CODE 0 8 8 FA 1 2
 cinit CODE 0 3AA4 3AA4 2C 1 2
@@ -93,10 +97,6 @@ cstackBANK5 BANK5 1 560 560 26 1 1
 bssBANK5 BANK5 1 586 586 8 1 1
 smallconst SMALLCONST 0 2600 2600 E2 1 2
 bssCOMRAM COMRAM 1 501 501 30 1 1
-config CONFIG 4 300000 300000 A 1 1
-$/tmp/xcXeDLIEk/driver_tmp_9.o
-init CODE 0 102 102 4 1 2
-reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -871,31 +871,31 @@ $/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodin
 3372 text0 CODE >69:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 3392 text0 CODE >70:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
 3396 text0 CODE >73:/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/main.c
-3AA4 cinit CODE >12571:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AA4 cinit CODE >12573:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AA4 cinit CODE >12576:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AA4 cinit CODE >12639:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AA8 cinit CODE >12640:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AAA cinit CODE >12641:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AAA cinit CODE >12642:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AAC cinit CODE >12643:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AAE cinit CODE >12644:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AB0 cinit CODE >12647:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AB4 cinit CODE >12648:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AB6 cinit CODE >12649:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AB6 cinit CODE >12650:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AB8 cinit CODE >12651:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ABA cinit CODE >12652:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ABC cinit CODE >12660:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ABE cinit CODE >12661:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AC0 cinit CODE >12662:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AC2 cinit CODE >12663:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AC4 cinit CODE >12664:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AC6 cinit CODE >12665:/tmp/xcXeDLIEk/driver_tmp_1.s
-3AC8 cinit CODE >12666:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ACA cinit CODE >12672:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ACA cinit CODE >12674:/tmp/xcXeDLIEk/driver_tmp_1.s
-3ACC cinit CODE >12675:/tmp/xcXeDLIEk/driver_tmp_1.s
+3AA4 cinit CODE >12571:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AA4 cinit CODE >12573:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AA4 cinit CODE >12576:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AA4 cinit CODE >12639:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AA8 cinit CODE >12640:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AAA cinit CODE >12641:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AAA cinit CODE >12642:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AAC cinit CODE >12643:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AAE cinit CODE >12644:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AB0 cinit CODE >12647:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AB4 cinit CODE >12648:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AB6 cinit CODE >12649:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AB6 cinit CODE >12650:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AB8 cinit CODE >12651:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ABA cinit CODE >12652:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ABC cinit CODE >12660:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ABE cinit CODE >12661:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AC0 cinit CODE >12662:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AC2 cinit CODE >12663:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AC4 cinit CODE >12664:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AC6 cinit CODE >12665:/tmp/xcXMfGCjh/driver_tmp_1.s
+3AC8 cinit CODE >12666:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ACA cinit CODE >12672:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ACA cinit CODE >12674:/tmp/xcXMfGCjh/driver_tmp_1.s
+3ACC cinit CODE >12675:/tmp/xcXMfGCjh/driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -941,13 +941,13 @@ _WPUB 409 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S
 _WPUC 411 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _WPUD 419 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _WPUE 421 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___sp 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___sp 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 _main 32E0 0 CODE 0 text0 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __end_of_Default_ISR 3D82 0 CODE 0 text60 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___stack_hi 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 _I2C1_DataReceive 3D7A 0 CODE 0 text58 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-start 102 0 CODE 0 init /tmp/xcXeDLIEk/driver_tmp_9.o
+start 102 0 CODE 0 init /tmp/xcXMfGCjh/driver_tmp_9.o
 clock_init@numbers_out 54A 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 INT2_SetInterruptHandler@InterruptHandler 53E 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -960,11 +960,11 @@ ___awmod@sign 543 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projec
 __end_of_I2C1_RestartEnable 3D62 0 CODE 0 text29 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __end_of_Timer0 2622 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__accesstop 560 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
-intlevel0 0 0 CODE 0 text /tmp/xcXeDLIEk/driver_tmp_9.o
-intlevel1 0 0 CODE 0 text /tmp/xcXeDLIEk/driver_tmp_9.o
-intlevel2 0 0 CODE 0 text /tmp/xcXeDLIEk/driver_tmp_9.o
-intlevel3 0 0 CODE 0 text /tmp/xcXeDLIEk/driver_tmp_9.o
+__accesstop 560 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xcXMfGCjh/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xcXMfGCjh/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xcXMfGCjh/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xcXMfGCjh/driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _pin_init 3854 0 CODE 0 text4 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _display_controll 2DF8 0 CODE 0 text5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -996,13 +996,13 @@ _ANSELD 418 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt
 _ANSELE 420 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1_AddrTransmit 3D1A 0 CODE 0 text31 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1_RestartEnable 3D5C 0 CODE 0 text29 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 _I2C1ADB1 28F 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1CON0 294 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1CON1 295 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1CON2 296 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1_ISR 3588 0 CODE 0 text34 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 _READ_RTC 39B6 0 CODE 0 text25 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _TMR0_DefaultOverflowCallback 3D88 0 CODE 0 text71 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 I2C1_DataTransmit@data 535 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -1078,7 +1078,7 @@ _INT2_DefaultInterruptHandler 3D86 0 CODE 0 text69 /home/nontoxiccat/Desktop/KiC
 _I2C1_RX_ISR 3C98 0 CODE 0 text57 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _Timer0 2601 0 SMALLCONST 0 smallconst /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _system_clock 3450 0 CODE 0 text1 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-isa$xinst 0 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
 i2I2C1_AddrTransmit@addr 531 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 display_digit@segments 53E 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1_TX_ISR 3CAC 0 CODE 0 text59 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -1438,16 +1438,16 @@ _I2C1SCLPPS 271 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Pro
 _I2C1SDAPPS 270 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lfarbss 0 0 FARRAM 0 farbss /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _I2C1_StopSend 3AFA 0 CODE 0 text35 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 _TMR0_MaxCountGet 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _Default_ISR 3D80 0 CODE 0 text60 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lfardata 0 0 FARRAM 0 fardata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-isa$std 1 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
+isa$std 1 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
 __end_of_CLOCK_Initialize 3C84 0 CODE 0 text24 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _refresh_setup_display 30C6 0 CODE 0 text7 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-stackhi 0 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
-stacklo 0 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
+stackhi 0 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
 _I2C1STAT1 299 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _OSCCON1 AD 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _OSCCON3 AF 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -1584,7 +1584,7 @@ __Ltext69 0 0 ABS 0 text69 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Pr
 __Ltext70 0 0 ABS 0 text70 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Ltext71 0 0 ABS 0 text71 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Ltext72 0 0 ABS 0 text72 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-__ramtop 2600 0 RAM 0 ramtop /tmp/xcXeDLIEk/driver_tmp_9.o
+__ramtop 2600 0 RAM 0 ramtop /tmp/xcXMfGCjh/driver_tmp_9.o
 __end_of_I2C1_TX_ISR 3CC0 0 CODE 0 text59 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __Lpowerup 0 0 CODE 0 powerup /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 clock_init@hold_button_time 580 0 BANK5 1 cstackBANK5 /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
@@ -1603,11 +1603,11 @@ _SLRCONB 40B 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projek
 _SLRCONC 413 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _SLRCOND 41B 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 _SLRCONE 423 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___heap_hi 0 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - /tmp/xcXeDLIEk/driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXMfGCjh/driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
-___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXeDLIEk/driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXMfGCjh/driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 __end_of__initialization 3ACA 0 CODE 0 cinit /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o
 ___awmod@divisor 540 0 COMRAM 1 cstackCOMRAM /home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.o

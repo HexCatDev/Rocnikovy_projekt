@@ -120,7 +120,7 @@ void clock_init(uint8_t numbers_out[6]) {
             hold_button_time = 0; // reset času držení tlačítka
         }
 
-        if (TL_ADD == 1) {
+        if (TL_SUB == 1) {
             switch (selected_digit) {
                 case 0: numbers_out[0] = (numbers_out[0] >= 2) ? 0 : numbers_out[0] + 1; break; //hh 0,1,2
                 case 1: numbers_out[1] = (numbers_out[1] >= 9) ? 0 : numbers_out[1] + 1; break; //h 0-9
@@ -134,7 +134,7 @@ void clock_init(uint8_t numbers_out[6]) {
             }
         }
 
-        if (TL_SUB == 1) {
+        if (TL_ADD == 1) {
             switch (selected_digit) {
                 //tady jsem použil ternary operace tj. (kondice) ? (je pravda) : (není pravda) protože když odečítám 1 od 0, chci aby se číslo změnilo na maximum (např. pro minuty když je 00 a odečtu 1, chci aby se změnilo na 59)
                 case 0: numbers_out[0] = (numbers_out[0] -1 ) < 0 ? 2 : numbers_out[0] - 1; break; //hh 0,1,2

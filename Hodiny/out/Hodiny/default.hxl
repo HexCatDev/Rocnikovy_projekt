@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXeDLIEk/driver_tmp_3.o
+ /tmp/xcXMfGCjh/driver_tmp_3.o
  -O/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hex
  -logfile=/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.hxl
  -addressing=1
@@ -9,16 +9,16 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  8h - 105h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  2600h - 26E0h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  26E2h - 31EDh		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  31F0h - 3585h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  3588h - 37BDh		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  37C0h - 3B8Dh		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  3B90h - 3D89h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  300000h - 300007h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
-  300009h - 300009h		(/tmp/xcXeDLIEk/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  8h - 105h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  2600h - 26E0h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  26E2h - 31EDh		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  31F0h - 3585h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  3588h - 37BDh		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  37C0h - 3B8Dh		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  3B90h - 3D89h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
+  300009h - 300009h		(/tmp/xcXMfGCjh/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   106h - 25FFh
@@ -33,7 +33,7 @@
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXeDLIEk/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXMfGCjh/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
