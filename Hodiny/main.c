@@ -34,45 +34,32 @@
 
 int main(void)
 { 
-    //I2C stuff
-    SYSTEM_Initialize();
-    INTERRUPT_Initialize();
-    I2C1_Host_Initialize();
-    I2C1_Initialize();
+    SYSTEM_Initialize();  // this is enough
     pin_init();
-
-    //interrupt
-    I2C1_Host_CallbackRegister(My_I2C1_Interrupt); //registrace callback funkce pro dokončení I2C přenosu, která se volá, když je I2C přenos dokončen
-    TMR0_OverflowCallbackRegister(timer); //registrace callback funkce pro přerušení od časovače tzn. když nastane přerušení spustí se fukce timer()
-    TMR0_Start(); //spuštění časovače
-
+    I2C1_Host_CallbackRegister(My_I2C1_Interrupt);
+    TMR0_OverflowCallbackRegister(timer);
+    TMR0_Start();
     INTCON0bits.GIEH = 1; 
     INTCON0bits.GIEL = 1;
 
     
     while (1) {
-        if (in_setup_mode == 0) { //pokud nejsme v režimu nastavení hodin, aktualizujeme čas a synchronizujeme s RTC
+        if (in_setup_mode == 0) {
             if (sys_clock) {
-                system_clock(); //tato funkce se bude volat každou sekundu a bude aktualizovat čas na displeji a je založena na funkci timer()
-                sys_clock = false; //reset flagu pro sys clock  
+                system_clock();
+                sys_clock = false;
             }
             if (RTC_sync) {
-                INTCON0bits.GIEH = 0; //vypne globální přerušení aby se zabránilo konfliktu mezi timerem a I2C komunikací
-                uint32_t snapshot_sync = ms_sync_counter; //uloží se aktuální hodnota ms_sync_counter do lokální proměnné, aby se zabránilo problému s tím, že se ms_sync_counter změní během čtení z RTC
-                INTCON0bits.GIEH = 1; //znovu zapne globální přerušení
-                READ_RTC(); //tato funkce se bude volat každých 15 minut a bude synchronizovat čas s RTC
-                RTC_sync = false; //reset flagu pro RTC sync
+                READ_RTC();
+                RTC_sync = false;
             }
-            if (!I2C_trasmission_complete ) {
-                waiting_for_data = false; //reset flagu pro čekání na data z RTC
-            }
-            if (waiting_for_data && I2C_trasmission_complete) { //pokud jsme čekali na data z RTC a I2C přenos je dokončen, aktualizujeme čas na displeji
-                process_data_from_RTC(); //tato funkce se bude volat, když je dokončen I2C přenos a aktualizuje čas na displeji podle dat z RTC
+            if (waiting_for_data && I2C_trasmission_complete) {
+                process_data_from_RTC();
+                waiting_for_data = false;
             }
         }
         display_controll();
-    } 
-    return 0;
+    }
 }
 
 void display_digit(const uint8_t *segments){
@@ -203,15 +190,11 @@ void display_controll(){
     }
 }
 
-void READ_RTC(void){
-    waiting_for_data = true; 
-    I2C_trasmission_complete = false; 
-
-    // Vytvoření proměnné pro adresu registru RTC
-    static uint8_t reg_addr = SEC_REG; 
-
-    // Předání adresy paměti (&reg_addr) místo konstanty 0x00
-    I2C1_WriteRead(RTC_ADDR, &reg_addr, 1, bcd_numbers_recieved, 3); 
+void READ_RTC(void) {
+    waiting_for_data = true;
+    I2C_trasmission_complete = false;
+    static uint8_t reg_addr = SEC_REG;
+    I2C1_Host_WriteRead(RTC_ADDR, &reg_addr, 1, bcd_numbers_recieved, 3); // "Host" prefix
 }
 
 void WRITE_RTC(){//tato funkce se bude volat při dlouhém stisku tlačítka pro nastavení hodin a odešle hodnoty z numbers_out do RTC
@@ -260,7 +243,7 @@ void timer(void){
         ms_counter = 0;
     }
     if (in_setup_mode == 0) {
-        if (ms_sync_counter >= 5000) { //když uplyne 15 minut, synchronizuje se čas s RTC
+        if (ms_sync_counter >= 900000UL) { //když uplyne 15 minut, synchronizuje se čas s RTC
             RTC_sync = true; //nastaví se flag pro RTC sync
             ms_sync_counter = 0;
         }

@@ -1,6 +1,6 @@
 # ninja log v7
-4	599	1780569302920186291	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	36ce216f6d264af0
-599	3478	1780569303516204504	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	a4744dfb0ed2474e
+1	468	1780592107666030356	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	36ce216f6d264af0
+468	2956	1780592108134055589	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	a4744dfb0ed2474e
 3	284	1780568956381523655	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/config_bits.c.p1	f47b978aadeae1d2
 2	942	1780568956381523655	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/clock.c.p1	fbf0604db8b54c10
 4	1154	1780568956385523779	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/system/src/pins.c.p1	38cc8e445b7037db
@@ -10,5 +10,3 @@
 286	1044	1780568956665532487	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/My_MCC_Config/mcc/mcc_generated_files/timer/src/tmr0.c.p1	871ba62b62abfa02
 1	25	1777918805929972473	CMakeFiles/clean.additional	e6a76e4bce69eb3a
 25	31	1777918805953973511	clean	712e468174992f09
-1	468	1780592107666030356	CMakeFiles/Hodiny_default_default_XC8_compile.dir/home/nontoxiccat/Desktop/KiCad_projects/Rocnikovy_Projekt_S3E/Hodiny/main.c.p1	36ce216f6d264af0
-468	2956	1780592108134055589	/home/nontoxiccat/Desktop/KiCad projects/Rocnikovy_Projekt_S3E/Hodiny/out/Hodiny/default.elf	a4744dfb0ed2474e
